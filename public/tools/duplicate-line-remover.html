@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Duplicate Line Remover — Free &amp; Private | Yarrow Tools</title>
+<meta name="description" content="Remove duplicate lines from a list, with options to trim whitespace, ignore blank lines and sort.">
+<link rel="canonical" href="https://__DOMAIN__/tools/duplicate-line-remover.html">
+<meta name="robots" content="index, follow">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Yarrow Tools">
+<meta property="og:title" content="Duplicate Line Remover — Free &amp; Private | Yarrow Tools">
+<meta property="og:description" content="Remove duplicate lines from a list, with options to trim whitespace, ignore blank lines and sort.">
+<meta property="og:url" content="https://__DOMAIN__/tools/duplicate-line-remover.html">
+<meta property="og:image" content="https://__DOMAIN__/assets/img/og-cover.png">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Duplicate Line Remover — Free &amp; Private | Yarrow Tools">
+<meta name="twitter:description" content="Remove duplicate lines from a list, with options to trim whitespace, ignore blank lines and sort.">
+<meta name="twitter:image" content="https://__DOMAIN__/assets/img/og-cover.png">
+<meta name="theme-color" content="#6366F1" media="(prefers-color-scheme: light)">
+<meta name="theme-color" content="#0C1020" media="(prefers-color-scheme: dark)">
+<link rel="icon" href="/assets/img/favicon.svg" type="image/svg+xml">
+<link rel="apple-touch-icon" href="/assets/img/favicon-180.png">
+<link rel="manifest" href="/manifest.webmanifest">
+<script>(function(){try{var k='yarrow-theme';var s=localStorage.getItem(k);if(!s){s=(window.matchMedia&&window.matchMedia('(prefers-color-scheme: dark)').matches)?'dark':'light';}document.documentElement.setAttribute('data-theme',s);}catch(e){}})();</script>
+<link rel="stylesheet" href="/assets/css/style.css">
+<script type="application/ld+json">
+{
+ "@context": "https://schema.org",
+ "@type": "WebApplication",
+ "name": "Duplicate Line Remover",
+ "url": "https://__DOMAIN__/tools/duplicate-line-remover.html",
+ "applicationCategory": "UtilityApplication",
+ "operatingSystem": "Any (web browser)",
+ "browserRequirements": "Requires a modern browser with JavaScript enabled",
+ "offers": {
+  "@type": "Offer",
+  "price": "0",
+  "priceCurrency": "USD"
+ },
+ "description": "Remove duplicate lines from a list, with options to trim whitespace, ignore blank lines and sort.",
+ "publisher": {
+  "@type": "Organization",
+  "name": "Yarrow Tools",
+  "url": "https://__DOMAIN__/"
+ }
+}
+</script>
+<script type="application/ld+json">
+{
+ "@context": "https://schema.org",
+ "@type": "BreadcrumbList",
+ "itemListElement": [
+  {
+   "@type": "ListItem",
+   "position": 1,
+   "name": "Home",
+   "item": "https://__DOMAIN__/"
+  },
+  {
+   "@type": "ListItem",
+   "position": 2,
+   "name": "Text & Code",
+   "item": "https://__DOMAIN__/category/text.html"
+  },
+  {
+   "@type": "ListItem",
+   "position": 3,
+   "name": "Duplicate Line Remover",
+   "item": "https://__DOMAIN__/tools/duplicate-line-remover.html"
+  }
+ ]
+}
+</script>
+</head>
+<body>
+<header class="hdr"><div class="wrap hdr-in">
+<a href="/" class="logo"><span class="logo-mark">Y</span><span>Yarrow <b>Tools</b></span></a>
+<span class="hdr-sp"></span>
+<div class="hdr-search">
+<svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"><circle cx="11" cy="11" r="7"/><path d="M21 21l-4.3-4.3"/></svg>
+<input type="search" placeholder="Search tools…" aria-label="Search tools" data-filter>
+</div>
+<button class="icon-btn" id="themeBtn" onclick="yarrowToggle()" aria-label="Toggle theme">☾</button>
+</div>
+<nav class="nav"><div class="wrap" style="display:flex;gap:4px"><a href="/" class=on>Home</a><a href="/category/text.html">Text &amp; Code</a><a href="/category/finance.html">Finance</a><a href="/category/health.html">Health &amp; Everyday</a><a href="/category/convert.html">Converters</a><a href="/category/generate.html">Generators &amp; Utilities</a></div></nav></header>
+<main class="wrap tool-wrap">
+<div class="crumb"><a href="/">Home</a> › <a href="/category/text.html">Text & Code</a> › Duplicate Line Remover</div>
+<div class="tool-hd">
+<div style="display:flex;align-items:center;gap:11px;margin-bottom:9px">
+<span class="ic" style="background:var(--c-text-bg);color:var(--c-text)">≡</span>
+<h1 style="margin:0">Duplicate Line Remover</h1></div>
+<p>Remove duplicate lines from a list, with options to trim whitespace, ignore blank lines and sort.</p></div>
+<div class="panel"><div class="fld"><label for="dlIn">Paste your list</label><textarea id="dlIn" style="min-height:140px">apple
+banana
+apple
+cherry
+  Banana  
+date</textarea></div>
+<div class="row">
+<div class="fld"><label><input type="checkbox" id="dlTrim" checked> Trim each line</label></div>
+<div class="fld"><label><input type="checkbox" id="dlBlank" checked> Drop blank lines</label></div>
+<div class="fld"><label><input type="checkbox" id="dlSort"> Sort A→Z</label></div>
+<div class="fld"><label><input type="checkbox" id="dlCase"> Case-sensitive compare</label></div>
+</div>
+<button class="btn" onclick="dlRun()">Process</button>
+<div class="res-grid" style="margin-top:13px">
+<div class="res-cell"><div class="k">Lines in</div><div class="v" id="dlIn2">0</div></div>
+<div class="res-cell"><div class="k">Lines out</div><div class="v" id="dlOut2">0</div></div>
+<div class="res-cell"><div class="k">Removed</div><div class="v" id="dlRm">0</div></div>
+</div>
+<div class="fld" style="margin-top:13px"><label>Result</label><textarea id="dlRes" readonly></textarea></div>
+<div style="margin-top:9px"><button class="btn-o" onclick="yarrowCopy(document.getElementById('dlRes').value,this)">Copy</button></div></div>
+</main>
+<footer class="ftr"><div class="wrap ftr-in">
+<div class="ftr-links">
+<a href="/pages/about.html">About</a><a href="/pages/contact.html">Contact</a>
+<a href="/pages/privacy.html">Privacy</a><a href="/pages/terms.html">Terms</a>
+<a href="/pages/disclaimer.html">Disclaimer</a><a href="/sitemap.xml">Sitemap</a>
+</div>
+<p class="ftr-c">© 2026 Yarrow Tools · Every tool runs in your browser — your data never leaves your device.</p>
+</div></footer>
+<script src="/assets/js/app.js"></script>
+<script src="/assets/js/tools-data.js"></script>
+<script>
+
+function dlRun(){
+  var raw=document.getElementById('dlIn').value.split('\n');
+  var trim=document.getElementById('dlTrim').checked;
+  var drop=document.getElementById('dlBlank').checked;
+  var sort=document.getElementById('dlSort').checked;
+  var cs=document.getElementById('dlCase').checked;
+  var seen={},out=[];
+  for(var i=0;i<raw.length;i++){
+    var l=trim?raw[i].trim():raw[i];
+    if(drop&&!l)continue;
+    var k=cs?l:l.toLowerCase();
+    if(seen[k])continue;
+    seen[k]=1;out.push(l);
+  }
+  if(sort)out.sort();
+  document.getElementById('dlIn2').textContent=raw.length;
+  document.getElementById('dlOut2').textContent=out.length;
+  document.getElementById('dlRm').textContent=raw.length-out.length;
+  document.getElementById('dlRes').value=out.join('\n');
+}
+document.addEventListener('DOMContentLoaded',function(){
+  try{
+    var g=window['grAdd'],p=window['gpAdd'];
+    if('dlRun'==='grInit'){grAdd();grAdd();grAdd();}
+    else if('dlRun'==='gpInit'){gpAdd();gpAdd();gpAdd();}
+    else if('dlRun'&&typeof window['dlRun']==='function'){window['dlRun']();}
+  }catch(e){console.warn(e);}
+});
+</script>
+</body></html>

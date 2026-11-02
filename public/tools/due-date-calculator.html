@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Pregnancy Due Date Calculator — Free &amp; Private | Yarrow Tools</title>
+<meta name="description" content="Estimate a due date from the last period, date of conception or a known ultrasound date.">
+<link rel="canonical" href="https://__DOMAIN__/tools/due-date-calculator.html">
+<meta name="robots" content="index, follow">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Yarrow Tools">
+<meta property="og:title" content="Pregnancy Due Date Calculator — Free &amp; Private | Yarrow Tools">
+<meta property="og:description" content="Estimate a due date from the last period, date of conception or a known ultrasound date.">
+<meta property="og:url" content="https://__DOMAIN__/tools/due-date-calculator.html">
+<meta property="og:image" content="https://__DOMAIN__/assets/img/og-cover.png">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Pregnancy Due Date Calculator — Free &amp; Private | Yarrow Tools">
+<meta name="twitter:description" content="Estimate a due date from the last period, date of conception or a known ultrasound date.">
+<meta name="twitter:image" content="https://__DOMAIN__/assets/img/og-cover.png">
+<meta name="theme-color" content="#6366F1" media="(prefers-color-scheme: light)">
+<meta name="theme-color" content="#0C1020" media="(prefers-color-scheme: dark)">
+<link rel="icon" href="/assets/img/favicon.svg" type="image/svg+xml">
+<link rel="apple-touch-icon" href="/assets/img/favicon-180.png">
+<link rel="manifest" href="/manifest.webmanifest">
+<script>(function(){try{var k='yarrow-theme';var s=localStorage.getItem(k);if(!s){s=(window.matchMedia&&window.matchMedia('(prefers-color-scheme: dark)').matches)?'dark':'light';}document.documentElement.setAttribute('data-theme',s);}catch(e){}})();</script>
+<link rel="stylesheet" href="/assets/css/style.css">
+<script type="application/ld+json">
+{
+ "@context": "https://schema.org",
+ "@type": "WebApplication",
+ "name": "Pregnancy Due Date Calculator",
+ "url": "https://__DOMAIN__/tools/due-date-calculator.html",
+ "applicationCategory": "UtilityApplication",
+ "operatingSystem": "Any (web browser)",
+ "browserRequirements": "Requires a modern browser with JavaScript enabled",
+ "offers": {
+  "@type": "Offer",
+  "price": "0",
+  "priceCurrency": "USD"
+ },
+ "description": "Estimate a due date from the last period, date of conception or a known ultrasound date.",
+ "publisher": {
+  "@type": "Organization",
+  "name": "Yarrow Tools",
+  "url": "https://__DOMAIN__/"
+ }
+}
+</script>
+<script type="application/ld+json">
+{
+ "@context": "https://schema.org",
+ "@type": "BreadcrumbList",
+ "itemListElement": [
+  {
+   "@type": "ListItem",
+   "position": 1,
+   "name": "Home",
+   "item": "https://__DOMAIN__/"
+  },
+  {
+   "@type": "ListItem",
+   "position": 2,
+   "name": "Health & Everyday",
+   "item": "https://__DOMAIN__/category/health.html"
+  },
+  {
+   "@type": "ListItem",
+   "position": 3,
+   "name": "Pregnancy Due Date Calculator",
+   "item": "https://__DOMAIN__/tools/due-date-calculator.html"
+  }
+ ]
+}
+</script>
+</head>
+<body>
+<header class="hdr"><div class="wrap hdr-in">
+<a href="/" class="logo"><span class="logo-mark">Y</span><span>Yarrow <b>Tools</b></span></a>
+<span class="hdr-sp"></span>
+<div class="hdr-search">
+<svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"><circle cx="11" cy="11" r="7"/><path d="M21 21l-4.3-4.3"/></svg>
+<input type="search" placeholder="Search tools…" aria-label="Search tools" data-filter>
+</div>
+<button class="icon-btn" id="themeBtn" onclick="yarrowToggle()" aria-label="Toggle theme">☾</button>
+</div>
+<nav class="nav"><div class="wrap" style="display:flex;gap:4px"><a href="/" class=on>Home</a><a href="/category/text.html">Text &amp; Code</a><a href="/category/finance.html">Finance</a><a href="/category/health.html">Health &amp; Everyday</a><a href="/category/convert.html">Converters</a><a href="/category/generate.html">Generators &amp; Utilities</a></div></nav></header>
+<main class="wrap tool-wrap">
+<div class="crumb"><a href="/">Home</a> › <a href="/category/health.html">Health & Everyday</a> › Pregnancy Due Date Calculator</div>
+<div class="tool-hd">
+<div style="display:flex;align-items:center;gap:11px;margin-bottom:9px">
+<span class="ic" style="background:var(--c-health-bg);color:var(--c-health)">due</span>
+<h1 style="margin:0">Pregnancy Due Date Calculator</h1></div>
+<p>Estimate a due date from the last period, date of conception or a known ultrasound date.</p></div>
+<div class="panel"><div class="fld"><label for="duM">Method</label><select id="duM" onchange="duM()">
+<option value="lmp">Last menstrual period (LMP)</option>
+<option value="con">Date of conception</option>
+<option value="us">Ultrasound (known gestational age)</option></select></div>
+<div id="duA"><div class="fld"><label for="duD">First day of last period</label><input id="duD" type="date" oninput="duRun()"></div></div>
+<div id="duB" style="display:none"><div class="fld"><label for="duD2">Date of conception</label><input id="duD2" type="date" oninput="duRun()"></div></div>
+<div id="duC" style="display:none">
+<div class="row"><div class="fld"><label for="duD3">Ultrasound date</label><input id="duD3" type="date" oninput="duRun()"></div>
+<div class="fld"><label for="duW">Weeks at scan</label><input id="duW" type="number" value="8" oninput="duRun()"></div>
+<div class="fld"><label for="duD4">Days at scan</label><input id="duD4" type="number" value="0" oninput="duRun()"></div></div></div>
+<button class="btn" onclick="duRun()">Calculate</button>
+<div class="out" style="margin-top:14px"><div class="k" style="font-size:11.5px;font-weight:800;color:var(--muted);text-transform:uppercase">Estimated due date</div><div class="out-val" id="duEDD">—</div></div>
+<div class="res-grid">
+<div class="res-cell"><div class="k">Gestational age</div><div class="v" id="duGA">—</div></div>
+<div class="res-cell"><div class="k">Trimester</div><div class="v" id="duTri">—</div></div>
+<div class="res-cell"><div class="k">Days remaining</div><div class="v" id="duLeft">—</div></div>
+</div>
+<p class="note">LMP method uses Naegele's rule: LMP + 280 days. Only about 1 in 20 babies arrive on the estimated date — treat it as a range, not a promise.</p></div>
+</main>
+<footer class="ftr"><div class="wrap ftr-in">
+<div class="ftr-links">
+<a href="/pages/about.html">About</a><a href="/pages/contact.html">Contact</a>
+<a href="/pages/privacy.html">Privacy</a><a href="/pages/terms.html">Terms</a>
+<a href="/pages/disclaimer.html">Disclaimer</a><a href="/sitemap.xml">Sitemap</a>
+</div>
+<p class="ftr-c">© 2026 Yarrow Tools · Every tool runs in your browser — your data never leaves your device.</p>
+</div></footer>
+<script src="/assets/js/app.js"></script>
+<script src="/assets/js/tools-data.js"></script>
+<script>
+
+function duM(){
+  var m=document.getElementById('duM').value;
+  document.getElementById('duA').style.display=m==='lmp'?'':'none';
+  document.getElementById('duB').style.display=m==='con'?'':'none';
+  document.getElementById('duC').style.display=m==='us'?'':'none';
+  duRun();
+}
+function duAdd(d,n){var x=new Date(d.getTime());x.setDate(x.getDate()+n);return x;}
+function duRun(){
+  var m=document.getElementById('duM').value,edd,start;
+  var today=new Date();today.setHours(0,0,0,0);
+  if(m==='lmp'){
+    var v=document.getElementById('duD').value;if(!v)return;
+    start=new Date(v+'T00:00:00');edd=duAdd(start,280);
+  }else if(m==='con'){
+    var v2=document.getElementById('duD2').value;if(!v2)return;
+    start=new Date(v2+'T00:00:00');edd=duAdd(start,266);
+  }else{
+    var v3=document.getElementById('duD3').value;if(!v3)return;
+    var w=parseFloat(document.getElementById('duW').value)||0;
+    var d4=parseFloat(document.getElementById('duD4').value)||0;
+    start=new Date(v3+'T00:00:00');
+    edd=duAdd(start,280-(w*7+d4));
+  }
+  document.getElementById('duEDD').textContent=edd.toDateString();
+  var ga=Math.floor((today-start)/86400000);
+  if(m==='con')ga+=14;
+  var gw=Math.floor(ga/7),gd=ga%7;
+  document.getElementById('duGA').textContent=(ga>=0&&ga<=320)?(gw+'w '+gd+'d'):'—';
+  var tri=ga<0?'—':(ga<98?'1st':(ga<196?'2nd':'3rd'));
+  document.getElementById('duTri').textContent=tri;
+  var left=Math.round((edd-today)/86400000);
+  document.getElementById('duLeft').textContent=left>=0?left+' days':'—';
+}
+document.addEventListener('DOMContentLoaded',function(){
+  try{
+    var g=window['grAdd'],p=window['gpAdd'];
+    if('duM'==='grInit'){grAdd();grAdd();grAdd();}
+    else if('duM'==='gpInit'){gpAdd();gpAdd();gpAdd();}
+    else if('duM'&&typeof window['duM']==='function'){window['duM']();}
+  }catch(e){console.warn(e);}
+});
+</script>
+</body></html>

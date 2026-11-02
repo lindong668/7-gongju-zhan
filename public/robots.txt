@@ -1,0 +1,14 @@
+# robots.txt — Yarrow Tools
+User-agent: Mediapartners-Google
+Allow: /
+
+User-agent: Googlebot
+Allow: /
+
+User-agent: Bingbot
+Allow: /
+
+User-agent: *
+Allow: /
+
+Sitemap: https://__DOMAIN__/sitemap.xml

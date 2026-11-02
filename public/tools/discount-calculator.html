@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Discount Calculator — Free &amp; Private | Yarrow Tools</title>
+<meta name="description" content="Sale price, amount saved, and what stacked discounts actually add up to.">
+<link rel="canonical" href="https://__DOMAIN__/tools/discount-calculator.html">
+<meta name="robots" content="index, follow">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Yarrow Tools">
+<meta property="og:title" content="Discount Calculator — Free &amp; Private | Yarrow Tools">
+<meta property="og:description" content="Sale price, amount saved, and what stacked discounts actually add up to.">
+<meta property="og:url" content="https://__DOMAIN__/tools/discount-calculator.html">
+<meta property="og:image" content="https://__DOMAIN__/assets/img/og-cover.png">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Discount Calculator — Free &amp; Private | Yarrow Tools">
+<meta name="twitter:description" content="Sale price, amount saved, and what stacked discounts actually add up to.">
+<meta name="twitter:image" content="https://__DOMAIN__/assets/img/og-cover.png">
+<meta name="theme-color" content="#6366F1" media="(prefers-color-scheme: light)">
+<meta name="theme-color" content="#0C1020" media="(prefers-color-scheme: dark)">
+<link rel="icon" href="/assets/img/favicon.svg" type="image/svg+xml">
+<link rel="apple-touch-icon" href="/assets/img/favicon-180.png">
+<link rel="manifest" href="/manifest.webmanifest">
+<script>(function(){try{var k='yarrow-theme';var s=localStorage.getItem(k);if(!s){s=(window.matchMedia&&window.matchMedia('(prefers-color-scheme: dark)').matches)?'dark':'light';}document.documentElement.setAttribute('data-theme',s);}catch(e){}})();</script>
+<link rel="stylesheet" href="/assets/css/style.css">
+<script type="application/ld+json">
+{
+ "@context": "https://schema.org",
+ "@type": "WebApplication",
+ "name": "Discount Calculator",
+ "url": "https://__DOMAIN__/tools/discount-calculator.html",
+ "applicationCategory": "UtilityApplication",
+ "operatingSystem": "Any (web browser)",
+ "browserRequirements": "Requires a modern browser with JavaScript enabled",
+ "offers": {
+  "@type": "Offer",
+  "price": "0",
+  "priceCurrency": "USD"
+ },
+ "description": "Sale price, amount saved, and what stacked discounts actually add up to.",
+ "publisher": {
+  "@type": "Organization",
+  "name": "Yarrow Tools",
+  "url": "https://__DOMAIN__/"
+ }
+}
+</script>
+<script type="application/ld+json">
+{
+ "@context": "https://schema.org",
+ "@type": "BreadcrumbList",
+ "itemListElement": [
+  {
+   "@type": "ListItem",
+   "position": 1,
+   "name": "Home",
+   "item": "https://__DOMAIN__/"
+  },
+  {
+   "@type": "ListItem",
+   "position": 2,
+   "name": "Finance",
+   "item": "https://__DOMAIN__/category/finance.html"
+  },
+  {
+   "@type": "ListItem",
+   "position": 3,
+   "name": "Discount Calculator",
+   "item": "https://__DOMAIN__/tools/discount-calculator.html"
+  }
+ ]
+}
+</script>
+</head>
+<body>
+<header class="hdr"><div class="wrap hdr-in">
+<a href="/" class="logo"><span class="logo-mark">Y</span><span>Yarrow <b>Tools</b></span></a>
+<span class="hdr-sp"></span>
+<div class="hdr-search">
+<svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"><circle cx="11" cy="11" r="7"/><path d="M21 21l-4.3-4.3"/></svg>
+<input type="search" placeholder="Search tools…" aria-label="Search tools" data-filter>
+</div>
+<button class="icon-btn" id="themeBtn" onclick="yarrowToggle()" aria-label="Toggle theme">☾</button>
+</div>
+<nav class="nav"><div class="wrap" style="display:flex;gap:4px"><a href="/" class=on>Home</a><a href="/category/text.html">Text &amp; Code</a><a href="/category/finance.html">Finance</a><a href="/category/health.html">Health &amp; Everyday</a><a href="/category/convert.html">Converters</a><a href="/category/generate.html">Generators &amp; Utilities</a></div></nav></header>
+<main class="wrap tool-wrap">
+<div class="crumb"><a href="/">Home</a> › <a href="/category/finance.html">Finance</a> › Discount Calculator</div>
+<div class="tool-hd">
+<div style="display:flex;align-items:center;gap:11px;margin-bottom:9px">
+<span class="ic" style="background:var(--c-finance-bg);color:var(--c-finance)">%↓</span>
+<h1 style="margin:0">Discount Calculator</h1></div>
+<p>Sale price, amount saved, and what stacked discounts actually add up to.</p></div>
+<div class="panel"><div class="fld"><label for="dcP">Original price</label><input id="dcP" type="number" value="249.99" oninput="dcRun()"></div>
+<div class="row">
+<div class="fld"><label for="dc1">Discount 1 (%)</label><input id="dc1" type="number" value="20" oninput="dcRun()"></div>
+<div class="fld"><label for="dc2">Discount 2 (%) — optional</label><input id="dc2" type="number" value="10" oninput="dcRun()"></div>
+<div class="fld"><label for="dcTax">Sales tax (%)</label><input id="dcTax" type="number" value="8.25" step="0.01" oninput="dcRun()"></div>
+</div>
+<div class="res-grid">
+<div class="res-cell"><div class="k">You save</div><div class="v" id="dcS" style="color:var(--ok)">—</div></div>
+<div class="res-cell"><div class="k">Sale price</div><div class="v" id="dcSp">—</div></div>
+<div class="res-cell"><div class="k">After tax</div><div class="v" id="dcTot">—</div></div>
+</div>
+<div id="dcMsg" style="margin-top:12px"></div></div>
+</main>
+<footer class="ftr"><div class="wrap ftr-in">
+<div class="ftr-links">
+<a href="/pages/about.html">About</a><a href="/pages/contact.html">Contact</a>
+<a href="/pages/privacy.html">Privacy</a><a href="/pages/terms.html">Terms</a>
+<a href="/pages/disclaimer.html">Disclaimer</a><a href="/sitemap.xml">Sitemap</a>
+</div>
+<p class="ftr-c">© 2026 Yarrow Tools · Every tool runs in your browser — your data never leaves your device.</p>
+</div></footer>
+<script src="/assets/js/app.js"></script>
+<script src="/assets/js/tools-data.js"></script>
+<script>
+
+function dcRun(){
+  var p=parseFloat(document.getElementById('dcP').value)||0;
+  var d1=parseFloat(document.getElementById('dc1').value)||0;
+  var d2=parseFloat(document.getElementById('dc2').value)||0;
+  var tx=parseFloat(document.getElementById('dcTax').value)||0;
+  var sale=p*(1-d1/100)*(1-d2/100);
+  var save=p-sale;
+  var tot=sale*(1+tx/100);
+  document.getElementById('dcS').textContent=fMoney(save);
+  document.getElementById('dcSp').textContent=fMoney(sale);
+  document.getElementById('dcTot').textContent=fMoney(tot);
+  if(d1&&d2){
+    var eff=(1-(1-d1/100)*(1-d2/100))*100;
+    document.getElementById('dcMsg').innerHTML='<p class="note">'+d1+'% then '+d2+'% is <b>'+eff.toFixed(1)+'%</b> off in total — not '+(d1+d2)+'%. Successive discounts multiply, they do not add.</p>';
+  }else{document.getElementById('dcMsg').innerHTML='';}
+}
+function fMoney(x){return '$'+x.toLocaleString('en-US',{minimumFractionDigits:2,maximumFractionDigits:2});}
+document.addEventListener('DOMContentLoaded',function(){
+  try{
+    var g=window['grAdd'],p=window['gpAdd'];
+    if('dcRun'==='grInit'){grAdd();grAdd();grAdd();}
+    else if('dcRun'==='gpInit'){gpAdd();gpAdd();gpAdd();}
+    else if('dcRun'&&typeof window['dcRun']==='function'){window['dcRun']();}
+  }catch(e){console.warn(e);}
+});
+</script>
+</body></html>

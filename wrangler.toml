@@ -1,0 +1,20 @@
+# Yarrow Tools — Cloudflare Workers + Assets
+# 域名用占位符 __DOMAIN__，确定真实域名后统一替换
+name = "yarrow-tools"
+compatibility_date = "2026-09-01"
+main = "src/index.js"
+
+routes = [
+  { pattern = "__DOMAIN__/*", zone_name = "__ZONE__" }
+]
+
+[assets]
+directory = "./public"
+binding = "ASSETS"
+
+[observability]
+enabled = true
+[observability.logs]
+enabled = true
+invocation_logs = true
+head_sampling_rate = 1

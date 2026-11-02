@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>CSV ↔ JSON Converter — Free &amp; Private | Yarrow Tools</title>
+<meta name="description" content="Convert CSV to JSON and JSON back to CSV, with a delimiter choice.">
+<link rel="canonical" href="https://__DOMAIN__/tools/csv-json-converter.html">
+<meta name="robots" content="index, follow">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Yarrow Tools">
+<meta property="og:title" content="CSV ↔ JSON Converter — Free &amp; Private | Yarrow Tools">
+<meta property="og:description" content="Convert CSV to JSON and JSON back to CSV, with a delimiter choice.">
+<meta property="og:url" content="https://__DOMAIN__/tools/csv-json-converter.html">
+<meta property="og:image" content="https://__DOMAIN__/assets/img/og-cover.png">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="CSV ↔ JSON Converter — Free &amp; Private | Yarrow Tools">
+<meta name="twitter:description" content="Convert CSV to JSON and JSON back to CSV, with a delimiter choice.">
+<meta name="twitter:image" content="https://__DOMAIN__/assets/img/og-cover.png">
+<meta name="theme-color" content="#6366F1" media="(prefers-color-scheme: light)">
+<meta name="theme-color" content="#0C1020" media="(prefers-color-scheme: dark)">
+<link rel="icon" href="/assets/img/favicon.svg" type="image/svg+xml">
+<link rel="apple-touch-icon" href="/assets/img/favicon-180.png">
+<link rel="manifest" href="/manifest.webmanifest">
+<script>(function(){try{var k='yarrow-theme';var s=localStorage.getItem(k);if(!s){s=(window.matchMedia&&window.matchMedia('(prefers-color-scheme: dark)').matches)?'dark':'light';}document.documentElement.setAttribute('data-theme',s);}catch(e){}})();</script>
+<link rel="stylesheet" href="/assets/css/style.css">
+<script type="application/ld+json">
+{
+ "@context": "https://schema.org",
+ "@type": "WebApplication",
+ "name": "CSV ↔ JSON Converter",
+ "url": "https://__DOMAIN__/tools/csv-json-converter.html",
+ "applicationCategory": "UtilityApplication",
+ "operatingSystem": "Any (web browser)",
+ "browserRequirements": "Requires a modern browser with JavaScript enabled",
+ "offers": {
+  "@type": "Offer",
+  "price": "0",
+  "priceCurrency": "USD"
+ },
+ "description": "Convert CSV to JSON and JSON back to CSV, with a delimiter choice.",
+ "publisher": {
+  "@type": "Organization",
+  "name": "Yarrow Tools",
+  "url": "https://__DOMAIN__/"
+ }
+}
+</script>
+<script type="application/ld+json">
+{
+ "@context": "https://schema.org",
+ "@type": "BreadcrumbList",
+ "itemListElement": [
+  {
+   "@type": "ListItem",
+   "position": 1,
+   "name": "Home",
+   "item": "https://__DOMAIN__/"
+  },
+  {
+   "@type": "ListItem",
+   "position": 2,
+   "name": "Converters",
+   "item": "https://__DOMAIN__/category/convert.html"
+  },
+  {
+   "@type": "ListItem",
+   "position": 3,
+   "name": "CSV ↔ JSON Converter",
+   "item": "https://__DOMAIN__/tools/csv-json-converter.html"
+  }
+ ]
+}
+</script>
+</head>
+<body>
+<header class="hdr"><div class="wrap hdr-in">
+<a href="/" class="logo"><span class="logo-mark">Y</span><span>Yarrow <b>Tools</b></span></a>
+<span class="hdr-sp"></span>
+<div class="hdr-search">
+<svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"><circle cx="11" cy="11" r="7"/><path d="M21 21l-4.3-4.3"/></svg>
+<input type="search" placeholder="Search tools…" aria-label="Search tools" data-filter>
+</div>
+<button class="icon-btn" id="themeBtn" onclick="yarrowToggle()" aria-label="Toggle theme">☾</button>
+</div>
+<nav class="nav"><div class="wrap" style="display:flex;gap:4px"><a href="/" class=on>Home</a><a href="/category/text.html">Text &amp; Code</a><a href="/category/finance.html">Finance</a><a href="/category/health.html">Health &amp; Everyday</a><a href="/category/convert.html">Converters</a><a href="/category/generate.html">Generators &amp; Utilities</a></div></nav></header>
+<main class="wrap tool-wrap">
+<div class="crumb"><a href="/">Home</a> › <a href="/category/convert.html">Converters</a> › CSV ↔ JSON Converter</div>
+<div class="tool-hd">
+<div style="display:flex;align-items:center;gap:11px;margin-bottom:9px">
+<span class="ic" style="background:var(--c-convert-bg);color:var(--c-convert)">csv</span>
+<h1 style="margin:0">CSV ↔ JSON Converter</h1></div>
+<p>Convert CSV to JSON and JSON back to CSV, with a delimiter choice.</p></div>
+<div class="panel"><div class="fld"><label>Mode</label><select id="cjM" onchange="cjM()"><option value="c2j">CSV → JSON</option><option value="j2c">JSON → CSV</option></select></div>
+<div class="row"><div class="fld"><label for="cjDel">Delimiter</label><select id="cjDel" onchange="cjRun()"><option value=",">Comma</option><option value=";">Semicolon</option><option value="\t">Tab</option></select></div></div>
+<div class="row">
+<div class="fld"><label id="cjL1">Input</label><textarea id="cjIn" style="min-height:150px" oninput="cjRun()">name,role,age
+Ada,engineer,36
+Grace,admiral,45</textarea></div>
+<div class="fld"><label id="cjL2">Output</label><textarea id="cjOut" readonly style="min-height:150px"></textarea></div>
+</div>
+<div id="cjMsg"></div>
+<div style="margin-top:9px"><button class="btn-o" onclick="yarrowCopy(document.getElementById('cjOut').value,this)">Copy output</button></div></div>
+</main>
+<footer class="ftr"><div class="wrap ftr-in">
+<div class="ftr-links">
+<a href="/pages/about.html">About</a><a href="/pages/contact.html">Contact</a>
+<a href="/pages/privacy.html">Privacy</a><a href="/pages/terms.html">Terms</a>
+<a href="/pages/disclaimer.html">Disclaimer</a><a href="/sitemap.xml">Sitemap</a>
+</div>
+<p class="ftr-c">© 2026 Yarrow Tools · Every tool runs in your browser — your data never leaves your device.</p>
+</div></footer>
+<script src="/assets/js/app.js"></script>
+<script src="/assets/js/tools-data.js"></script>
+<script>
+
+function cjM(){
+  var m=document.getElementById('cjM').value;
+  document.getElementById('cjL1').textContent=m==='c2j'?'CSV':'JSON';
+  document.getElementById('cjL2').textContent=m==='c2j'?'JSON':'CSV';
+  var i=document.getElementById('cjIn'),o=document.getElementById('cjOut');
+  var t=i.value;i.value=o.value;o.value=t;
+  cjRun();
+}
+function cjSplit(line,d){
+  var out=[],cur='',q=false;
+  for(var i=0;i<line.length;i++){
+    var c=line[i];
+    if(c==='"'){
+      if(q&&line[i+1]==='"'){cur+='"';i++;}
+      else q=!q;
+    }else if(c===d&&!q){out.push(cur);cur='';}
+    else cur+=c;
+  }
+  out.push(cur);
+  return out;
+}
+function cjRun(){
+  var m=document.getElementById('cjM').value;
+  var d=document.getElementById('cjDel').value;
+  if(d==='\\t')d='\t';
+  var raw=document.getElementById('cjIn').value;
+  var o=document.getElementById('cjOut'),msg=document.getElementById('cjMsg');
+  try{
+    if(m==='c2j'){
+      var lines=raw.replace(/\r/g,'').split('\n').filter(function(l){return l.trim();});
+      if(!lines.length){o.value='';msg.innerHTML='';return;}
+      var head=cjSplit(lines[0],d);
+      var arr=[];
+      for(var i=1;i<lines.length;i++){
+        var cells=cjSplit(lines[i],d),obj={};
+        head.forEach(function(h,k){obj[h]=cells[k]!==undefined?cells[k]:'';});
+        arr.push(obj);
+      }
+      o.value=JSON.stringify(arr,null,2);
+      msg.innerHTML='<div class="ok-t">'+arr.length+' row(s) parsed.</div>';
+    }else{
+      var data=JSON.parse(raw);
+      if(!Array.isArray(data))throw new Error('JSON must be an array of objects');
+      if(!data.length){o.value='';msg.innerHTML='';return;}
+      var keys=Object.keys(data[0]);
+      var rows=[keys.join(d)];
+      data.forEach(function(r){
+        rows.push(keys.map(function(k){
+          var v=r[k]===undefined||r[k]===null?'':String(r[k]);
+          return /["\n]/.test(v)||v.indexOf(d)>=0?'"'+v.replace(/"/g,'""')+'"':v;
+        }).join(d));
+      });
+      o.value=rows.join('\n');
+      msg.innerHTML='<div class="ok-t">'+data.length+' row(s) written.</div>';
+    }
+  }catch(e){msg.innerHTML='<div class="err-t">'+e.message+'</div>';}
+}
+document.addEventListener('DOMContentLoaded',function(){
+  try{
+    var g=window['grAdd'],p=window['gpAdd'];
+    if('cjRun'==='grInit'){grAdd();grAdd();grAdd();}
+    else if('cjRun'==='gpInit'){gpAdd();gpAdd();gpAdd();}
+    else if('cjRun'&&typeof window['cjRun']==='function'){window['cjRun']();}
+  }catch(e){console.warn(e);}
+});
+</script>
+</body></html>

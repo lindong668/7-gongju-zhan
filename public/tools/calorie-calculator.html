@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Calorie &amp; TDEE Calculator — Free &amp; Private | Yarrow Tools</title>
+<meta name="description" content="BMR with Mifflin-St Jeor, then daily calories to maintain, lose or gain weight.">
+<link rel="canonical" href="https://__DOMAIN__/tools/calorie-calculator.html">
+<meta name="robots" content="index, follow">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Yarrow Tools">
+<meta property="og:title" content="Calorie &amp; TDEE Calculator — Free &amp; Private | Yarrow Tools">
+<meta property="og:description" content="BMR with Mifflin-St Jeor, then daily calories to maintain, lose or gain weight.">
+<meta property="og:url" content="https://__DOMAIN__/tools/calorie-calculator.html">
+<meta property="og:image" content="https://__DOMAIN__/assets/img/og-cover.png">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Calorie &amp; TDEE Calculator — Free &amp; Private | Yarrow Tools">
+<meta name="twitter:description" content="BMR with Mifflin-St Jeor, then daily calories to maintain, lose or gain weight.">
+<meta name="twitter:image" content="https://__DOMAIN__/assets/img/og-cover.png">
+<meta name="theme-color" content="#6366F1" media="(prefers-color-scheme: light)">
+<meta name="theme-color" content="#0C1020" media="(prefers-color-scheme: dark)">
+<link rel="icon" href="/assets/img/favicon.svg" type="image/svg+xml">
+<link rel="apple-touch-icon" href="/assets/img/favicon-180.png">
+<link rel="manifest" href="/manifest.webmanifest">
+<script>(function(){try{var k='yarrow-theme';var s=localStorage.getItem(k);if(!s){s=(window.matchMedia&&window.matchMedia('(prefers-color-scheme: dark)').matches)?'dark':'light';}document.documentElement.setAttribute('data-theme',s);}catch(e){}})();</script>
+<link rel="stylesheet" href="/assets/css/style.css">
+<script type="application/ld+json">
+{
+ "@context": "https://schema.org",
+ "@type": "WebApplication",
+ "name": "Calorie & TDEE Calculator",
+ "url": "https://__DOMAIN__/tools/calorie-calculator.html",
+ "applicationCategory": "UtilityApplication",
+ "operatingSystem": "Any (web browser)",
+ "browserRequirements": "Requires a modern browser with JavaScript enabled",
+ "offers": {
+  "@type": "Offer",
+  "price": "0",
+  "priceCurrency": "USD"
+ },
+ "description": "BMR with Mifflin-St Jeor, then daily calories to maintain, lose or gain weight.",
+ "publisher": {
+  "@type": "Organization",
+  "name": "Yarrow Tools",
+  "url": "https://__DOMAIN__/"
+ }
+}
+</script>
+<script type="application/ld+json">
+{
+ "@context": "https://schema.org",
+ "@type": "BreadcrumbList",
+ "itemListElement": [
+  {
+   "@type": "ListItem",
+   "position": 1,
+   "name": "Home",
+   "item": "https://__DOMAIN__/"
+  },
+  {
+   "@type": "ListItem",
+   "position": 2,
+   "name": "Health & Everyday",
+   "item": "https://__DOMAIN__/category/health.html"
+  },
+  {
+   "@type": "ListItem",
+   "position": 3,
+   "name": "Calorie & TDEE Calculator",
+   "item": "https://__DOMAIN__/tools/calorie-calculator.html"
+  }
+ ]
+}
+</script>
+</head>
+<body>
+<header class="hdr"><div class="wrap hdr-in">
+<a href="/" class="logo"><span class="logo-mark">Y</span><span>Yarrow <b>Tools</b></span></a>
+<span class="hdr-sp"></span>
+<div class="hdr-search">
+<svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"><circle cx="11" cy="11" r="7"/><path d="M21 21l-4.3-4.3"/></svg>
+<input type="search" placeholder="Search tools…" aria-label="Search tools" data-filter>
+</div>
+<button class="icon-btn" id="themeBtn" onclick="yarrowToggle()" aria-label="Toggle theme">☾</button>
+</div>
+<nav class="nav"><div class="wrap" style="display:flex;gap:4px"><a href="/" class=on>Home</a><a href="/category/text.html">Text &amp; Code</a><a href="/category/finance.html">Finance</a><a href="/category/health.html">Health &amp; Everyday</a><a href="/category/convert.html">Converters</a><a href="/category/generate.html">Generators &amp; Utilities</a></div></nav></header>
+<main class="wrap tool-wrap">
+<div class="crumb"><a href="/">Home</a> › <a href="/category/health.html">Health & Everyday</a> › Calorie &amp; TDEE Calculator</div>
+<div class="tool-hd">
+<div style="display:flex;align-items:center;gap:11px;margin-bottom:9px">
+<span class="ic" style="background:var(--c-health-bg);color:var(--c-health)">cal</span>
+<h1 style="margin:0">Calorie &amp; TDEE Calculator</h1></div>
+<p>BMR with Mifflin-St Jeor, then daily calories to maintain, lose or gain weight.</p></div>
+<div class="panel"><div class="row">
+<div class="fld"><label for="clS">Sex</label><select id="clS" onchange="clRun()"><option value="m">Male</option><option value="f">Female</option></select></div>
+<div class="fld"><label for="clA">Age</label><input id="clA" type="number" value="32" oninput="clRun()"></div>
+<div class="fld"><label for="clH">Height (cm)</label><input id="clH" type="number" value="175" oninput="clRun()"></div>
+</div>
+<div class="row">
+<div class="fld"><label for="clW">Weight (kg)</label><input id="clW" type="number" value="75" oninput="clRun()"></div>
+<div class="fld"><label for="clAct">Activity</label><select id="clAct" onchange="clRun()">
+<option value="1.2">Sedentary — desk, little exercise</option>
+<option value="1.375" selected>Light — 1–3 days/week</option>
+<option value="1.55">Moderate — 3–5 days/week</option>
+<option value="1.725">Active — 6–7 days/week</option>
+<option value="1.9">Very active — physical job or twice daily</option></select></div>
+</div>
+<div class="res-grid">
+<div class="res-cell"><div class="k">BMR</div><div class="v" id="clB">—</div></div>
+<div class="res-cell"><div class="k">Maintain</div><div class="v" id="clT">—</div></div>
+<div class="res-cell"><div class="k">Lose 0.5 kg/wk</div><div class="v" id="clL">—</div></div>
+<div class="res-cell"><div class="k">Gain 0.5 kg/wk</div><div class="v" id="clG">—</div></div>
+</div>
+<p class="note">BMR uses Mifflin-St Jeor: men 10·kg + 6.25·cm − 5·age + 5; women the same minus 161. A 500 kcal daily deficit is roughly 0.5 kg per week.</p></div>
+</main>
+<footer class="ftr"><div class="wrap ftr-in">
+<div class="ftr-links">
+<a href="/pages/about.html">About</a><a href="/pages/contact.html">Contact</a>
+<a href="/pages/privacy.html">Privacy</a><a href="/pages/terms.html">Terms</a>
+<a href="/pages/disclaimer.html">Disclaimer</a><a href="/sitemap.xml">Sitemap</a>
+</div>
+<p class="ftr-c">© 2026 Yarrow Tools · Every tool runs in your browser — your data never leaves your device.</p>
+</div></footer>
+<script src="/assets/js/app.js"></script>
+<script src="/assets/js/tools-data.js"></script>
+<script>
+
+function clRun(){
+  var s=document.getElementById('clS').value;
+  var a=parseFloat(document.getElementById('clA').value)||0;
+  var h=parseFloat(document.getElementById('clH').value)||0;
+  var w=parseFloat(document.getElementById('clW').value)||0;
+  var act=parseFloat(document.getElementById('clAct').value)||1.2;
+  if(!(a>0)||!(h>0)||!(w>0))return;
+  var bmr=10*w+6.25*h-5*a+(s==='m'?5:-161);
+  var tdee=bmr*act;
+  function k(n){return Math.round(n).toLocaleString('en-US')+' kcal';}
+  document.getElementById('clB').textContent=k(bmr);
+  document.getElementById('clT').textContent=k(tdee);
+  document.getElementById('clL').textContent=k(tdee-500);
+  document.getElementById('clG').textContent=k(tdee+500);
+}
+document.addEventListener('DOMContentLoaded',function(){
+  try{
+    var g=window['grAdd'],p=window['gpAdd'];
+    if('clRun'==='grInit'){grAdd();grAdd();grAdd();}
+    else if('clRun'==='gpInit'){gpAdd();gpAdd();gpAdd();}
+    else if('clRun'&&typeof window['clRun']==='function'){window['clRun']();}
+  }catch(e){console.warn(e);}
+});
+</script>
+</body></html>

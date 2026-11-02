@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Compound Interest Calculator — Free &amp; Private | Yarrow Tools</title>
+<meta name="description" content="Project how savings or a deposit grows with any compounding frequency and regular contributions.">
+<link rel="canonical" href="https://__DOMAIN__/tools/compound-interest.html">
+<meta name="robots" content="index, follow">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Yarrow Tools">
+<meta property="og:title" content="Compound Interest Calculator — Free &amp; Private | Yarrow Tools">
+<meta property="og:description" content="Project how savings or a deposit grows with any compounding frequency and regular contributions.">
+<meta property="og:url" content="https://__DOMAIN__/tools/compound-interest.html">
+<meta property="og:image" content="https://__DOMAIN__/assets/img/og-cover.png">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Compound Interest Calculator — Free &amp; Private | Yarrow Tools">
+<meta name="twitter:description" content="Project how savings or a deposit grows with any compounding frequency and regular contributions.">
+<meta name="twitter:image" content="https://__DOMAIN__/assets/img/og-cover.png">
+<meta name="theme-color" content="#6366F1" media="(prefers-color-scheme: light)">
+<meta name="theme-color" content="#0C1020" media="(prefers-color-scheme: dark)">
+<link rel="icon" href="/assets/img/favicon.svg" type="image/svg+xml">
+<link rel="apple-touch-icon" href="/assets/img/favicon-180.png">
+<link rel="manifest" href="/manifest.webmanifest">
+<script>(function(){try{var k='yarrow-theme';var s=localStorage.getItem(k);if(!s){s=(window.matchMedia&&window.matchMedia('(prefers-color-scheme: dark)').matches)?'dark':'light';}document.documentElement.setAttribute('data-theme',s);}catch(e){}})();</script>
+<link rel="stylesheet" href="/assets/css/style.css">
+<script type="application/ld+json">
+{
+ "@context": "https://schema.org",
+ "@type": "WebApplication",
+ "name": "Compound Interest Calculator",
+ "url": "https://__DOMAIN__/tools/compound-interest.html",
+ "applicationCategory": "UtilityApplication",
+ "operatingSystem": "Any (web browser)",
+ "browserRequirements": "Requires a modern browser with JavaScript enabled",
+ "offers": {
+  "@type": "Offer",
+  "price": "0",
+  "priceCurrency": "USD"
+ },
+ "description": "Project how savings or a deposit grows with any compounding frequency and regular contributions.",
+ "publisher": {
+  "@type": "Organization",
+  "name": "Yarrow Tools",
+  "url": "https://__DOMAIN__/"
+ }
+}
+</script>
+<script type="application/ld+json">
+{
+ "@context": "https://schema.org",
+ "@type": "BreadcrumbList",
+ "itemListElement": [
+  {
+   "@type": "ListItem",
+   "position": 1,
+   "name": "Home",
+   "item": "https://__DOMAIN__/"
+  },
+  {
+   "@type": "ListItem",
+   "position": 2,
+   "name": "Finance",
+   "item": "https://__DOMAIN__/category/finance.html"
+  },
+  {
+   "@type": "ListItem",
+   "position": 3,
+   "name": "Compound Interest Calculator",
+   "item": "https://__DOMAIN__/tools/compound-interest.html"
+  }
+ ]
+}
+</script>
+</head>
+<body>
+<header class="hdr"><div class="wrap hdr-in">
+<a href="/" class="logo"><span class="logo-mark">Y</span><span>Yarrow <b>Tools</b></span></a>
+<span class="hdr-sp"></span>
+<div class="hdr-search">
+<svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"><circle cx="11" cy="11" r="7"/><path d="M21 21l-4.3-4.3"/></svg>
+<input type="search" placeholder="Search tools…" aria-label="Search tools" data-filter>
+</div>
+<button class="icon-btn" id="themeBtn" onclick="yarrowToggle()" aria-label="Toggle theme">☾</button>
+</div>
+<nav class="nav"><div class="wrap" style="display:flex;gap:4px"><a href="/" class=on>Home</a><a href="/category/text.html">Text &amp; Code</a><a href="/category/finance.html">Finance</a><a href="/category/health.html">Health &amp; Everyday</a><a href="/category/convert.html">Converters</a><a href="/category/generate.html">Generators &amp; Utilities</a></div></nav></header>
+<main class="wrap tool-wrap">
+<div class="crumb"><a href="/">Home</a> › <a href="/category/finance.html">Finance</a> › Compound Interest Calculator</div>
+<div class="tool-hd">
+<div style="display:flex;align-items:center;gap:11px;margin-bottom:9px">
+<span class="ic" style="background:var(--c-finance-bg);color:var(--c-finance)">CI</span>
+<h1 style="margin:0">Compound Interest Calculator</h1></div>
+<p>Project how savings or a deposit grows with any compounding frequency and regular contributions.</p></div>
+<div class="panel"><div class="row">
+<div class="fld"><label for="ciP">Starting amount</label><input id="ciP" type="number" value="10000" oninput="ciRun()"></div>
+<div class="fld"><label for="ciR">Annual rate (%)</label><input id="ciR" type="number" value="7" step="0.01" oninput="ciRun()"></div>
+<div class="fld"><label for="ciY">Years</label><input id="ciY" type="number" value="20" oninput="ciRun()"></div>
+</div>
+<div class="row">
+<div class="fld"><label for="ciN">Compounds per year</label><select id="ciN" onchange="ciRun()">
+<option value="1">Annually</option><option value="2">Semiannually</option><option value="4">Quarterly</option>
+<option value="12" selected>Monthly</option><option value="365">Daily</option></select></div>
+<div class="fld"><label for="ciC">Contribution / month</label><input id="ciC" type="number" value="250" oninput="ciRun()"></div>
+</div>
+<button class="btn" onclick="ciRun()">Calculate</button>
+<div class="res-grid" style="margin-top:14px">
+<div class="res-cell"><div class="k">Final balance</div><div class="v" id="ciF">—</div></div>
+<div class="res-cell"><div class="k">Total contributed</div><div class="v" id="ciC2">—</div></div>
+<div class="res-cell"><div class="k">Total interest</div><div class="v" id="ciI">—</div></div>
+</div>
+<div id="ciTbl" style="margin-top:14px"></div></div>
+</main>
+<footer class="ftr"><div class="wrap ftr-in">
+<div class="ftr-links">
+<a href="/pages/about.html">About</a><a href="/pages/contact.html">Contact</a>
+<a href="/pages/privacy.html">Privacy</a><a href="/pages/terms.html">Terms</a>
+<a href="/pages/disclaimer.html">Disclaimer</a><a href="/sitemap.xml">Sitemap</a>
+</div>
+<p class="ftr-c">© 2026 Yarrow Tools · Every tool runs in your browser — your data never leaves your device.</p>
+</div></footer>
+<script src="/assets/js/app.js"></script>
+<script src="/assets/js/tools-data.js"></script>
+<script>
+
+function ciRun(){
+  var P=parseFloat(document.getElementById('ciP').value)||0;
+  var r=parseFloat(document.getElementById('ciR').value)/100||0;
+  var y=parseFloat(document.getElementById('ciY').value)||0;
+  var n=parseInt(document.getElementById('ciN').value,10)||12;
+  var c=parseFloat(document.getElementById('ciC').value)||0;
+  if(y<=0){document.getElementById('ciF').textContent='—';return;}
+  var bal=P, contributed=P, rows=[];
+  for(var yr=1;yr<=Math.min(y,60);yr++){
+    for(var k=0;k<n;k++){
+      bal=bal*(1+r/n);
+      bal+=c*(12/n);
+      contributed+=c*(12/n);
+    }
+    if(yr%Math.ceil(y/10)===0||yr===Math.round(y))rows.push({y:yr,bal:bal});
+  }
+  var interest=bal-contributed;
+  document.getElementById('ciF').textContent=fMoney(bal);
+  document.getElementById('ciC2').textContent=fMoney(contributed);
+  document.getElementById('ciI').textContent=fMoney(interest);
+  var h='<div class="panel"><div class="panel-t">Year by year</div><table class="tbl"><thead><tr><th>Year</th><th>Balance</th></tr></thead><tbody>';
+  rows.forEach(function(x){h+='<tr><td>'+x.y+'</td><td>'+fMoney(x.bal)+'</td></tr>';});
+  h+='</tbody></table><p class="note">Monthly contributions are compounded at the same frequency as the balance.</p></div>';
+  document.getElementById('ciTbl').innerHTML=h;
+}
+function fMoney(x){return '$'+x.toLocaleString('en-US',{minimumFractionDigits:2,maximumFractionDigits:2});}
+document.addEventListener('DOMContentLoaded',function(){
+  try{
+    var g=window['grAdd'],p=window['gpAdd'];
+    if('ciRun'==='grInit'){grAdd();grAdd();grAdd();}
+    else if('ciRun'==='gpInit'){gpAdd();gpAdd();gpAdd();}
+    else if('ciRun'&&typeof window['ciRun']==='function'){window['ciRun']();}
+  }catch(e){console.warn(e);}
+});
+</script>
+</body></html>

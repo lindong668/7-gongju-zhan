@@ -1,0 +1,347 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>QR Code Generator — Free &amp; Private | Yarrow Tools</title>
+<meta name="description" content="Turn any text or link into a QR code, rendered locally and downloadable as PNG.">
+<link rel="canonical" href="https://__DOMAIN__/tools/qr-code-generator.html">
+<meta name="robots" content="index, follow">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Yarrow Tools">
+<meta property="og:title" content="QR Code Generator — Free &amp; Private | Yarrow Tools">
+<meta property="og:description" content="Turn any text or link into a QR code, rendered locally and downloadable as PNG.">
+<meta property="og:url" content="https://__DOMAIN__/tools/qr-code-generator.html">
+<meta property="og:image" content="https://__DOMAIN__/assets/img/og-cover.png">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="QR Code Generator — Free &amp; Private | Yarrow Tools">
+<meta name="twitter:description" content="Turn any text or link into a QR code, rendered locally and downloadable as PNG.">
+<meta name="twitter:image" content="https://__DOMAIN__/assets/img/og-cover.png">
+<meta name="theme-color" content="#6366F1" media="(prefers-color-scheme: light)">
+<meta name="theme-color" content="#0C1020" media="(prefers-color-scheme: dark)">
+<link rel="icon" href="/assets/img/favicon.svg" type="image/svg+xml">
+<link rel="apple-touch-icon" href="/assets/img/favicon-180.png">
+<link rel="manifest" href="/manifest.webmanifest">
+<script>(function(){try{var k='yarrow-theme';var s=localStorage.getItem(k);if(!s){s=(window.matchMedia&&window.matchMedia('(prefers-color-scheme: dark)').matches)?'dark':'light';}document.documentElement.setAttribute('data-theme',s);}catch(e){}})();</script>
+<link rel="stylesheet" href="/assets/css/style.css">
+<script type="application/ld+json">
+{
+ "@context": "https://schema.org",
+ "@type": "WebApplication",
+ "name": "QR Code Generator",
+ "url": "https://__DOMAIN__/tools/qr-code-generator.html",
+ "applicationCategory": "UtilityApplication",
+ "operatingSystem": "Any (web browser)",
+ "browserRequirements": "Requires a modern browser with JavaScript enabled",
+ "offers": {
+  "@type": "Offer",
+  "price": "0",
+  "priceCurrency": "USD"
+ },
+ "description": "Turn any text or link into a QR code, rendered locally and downloadable as PNG.",
+ "publisher": {
+  "@type": "Organization",
+  "name": "Yarrow Tools",
+  "url": "https://__DOMAIN__/"
+ }
+}
+</script>
+<script type="application/ld+json">
+{
+ "@context": "https://schema.org",
+ "@type": "BreadcrumbList",
+ "itemListElement": [
+  {
+   "@type": "ListItem",
+   "position": 1,
+   "name": "Home",
+   "item": "https://__DOMAIN__/"
+  },
+  {
+   "@type": "ListItem",
+   "position": 2,
+   "name": "Generators & Utilities",
+   "item": "https://__DOMAIN__/category/generate.html"
+  },
+  {
+   "@type": "ListItem",
+   "position": 3,
+   "name": "QR Code Generator",
+   "item": "https://__DOMAIN__/tools/qr-code-generator.html"
+  }
+ ]
+}
+</script>
+</head>
+<body>
+<header class="hdr"><div class="wrap hdr-in">
+<a href="/" class="logo"><span class="logo-mark">Y</span><span>Yarrow <b>Tools</b></span></a>
+<span class="hdr-sp"></span>
+<div class="hdr-search">
+<svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"><circle cx="11" cy="11" r="7"/><path d="M21 21l-4.3-4.3"/></svg>
+<input type="search" placeholder="Search tools…" aria-label="Search tools" data-filter>
+</div>
+<button class="icon-btn" id="themeBtn" onclick="yarrowToggle()" aria-label="Toggle theme">☾</button>
+</div>
+<nav class="nav"><div class="wrap" style="display:flex;gap:4px"><a href="/" class=on>Home</a><a href="/category/text.html">Text &amp; Code</a><a href="/category/finance.html">Finance</a><a href="/category/health.html">Health &amp; Everyday</a><a href="/category/convert.html">Converters</a><a href="/category/generate.html">Generators &amp; Utilities</a></div></nav></header>
+<main class="wrap tool-wrap">
+<div class="crumb"><a href="/">Home</a> › <a href="/category/generate.html">Generators & Utilities</a> › QR Code Generator</div>
+<div class="tool-hd">
+<div style="display:flex;align-items:center;gap:11px;margin-bottom:9px">
+<span class="ic" style="background:var(--c-generate-bg);color:var(--c-generate)">QR</span>
+<h1 style="margin:0">QR Code Generator</h1></div>
+<p>Turn any text or link into a QR code, rendered locally and downloadable as PNG.</p></div>
+<div class="panel"><div class="fld"><label for="qrT">Text or URL</label><textarea id="qrT" style="min-height:80px" oninput="qrGo()">https://example.com</textarea></div>
+<div class="row">
+<div class="fld"><label for="qrS">Size</label><select id="qrS" onchange="qrGo()"><option value="4">Small</option><option value="6" selected>Medium</option><option value="9">Large</option></select></div>
+<div class="fld"><label for="qrE">Error correction</label><select id="qrE" onchange="qrGo()"><option value="M" selected>M (15%)</option><option value="L">L (7%)</option></select></div>
+</div>
+<div id="qrMsg"></div>
+<div id="qrBox" style="margin-top:14px;display:flex;flex-direction:column;align-items:center;gap:12px"></div></div>
+</main>
+<footer class="ftr"><div class="wrap ftr-in">
+<div class="ftr-links">
+<a href="/pages/about.html">About</a><a href="/pages/contact.html">Contact</a>
+<a href="/pages/privacy.html">Privacy</a><a href="/pages/terms.html">Terms</a>
+<a href="/pages/disclaimer.html">Disclaimer</a><a href="/sitemap.xml">Sitemap</a>
+</div>
+<p class="ftr-c">© 2026 Yarrow Tools · Every tool runs in your browser — your data never leaves your device.</p>
+</div></footer>
+<script src="/assets/js/app.js"></script>
+<script src="/assets/js/tools-data.js"></script>
+<script>
+
+/* ---- 精简 QR 编码器：byte mode, EC level M, 版本 1–10 ---- */
+var QR_EC={L:1,M:0,Q:3,H:2};
+var QR_CAP=[[0,0,0,0],[26,20,16,10],[44,34,28,16],[70,55,44,26],[100,80,64,36],[134,108,86,48],
+ [172,136,108,64],[196,156,124,72],[242,194,154,88],[292,232,182,110],[346,274,216,130]];
+var QR_BLOCKS={
+ 1:{M:{n:1,k:16,d:10}},2:{M:{n:1,k:28,d:16}},3:{M:{n:1,k:44,d:26}},4:{M:{n:2,k:32,d:18}},
+ 5:{M:{n:2,k:43,d:24}},6:{M:{n:4,k:27,d:16}},7:{M:{n:4,k:31,d:18}},8:{M:{n:2,k:38,d:22}},
+ 9:{M:{n:3,k:36,d:22}},10:{M:{n:4,k:43,d:26}}
+};
+var QR_EXP=new Uint8Array(512),QR_LOG=new Uint8Array(256);
+(function(){var x=1;for(var i=0;i<255;i++){QR_EXP[i]=x;QR_LOG[x]=i;x<<=1;if(x&0x100)x^=0x11d;}for(var j=255;j<512;j++)QR_EXP[j]=QR_EXP[j-255];})();
+function qrMul(a,b){if(a===0||b===0)return 0;return QR_EXP[QR_LOG[a]+QR_LOG[b]];}
+function qrGenPoly(d){
+  var p=new Uint8Array(d+1);p[0]=1;
+  var cur=new Uint8Array([1,1]);
+  for(var i=0;i<d-1;i++){
+    var nxt=new Uint8Array(cur.length+1);
+    for(var j=0;j<cur.length;j++){
+      nxt[j]^=cur[j];
+      nxt[j+1]^=qrMul(cur[j],QR_EXP[i]);
+    }
+    cur=nxt;
+  }
+  return cur;
+}
+function qrRS(data,d){
+  var gen=qrGenPoly(d);
+  var res=new Uint8Array(data.length+d);
+  res.set(data);
+  for(var i=0;i<data.length;i++){
+    var f=res[i];
+    if(f){
+      for(var j=0;j<gen.length;j++)res[i+j]^=qrMul(gen[j],f);
+    }
+  }
+  return res.slice(data.length);
+}
+function qrBits(val,len){
+  var s='';
+  for(var i=len-1;i>=0;i--)s+=((val>>i)&1)?'1':'0';
+  return s;
+}
+function qrEncode(str,ecLevel){
+  var bytes=new TextEncoder().encode(str);
+  var ver=0;
+  for(var v=1;v<=10;v++){
+    if(bytes.length<=QR_CAP[v][ecLevel==='L'?1:(ecLevel==='M'?2:(ecLevel==='Q'?3:4))]){ver=v;break;}
+  }
+  if(!ver)throw new Error('Text too long for this generator (max ~213 bytes at level M, version 10).');
+  var blk=QR_BLOCKS[ver][ecLevel];
+  var dataCap=QR_CAP[ver][ecLevel==='L'?1:(ecLevel==='M'?2:(ecLevel==='Q'?3:4))];
+  var bits='0100'; /* byte mode */
+  bits+=qrBits(bytes.length,ver<10?8:16);
+  for(var i=0;i<bytes.length;i++)bits+=qrBits(bytes[i],8);
+  var capBits=dataCap*8;
+  for(var t=0;t<4&&bits.length<capBits;t++)bits+='0';
+  while(bits.length%8)bits+='0';
+  var pad=[0xEC,0x11];
+  var pi=0;
+  while(bits.length<capBits){bits+=qrBits(pad[pi%2],8);pi++;}
+  var data=[];
+  for(var k=0;k<bits.length;k+=8)data.push(parseInt(bits.substr(k,8),2));
+  /* 分块 */
+  var total=blk.n*blk.k;
+  var blocks=[],ecBlocks=[],off=0;
+  var shortLen=Math.floor(total/blk.n);
+  var numLong=total%blk.n;
+  for(var b=0;b<blk.n;b++){
+    var len2=shortLen+(b>=blk.n-numLong?1:0);
+    var part=data.slice(off,off+len2);off+=len2;
+    blocks.push(part);
+    ecBlocks.push(qrRS(part,blk.d));
+  }
+  var final=[];
+  for(var c=0;c<shortLen+ (numLong?1:0);c++){
+    for(var b2=0;b2<blk.n;b2++){if(c<blocks[b2].length)final.push(blocks[b2][c]);}
+  }
+  for(var c2=0;c2<blk.d;c2++){
+    for(var b3=0;b3<blk.n;b3++)final.push(ecBlocks[b3][c2]);
+  }
+  return {ver:ver,data:final};
+}
+function qrMatrix(ver,data){
+  var size=ver*4+17;
+  var m=[];
+  for(var i=0;i<size;i++)m.push(new Array(size).fill(null));
+  function setR(r,c0,c1,v){for(var c=c0;c<=c1;c++)m[r][c]=v;}
+  function setC(c,r0,r1,v){for(var r=r0;r<=r1;r++)m[r][c]=v;}
+  function finder(r,c){
+    for(var dr=-1;dr<=7;dr++)for(var dc=-1;dc<=7;dc++){
+      var rr=r+dr,cc=c+dc;
+      if(rr<0||rr>=size||cc<0||cc>=size)continue;
+      var inDark=(dr>=0&&dr<=6&&(dc===0||dc===6))||(dc>=0&&dc<=6&&(dr===0||dr===6))||(dr>=2&&dr<=4&&dc>=2&&dc<=4);
+      m[rr][cc]=inDark?1:0;
+    }
+  }
+  finder(0,0);finder(0,size-7);finder(size-7,0);
+  /* timing */
+  for(var i=8;i<size-8;i++){m[6][i]=i%2?0:1;m[i][6]=i%2?0:1;}
+  /* alignment */
+  var ap=[];
+  if(ver>=2){
+    var positions=[0,6];
+    var cnt=Math.floor(ver/7)+2;
+    var step=(ver===32)?26:Math.ceil((ver*4+10)/(cnt-1)/2)*2;
+    var first=6,last=ver*4+10;
+    for(var a=cnt-1;a>=0;a--){
+      var p=first+(last-first)*a/(cnt-1);
+      p=Math.round(p/2)*2;
+      if(positions.indexOf(p)<0)positions.push(p);
+    }
+    for(var x=0;x<positions.length;x++)for(var y=0;y<positions.length;y++){
+      var pr=positions[x],pc=positions[y];
+      if((pr<=8&&pc<=8)||(pr<=8&&pc>=size-9)||(pr>=size-9&&pc<=8))continue;
+      for(var dr2=-2;dr2<=2;dr2++)for(var dc2=-2;dc2<=2;dc2++){
+        var dark=Math.max(Math.abs(dr2),Math.abs(dc2))!==1;
+        m[pr+dr2][pc+dc2]=dark?1:0;
+      }
+    }
+  }
+  /* dark module + format info 区域预留 */
+  m[size-8][8]=1;
+  /* 数据放置 */
+  var bitIdx=0,total=data.length*8;
+  var up=true;
+  for(var col=size-1;col>0;col-=2){
+    if(col===6)col--;
+    for(var i2=0;i2<size;i2++){
+      var row=up?size-1-i2:i2;
+      for(var s2=0;s2<2;s2++){
+        var cc2=col-s2;
+        if(m[row][cc2]!==null)continue;
+        var bit=0;
+        if(bitIdx<total){
+          bit=(data[bitIdx>>3]>>(7-(bitIdx&7)))&1;
+          bitIdx++;
+        }
+        m[row][cc2]=bit;
+      }
+    }
+    up=!up;
+  }
+  /* 掩码 0：(row+col)%2==0 */
+  var mask=0;
+  for(var r2=0;r2<size;r2++)for(var c3=0;c3<size;c3++){
+    if(m[r2][c3]===null)continue;
+    if(qrIsFunc(ver,size,r2,c3))continue;
+    if((r2+c3)%2===0)m[r2][c3]^=1;
+  }
+  /* format info: EC level M(00) + mask 0 */
+  var fmt=qrFormatBits(0);
+  for(var f2=0;f2<15;f2++){
+    var bit2=(fmt>>f2)&1;
+    if(f2<6)m[f2][8]=bit2;
+    else if(f2<8)m[f2+1][8]=bit2;
+    else m[8][size-15+f2]=bit2;
+    if(f2<8)m[8][size-1-f2]=bit2;
+    else m[size-15+f2][8]=bit2;
+  }
+  return m;
+}
+function qrIsFunc(ver,size,r,c){
+  if(r<9&&c<9)return true;
+  if(r<9&&c>=size-8)return true;
+  if(r>=size-8&&c<9)return true;
+  if(r===6||c===6)return true;
+  if(ver>=2){
+    var cnt=Math.floor(ver/7)+2;
+    var first=6,last=ver*4+10;
+    var positions=[];
+    for(var a=cnt-1;a>=0;a--){
+      var p=Math.round((first+(last-first)*a/(cnt-1))/2)*2;
+      if(positions.indexOf(p)<0)positions.push(p);
+    }
+    for(var x=0;x<positions.length;x++)for(var y=0;y<positions.length;y++){
+      if(Math.abs(r-positions[x])<=2&&Math.abs(c-positions[y])<=2)return true;
+    }
+  }
+  return r>=size-8&&c>=size-8;
+}
+function qrFormatBits(mask){
+  var data=(0<<3)|mask; /* EC M = 00 */
+  var rem=data;
+  for(var i=0;i<10;i++)rem=(rem<<1)^(((rem>>9)&1)*0x537);
+  var bits=((data<<10)|rem)^0x5412;
+  return bits;
+}
+function qrRender(m,scale){
+  var size=m.length;
+  var q=scale||6;
+  var px=size*q+16;
+  var c=document.createElement('canvas');
+  c.width=px;c.height=px;
+  var ctx=c.getContext('2d');
+  ctx.fillStyle='#fff';ctx.fillRect(0,0,px,px);
+  ctx.fillStyle='#000';
+  for(var r=0;r<size;r++)for(var cc=0;cc<size;cc++){
+    if(m[r][cc]===1)ctx.fillRect(8+cc*q,8+r*q,q,q);
+  }
+  return c;
+}
+function qrGo(){
+  var txt=document.getElementById('qrT').value;
+  var box=document.getElementById('qrBox'),msg=document.getElementById('qrMsg');
+  box.innerHTML='';msg.innerHTML='';
+  if(!txt){return;}
+  try{
+    var ec=document.getElementById('qrE').value;
+    var e=qrEncode(txt,ec);
+    var m=qrMatrix(e.ver,e.data);
+    var scale=parseInt(document.getElementById('qrS').value,10);
+    var c=qrRender(m,scale);
+    box.appendChild(c);
+    var a=document.createElement('button');
+    a.className='btn-o';a.textContent='Download PNG';
+    a.onclick=function(){
+      var url=c.toDataURL('image/png');
+      var l=document.createElement('a');
+      l.href=url;l.download='qrcode.png';l.click();
+    };
+    box.appendChild(a);
+    msg.innerHTML='<div class="ok-t">QR version '+e.ver+' · '+m.length+'×'+m.length+' modules · '+txt.length+' characters</div>';
+  }catch(err){msg.innerHTML='<div class="err-t">'+err.message+'</div>';}
+}
+document.addEventListener('DOMContentLoaded',function(){
+  try{
+    var g=window['grAdd'],p=window['gpAdd'];
+    if('qrGo'==='grInit'){grAdd();grAdd();grAdd();}
+    else if('qrGo'==='gpInit'){gpAdd();gpAdd();gpAdd();}
+    else if('qrGo'&&typeof window['qrGo']==='function'){window['qrGo']();}
+  }catch(e){console.warn(e);}
+});
+</script>
+</body></html>

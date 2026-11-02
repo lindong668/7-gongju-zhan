@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Unix Timestamp Converter — Free &amp; Private | Yarrow Tools</title>
+<meta name="description" content="Convert Unix timestamps to readable dates and back, in seconds or milliseconds, UTC or local.">
+<link rel="canonical" href="https://__DOMAIN__/tools/timestamp-converter.html">
+<meta name="robots" content="index, follow">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Yarrow Tools">
+<meta property="og:title" content="Unix Timestamp Converter — Free &amp; Private | Yarrow Tools">
+<meta property="og:description" content="Convert Unix timestamps to readable dates and back, in seconds or milliseconds, UTC or local.">
+<meta property="og:url" content="https://__DOMAIN__/tools/timestamp-converter.html">
+<meta property="og:image" content="https://__DOMAIN__/assets/img/og-cover.png">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Unix Timestamp Converter — Free &amp; Private | Yarrow Tools">
+<meta name="twitter:description" content="Convert Unix timestamps to readable dates and back, in seconds or milliseconds, UTC or local.">
+<meta name="twitter:image" content="https://__DOMAIN__/assets/img/og-cover.png">
+<meta name="theme-color" content="#6366F1" media="(prefers-color-scheme: light)">
+<meta name="theme-color" content="#0C1020" media="(prefers-color-scheme: dark)">
+<link rel="icon" href="/assets/img/favicon.svg" type="image/svg+xml">
+<link rel="apple-touch-icon" href="/assets/img/favicon-180.png">
+<link rel="manifest" href="/manifest.webmanifest">
+<script>(function(){try{var k='yarrow-theme';var s=localStorage.getItem(k);if(!s){s=(window.matchMedia&&window.matchMedia('(prefers-color-scheme: dark)').matches)?'dark':'light';}document.documentElement.setAttribute('data-theme',s);}catch(e){}})();</script>
+<link rel="stylesheet" href="/assets/css/style.css">
+<script type="application/ld+json">
+{
+ "@context": "https://schema.org",
+ "@type": "WebApplication",
+ "name": "Unix Timestamp Converter",
+ "url": "https://__DOMAIN__/tools/timestamp-converter.html",
+ "applicationCategory": "UtilityApplication",
+ "operatingSystem": "Any (web browser)",
+ "browserRequirements": "Requires a modern browser with JavaScript enabled",
+ "offers": {
+  "@type": "Offer",
+  "price": "0",
+  "priceCurrency": "USD"
+ },
+ "description": "Convert Unix timestamps to readable dates and back, in seconds or milliseconds, UTC or local.",
+ "publisher": {
+  "@type": "Organization",
+  "name": "Yarrow Tools",
+  "url": "https://__DOMAIN__/"
+ }
+}
+</script>
+<script type="application/ld+json">
+{
+ "@context": "https://schema.org",
+ "@type": "BreadcrumbList",
+ "itemListElement": [
+  {
+   "@type": "ListItem",
+   "position": 1,
+   "name": "Home",
+   "item": "https://__DOMAIN__/"
+  },
+  {
+   "@type": "ListItem",
+   "position": 2,
+   "name": "Converters",
+   "item": "https://__DOMAIN__/category/convert.html"
+  },
+  {
+   "@type": "ListItem",
+   "position": 3,
+   "name": "Unix Timestamp Converter",
+   "item": "https://__DOMAIN__/tools/timestamp-converter.html"
+  }
+ ]
+}
+</script>
+</head>
+<body>
+<header class="hdr"><div class="wrap hdr-in">
+<a href="/" class="logo"><span class="logo-mark">Y</span><span>Yarrow <b>Tools</b></span></a>
+<span class="hdr-sp"></span>
+<div class="hdr-search">
+<svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"><circle cx="11" cy="11" r="7"/><path d="M21 21l-4.3-4.3"/></svg>
+<input type="search" placeholder="Search tools…" aria-label="Search tools" data-filter>
+</div>
+<button class="icon-btn" id="themeBtn" onclick="yarrowToggle()" aria-label="Toggle theme">☾</button>
+</div>
+<nav class="nav"><div class="wrap" style="display:flex;gap:4px"><a href="/" class=on>Home</a><a href="/category/text.html">Text &amp; Code</a><a href="/category/finance.html">Finance</a><a href="/category/health.html">Health &amp; Everyday</a><a href="/category/convert.html">Converters</a><a href="/category/generate.html">Generators &amp; Utilities</a></div></nav></header>
+<main class="wrap tool-wrap">
+<div class="crumb"><a href="/">Home</a> › <a href="/category/convert.html">Converters</a> › Unix Timestamp Converter</div>
+<div class="tool-hd">
+<div style="display:flex;align-items:center;gap:11px;margin-bottom:9px">
+<span class="ic" style="background:var(--c-convert-bg);color:var(--c-convert)">t→</span>
+<h1 style="margin:0">Unix Timestamp Converter</h1></div>
+<p>Convert Unix timestamps to readable dates and back, in seconds or milliseconds, UTC or local.</p></div>
+<div class="panel"><div class="row">
+<div class="fld"><label for="tsV">Unix timestamp</label><input id="tsV" value="1767225600" oninput="tsRun()"></div>
+<div class="fld"><label for="tsU">Unit</label><select id="tsU" onchange="tsRun()"><option value="s">Seconds</option><option value="ms">Milliseconds</option></select></div>
+</div>
+<button class="btn-o" onclick="tsNow()" style="margin-bottom:12px">Use current time</button>
+<div class="res-grid">
+<div class="res-cell"><div class="k">UTC</div><div class="v" id="tsUtc" style="font-size:14px">—</div></div>
+<div class="res-cell"><div class="k">Local</div><div class="v" id="tsLoc" style="font-size:14px">—</div></div>
+<div class="res-cell"><div class="k">ISO 8601</div><div class="v" id="tsIso" style="font-family:var(--mono);font-size:13px">—</div></div>
+<div class="res-cell"><div class="k">Relative</div><div class="v" id="tsRel" style="font-size:14px">—</div></div>
+</div>
+<hr style="margin:20px 0;border:none;border-top:1px solid var(--border)">
+<div class="fld"><label for="tsD">Or convert a date → timestamp</label><input id="tsD" type="datetime-local" oninput="tsBack()"></div>
+<div class="out"><div class="out-val" id="tsBack" style="font-family:var(--mono)">—</div></div></div>
+</main>
+<footer class="ftr"><div class="wrap ftr-in">
+<div class="ftr-links">
+<a href="/pages/about.html">About</a><a href="/pages/contact.html">Contact</a>
+<a href="/pages/privacy.html">Privacy</a><a href="/pages/terms.html">Terms</a>
+<a href="/pages/disclaimer.html">Disclaimer</a><a href="/sitemap.xml">Sitemap</a>
+</div>
+<p class="ftr-c">© 2026 Yarrow Tools · Every tool runs in your browser — your data never leaves your device.</p>
+</div></footer>
+<script src="/assets/js/app.js"></script>
+<script src="/assets/js/tools-data.js"></script>
+<script>
+
+(function(){var d=new Date();document.getElementById('tsV').value=Math.floor(d.getTime()/1000);
+ var p=document.getElementById('tsD');if(p){var t=new Date(d.getTime()-d.getTimezoneOffset()*60000);p.value=t.toISOString().slice(0,16);}tsRun();tsBack();})();
+function tsNow(){
+  var d=new Date();
+  document.getElementById('tsV').value=document.getElementById('tsU').value==='ms'?d.getTime():Math.floor(d.getTime()/1000);
+  tsRun();
+}
+function tsRun(){
+  var v=parseFloat(document.getElementById('tsV').value);
+  if(isNaN(v)){return;}
+  var ms=document.getElementById('tsU').value==='ms'?v:v*1000;
+  var d=new Date(ms);
+  if(isNaN(d.getTime())){document.getElementById('tsUtc').textContent='Invalid';return;}
+  document.getElementById('tsUtc').textContent=d.toUTCString();
+  document.getElementById('tsLoc').textContent=d.toString();
+  document.getElementById('tsIso').textContent=d.toISOString();
+  var diff=(d-new Date())/1000;
+  var a=Math.abs(diff);
+  var s;
+  if(a<60)s=Math.round(diff)+' s';
+  else if(a<3600)s=Math.round(diff/60)+' min';
+  else if(a<86400)s=Math.round(diff/3600)+' h';
+  else if(a<2592000)s=Math.round(diff/86400)+' days';
+  else s=Math.round(diff/2592000)+' months';
+  document.getElementById('tsRel').textContent=(diff>=0?'in ':'')+s+(diff<0?' ago':'');
+}
+function tsBack(){
+  var v=document.getElementById('tsD').value;
+  if(!v){document.getElementById('tsBack').textContent='—';return;}
+  var d=new Date(v);
+  document.getElementById('tsBack').textContent=Math.floor(d.getTime()/1000)+' s · '+d.getTime()+' ms';
+}
+document.addEventListener('DOMContentLoaded',function(){
+  try{
+    var g=window['grAdd'],p=window['gpAdd'];
+    if('tsRun'==='grInit'){grAdd();grAdd();grAdd();}
+    else if('tsRun'==='gpInit'){gpAdd();gpAdd();gpAdd();}
+    else if('tsRun'&&typeof window['tsRun']==='function'){window['tsRun']();}
+  }catch(e){console.warn(e);}
+});
+</script>
+</body></html>

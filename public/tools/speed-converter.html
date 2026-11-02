@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Speed Converter — Free &amp; Private | Yarrow Tools</title>
+<meta name="description" content="Convert km/h, mph, m/s, knots and feet per second.">
+<link rel="canonical" href="https://__DOMAIN__/tools/speed-converter.html">
+<meta name="robots" content="index, follow">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Yarrow Tools">
+<meta property="og:title" content="Speed Converter — Free &amp; Private | Yarrow Tools">
+<meta property="og:description" content="Convert km/h, mph, m/s, knots and feet per second.">
+<meta property="og:url" content="https://__DOMAIN__/tools/speed-converter.html">
+<meta property="og:image" content="https://__DOMAIN__/assets/img/og-cover.png">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Speed Converter — Free &amp; Private | Yarrow Tools">
+<meta name="twitter:description" content="Convert km/h, mph, m/s, knots and feet per second.">
+<meta name="twitter:image" content="https://__DOMAIN__/assets/img/og-cover.png">
+<meta name="theme-color" content="#6366F1" media="(prefers-color-scheme: light)">
+<meta name="theme-color" content="#0C1020" media="(prefers-color-scheme: dark)">
+<link rel="icon" href="/assets/img/favicon.svg" type="image/svg+xml">
+<link rel="apple-touch-icon" href="/assets/img/favicon-180.png">
+<link rel="manifest" href="/manifest.webmanifest">
+<script>(function(){try{var k='yarrow-theme';var s=localStorage.getItem(k);if(!s){s=(window.matchMedia&&window.matchMedia('(prefers-color-scheme: dark)').matches)?'dark':'light';}document.documentElement.setAttribute('data-theme',s);}catch(e){}})();</script>
+<link rel="stylesheet" href="/assets/css/style.css">
+<script type="application/ld+json">
+{
+ "@context": "https://schema.org",
+ "@type": "WebApplication",
+ "name": "Speed Converter",
+ "url": "https://__DOMAIN__/tools/speed-converter.html",
+ "applicationCategory": "UtilityApplication",
+ "operatingSystem": "Any (web browser)",
+ "browserRequirements": "Requires a modern browser with JavaScript enabled",
+ "offers": {
+  "@type": "Offer",
+  "price": "0",
+  "priceCurrency": "USD"
+ },
+ "description": "Convert km/h, mph, m/s, knots and feet per second.",
+ "publisher": {
+  "@type": "Organization",
+  "name": "Yarrow Tools",
+  "url": "https://__DOMAIN__/"
+ }
+}
+</script>
+<script type="application/ld+json">
+{
+ "@context": "https://schema.org",
+ "@type": "BreadcrumbList",
+ "itemListElement": [
+  {
+   "@type": "ListItem",
+   "position": 1,
+   "name": "Home",
+   "item": "https://__DOMAIN__/"
+  },
+  {
+   "@type": "ListItem",
+   "position": 2,
+   "name": "Converters",
+   "item": "https://__DOMAIN__/category/convert.html"
+  },
+  {
+   "@type": "ListItem",
+   "position": 3,
+   "name": "Speed Converter",
+   "item": "https://__DOMAIN__/tools/speed-converter.html"
+  }
+ ]
+}
+</script>
+</head>
+<body>
+<header class="hdr"><div class="wrap hdr-in">
+<a href="/" class="logo"><span class="logo-mark">Y</span><span>Yarrow <b>Tools</b></span></a>
+<span class="hdr-sp"></span>
+<div class="hdr-search">
+<svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"><circle cx="11" cy="11" r="7"/><path d="M21 21l-4.3-4.3"/></svg>
+<input type="search" placeholder="Search tools…" aria-label="Search tools" data-filter>
+</div>
+<button class="icon-btn" id="themeBtn" onclick="yarrowToggle()" aria-label="Toggle theme">☾</button>
+</div>
+<nav class="nav"><div class="wrap" style="display:flex;gap:4px"><a href="/" class=on>Home</a><a href="/category/text.html">Text &amp; Code</a><a href="/category/finance.html">Finance</a><a href="/category/health.html">Health &amp; Everyday</a><a href="/category/convert.html">Converters</a><a href="/category/generate.html">Generators &amp; Utilities</a></div></nav></header>
+<main class="wrap tool-wrap">
+<div class="crumb"><a href="/">Home</a> › <a href="/category/convert.html">Converters</a> › Speed Converter</div>
+<div class="tool-hd">
+<div style="display:flex;align-items:center;gap:11px;margin-bottom:9px">
+<span class="ic" style="background:var(--c-convert-bg);color:var(--c-convert)">km/h</span>
+<h1 style="margin:0">Speed Converter</h1></div>
+<p>Convert km/h, mph, m/s, knots and feet per second.</p></div>
+<div class="panel"><div class="row">
+<div class="fld"><label for="spV">Value</label><input id="spV" type="number" value="100" oninput="spRun()"></div>
+<div class="fld"><label for="spF">From</label><select id="spF" onchange="spRun()"></select></div>
+</div>
+<div class="panel" style="margin-top:12px"><div class="panel-t">All units</div><div id="spAll"></div></div></div>
+</main>
+<footer class="ftr"><div class="wrap ftr-in">
+<div class="ftr-links">
+<a href="/pages/about.html">About</a><a href="/pages/contact.html">Contact</a>
+<a href="/pages/privacy.html">Privacy</a><a href="/pages/terms.html">Terms</a>
+<a href="/pages/disclaimer.html">Disclaimer</a><a href="/sitemap.xml">Sitemap</a>
+</div>
+<p class="ftr-c">© 2026 Yarrow Tools · Every tool runs in your browser — your data never leaves your device.</p>
+</div></footer>
+<script src="/assets/js/app.js"></script>
+<script src="/assets/js/tools-data.js"></script>
+<script>
+
+var SP={mps:1,'km/h':1/3.6,mph:0.44704,kn:0.5144444444,'ft/s':0.3048,'min/km':'p','min/mi':'p'};
+(function(){
+  var f=document.getElementById('spF');
+  f.innerHTML=Object.keys(SP).map(function(x){return '<option value="'+x+'"'+(x==='km/h'?' selected':'')+'>'+x+'</option>';}).join('');
+  spRun();
+})();
+function spRun(){
+  var v=parseFloat(document.getElementById('spV').value);
+  var f=document.getElementById('spF').value;
+  if(isNaN(v)||!(v>0)){document.getElementById('spAll').innerHTML='<p class="note">Enter a positive number.</p>';return;}
+  var mps=v*(SP[f]===1?1:(f==='km/h'?1/3.6:(f==='mph'?0.44704:(f==='kn'?0.5144444444:0.3048))));
+  var h='';
+  Object.keys(SP).forEach(function(k){
+    var x;
+    if(k==='min/km'){x=(mps>0)?Math.floor(1000/mps/60)+':'+('0'+Math.round(1000/mps%60)).slice(-2)+' /km':'—';}
+    else if(k==='min/mi'){x=(mps>0)?Math.floor(1609.344/mps/60)+':'+('0'+Math.round(1609.344/mps%60)).slice(-2)+' /mi':'—';}
+    else{
+      var f2=(k==='mps'?1:(k==='km/h'?1/3.6:(k==='mph'?0.44704:(k==='kn'?0.5144444444:0.3048))));
+      x=mps/f2;
+      x=(Math.abs(x)<1e-4||Math.abs(x)>=1e6)?x.toExponential(4):parseFloat(x.toPrecision(8)).toString();
+    }
+    h+='<div style="display:flex;justify-content:space-between;padding:7px 0;border-bottom:1px solid var(--border-soft);font-size:13.5px"><span style="color:var(--muted)">'+k+'</span><b>'+x+'</b></div>';
+  });
+  document.getElementById('spAll').innerHTML=h;
+}
+document.addEventListener('DOMContentLoaded',function(){
+  try{
+    var g=window['grAdd'],p=window['gpAdd'];
+    if('spRun'==='grInit'){grAdd();grAdd();grAdd();}
+    else if('spRun'==='gpInit'){gpAdd();gpAdd();gpAdd();}
+    else if('spRun'&&typeof window['spRun']==='function'){window['spRun']();}
+  }catch(e){console.warn(e);}
+});
+</script>
+</body></html>

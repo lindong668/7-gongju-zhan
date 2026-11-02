@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Mortgage Calculator — Free &amp; Private | Yarrow Tools</title>
+<meta name="description" content="Full monthly cost: principal and interest plus property tax, home insurance, HOA and PMI.">
+<link rel="canonical" href="https://__DOMAIN__/tools/mortgage-calculator.html">
+<meta name="robots" content="index, follow">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Yarrow Tools">
+<meta property="og:title" content="Mortgage Calculator — Free &amp; Private | Yarrow Tools">
+<meta property="og:description" content="Full monthly cost: principal and interest plus property tax, home insurance, HOA and PMI.">
+<meta property="og:url" content="https://__DOMAIN__/tools/mortgage-calculator.html">
+<meta property="og:image" content="https://__DOMAIN__/assets/img/og-cover.png">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Mortgage Calculator — Free &amp; Private | Yarrow Tools">
+<meta name="twitter:description" content="Full monthly cost: principal and interest plus property tax, home insurance, HOA and PMI.">
+<meta name="twitter:image" content="https://__DOMAIN__/assets/img/og-cover.png">
+<meta name="theme-color" content="#6366F1" media="(prefers-color-scheme: light)">
+<meta name="theme-color" content="#0C1020" media="(prefers-color-scheme: dark)">
+<link rel="icon" href="/assets/img/favicon.svg" type="image/svg+xml">
+<link rel="apple-touch-icon" href="/assets/img/favicon-180.png">
+<link rel="manifest" href="/manifest.webmanifest">
+<script>(function(){try{var k='yarrow-theme';var s=localStorage.getItem(k);if(!s){s=(window.matchMedia&&window.matchMedia('(prefers-color-scheme: dark)').matches)?'dark':'light';}document.documentElement.setAttribute('data-theme',s);}catch(e){}})();</script>
+<link rel="stylesheet" href="/assets/css/style.css">
+<script type="application/ld+json">
+{
+ "@context": "https://schema.org",
+ "@type": "WebApplication",
+ "name": "Mortgage Calculator",
+ "url": "https://__DOMAIN__/tools/mortgage-calculator.html",
+ "applicationCategory": "UtilityApplication",
+ "operatingSystem": "Any (web browser)",
+ "browserRequirements": "Requires a modern browser with JavaScript enabled",
+ "offers": {
+  "@type": "Offer",
+  "price": "0",
+  "priceCurrency": "USD"
+ },
+ "description": "Full monthly cost: principal and interest plus property tax, home insurance, HOA and PMI.",
+ "publisher": {
+  "@type": "Organization",
+  "name": "Yarrow Tools",
+  "url": "https://__DOMAIN__/"
+ }
+}
+</script>
+<script type="application/ld+json">
+{
+ "@context": "https://schema.org",
+ "@type": "BreadcrumbList",
+ "itemListElement": [
+  {
+   "@type": "ListItem",
+   "position": 1,
+   "name": "Home",
+   "item": "https://__DOMAIN__/"
+  },
+  {
+   "@type": "ListItem",
+   "position": 2,
+   "name": "Finance",
+   "item": "https://__DOMAIN__/category/finance.html"
+  },
+  {
+   "@type": "ListItem",
+   "position": 3,
+   "name": "Mortgage Calculator",
+   "item": "https://__DOMAIN__/tools/mortgage-calculator.html"
+  }
+ ]
+}
+</script>
+</head>
+<body>
+<header class="hdr"><div class="wrap hdr-in">
+<a href="/" class="logo"><span class="logo-mark">Y</span><span>Yarrow <b>Tools</b></span></a>
+<span class="hdr-sp"></span>
+<div class="hdr-search">
+<svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"><circle cx="11" cy="11" r="7"/><path d="M21 21l-4.3-4.3"/></svg>
+<input type="search" placeholder="Search tools…" aria-label="Search tools" data-filter>
+</div>
+<button class="icon-btn" id="themeBtn" onclick="yarrowToggle()" aria-label="Toggle theme">☾</button>
+</div>
+<nav class="nav"><div class="wrap" style="display:flex;gap:4px"><a href="/" class=on>Home</a><a href="/category/text.html">Text &amp; Code</a><a href="/category/finance.html">Finance</a><a href="/category/health.html">Health &amp; Everyday</a><a href="/category/convert.html">Converters</a><a href="/category/generate.html">Generators &amp; Utilities</a></div></nav></header>
+<main class="wrap tool-wrap">
+<div class="crumb"><a href="/">Home</a> › <a href="/category/finance.html">Finance</a> › Mortgage Calculator</div>
+<div class="tool-hd">
+<div style="display:flex;align-items:center;gap:11px;margin-bottom:9px">
+<span class="ic" style="background:var(--c-finance-bg);color:var(--c-finance)">mtg</span>
+<h1 style="margin:0">Mortgage Calculator</h1></div>
+<p>Full monthly cost: principal and interest plus property tax, home insurance, HOA and PMI.</p></div>
+<div class="panel"><div class="row">
+<div class="fld"><label for="mPrice">Home price</label><input id="mPrice" type="number" value="400000" oninput="mRun()"></div>
+<div class="fld"><label for="mDown">Down payment</label><input id="mDown" type="number" value="80000" oninput="mRun()"></div>
+<div class="fld"><label for="mRate">Rate (% APR)</label><input id="mRate" type="number" value="6.5" step="0.01" oninput="mRun()"></div>
+</div>
+<div class="row">
+<div class="fld"><label for="mYrs">Term (years)</label><input id="mYrs" type="number" value="30" oninput="mRun()"></div>
+<div class="fld"><label for="mTax">Property tax / year</label><input id="mTax" type="number" value="4800" oninput="mRun()"></div>
+<div class="fld"><label for="mIns">Home insurance / year</label><input id="mIns" type="number" value="1400" oninput="mRun()"></div>
+</div>
+<div class="row">
+<div class="fld"><label for="mHoa">HOA / month</label><input id="mHoa" type="number" value="0" oninput="mRun()"></div>
+<div class="fld"><label for="mPmi">PMI (% of loan / year)</label><input id="mPmi" type="number" value="0.5" step="0.01" oninput="mRun()"></div>
+</div>
+<button class="btn" onclick="mRun()">Calculate</button>
+<div class="out" style="margin-top:14px"><div class="k" style="font-size:11.5px;font-weight:800;color:var(--muted);text-transform:uppercase">Total monthly payment</div><div class="out-val" id="mAll">—</div></div>
+<div class="res-grid">
+<div class="res-cell"><div class="k">P &amp; I</div><div class="v" id="mPI">—</div></div>
+<div class="res-cell"><div class="k">Tax</div><div class="v" id="mT">—</div></div>
+<div class="res-cell"><div class="k">Insurance</div><div class="v" id="mI">—</div></div>
+<div class="res-cell"><div class="k">PMI</div><div class="v" id="mP">—</div></div>
+<div class="res-cell"><div class="k">HOA</div><div class="v" id="mH">—</div></div>
+<div class="res-cell"><div class="k">Loan amount</div><div class="v" id="mL">—</div></div>
+</div>
+<div id="mMsg" style="margin-top:12px"></div></div>
+</main>
+<footer class="ftr"><div class="wrap ftr-in">
+<div class="ftr-links">
+<a href="/pages/about.html">About</a><a href="/pages/contact.html">Contact</a>
+<a href="/pages/privacy.html">Privacy</a><a href="/pages/terms.html">Terms</a>
+<a href="/pages/disclaimer.html">Disclaimer</a><a href="/sitemap.xml">Sitemap</a>
+</div>
+<p class="ftr-c">© 2026 Yarrow Tools · Every tool runs in your browser — your data never leaves your device.</p>
+</div></footer>
+<script src="/assets/js/app.js"></script>
+<script src="/assets/js/tools-data.js"></script>
+<script>
+
+/* 标准等额本息：M = P·i·(1+i)^n / ((1+i)^n − 1)  i=月利率 */
+function fPmt(P,annualPct,years){
+  var n=Math.round(years*12), i=annualPct/100/12;
+  if(n<=0)return 0;
+  if(i===0)return P/n;
+  var f=Math.pow(1+i,n);
+  return P*i*f/(f-1);
+}
+function fMoney(x,cur){
+  cur=cur||'$';
+  return (x<0?'-':'')+cur+Math.abs(x).toLocaleString('en-US',{minimumFractionDigits:2,maximumFractionDigits:2});
+}
+function fAmort(P,annualPct,years){
+  var n=Math.round(years*12), i=annualPct/100/12;
+  var m=fPmt(P,annualPct,years), bal=P, rows=[], ti=0;
+  for(var k=1;k<=n&&k<=600;k++){
+    var int_=bal*i, prin=m-int_;
+    if(prin>bal)prin=bal;
+    ti+=int_; bal-=prin;
+    rows.push({k:k,pmt:m,int_:int_,prin:prin,bal:Math.max(0,bal)});
+    if(bal<=0.005)break;
+  }
+  return {rows:rows,totalInterest:ti,monthly:m};
+}
+function mRun(){
+  var price=parseFloat(document.getElementById('mPrice').value)||0;
+  var down=parseFloat(document.getElementById('mDown').value)||0;
+  var rate=parseFloat(document.getElementById('mRate').value)||0;
+  var yrs=parseFloat(document.getElementById('mYrs').value)||30;
+  var tax=(parseFloat(document.getElementById('mTax').value)||0)/12;
+  var ins=(parseFloat(document.getElementById('mIns').value)||0)/12;
+  var hoa=parseFloat(document.getElementById('mHoa').value)||0;
+  var pmiPct=parseFloat(document.getElementById('mPmi').value)||0;
+  var loan=Math.max(0,price-down);
+  var pi=fPmt(loan,rate,yrs);
+  var ltv=price>0?(loan/price*100):0;
+  /* PMI 通常在 LTV 降到 78% 以下时终止（美国常规做法） */
+  var pmi=(ltv>78)?(loan*pmiPct/100/12):0;
+  var all=pi+tax+ins+pmi+hoa;
+  document.getElementById('mPI').textContent=fMoney(pi);
+  document.getElementById('mT').textContent=fMoney(tax);
+  document.getElementById('mI').textContent=fMoney(ins);
+  document.getElementById('mP').textContent=fMoney(pmi);
+  document.getElementById('mH').textContent=fMoney(hoa);
+  document.getElementById('mL').textContent=fMoney(loan).replace('$','$');
+  document.getElementById('mAll').textContent=fMoney(all);
+  var msg='';
+  if(ltv>0){
+    msg='LTV '+ltv.toFixed(1)+'%. ';
+    if(ltv>80)msg+='Above 80% — PMI applies until the balance reaches 78% LTV.';
+    else msg+='At or below 80% — no PMI needed on a conventional loan.';
+  }
+  document.getElementById('mMsg').innerHTML='<p class="note">'+msg+'</p>';
+}
+document.addEventListener('DOMContentLoaded',function(){
+  try{
+    var g=window['grAdd'],p=window['gpAdd'];
+    if('mRun'==='grInit'){grAdd();grAdd();grAdd();}
+    else if('mRun'==='gpInit'){gpAdd();gpAdd();gpAdd();}
+    else if('mRun'&&typeof window['mRun']==='function'){window['mRun']();}
+  }catch(e){console.warn(e);}
+});
+</script>
+</body></html>
