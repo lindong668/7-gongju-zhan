@@ -5,7 +5,7 @@ compatibility_date = "2026-09-01"
 main = "src/index.js"
 
 routes = [
-  { pattern = "__DOMAIN__/*", zone_name = "__ZONE__" }
+  { pattern = "hho.us.ci/*", zone_name = "hho.us.ci" }
 ]
 
 [assets]
