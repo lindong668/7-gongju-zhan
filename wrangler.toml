@@ -1,22 +1,23 @@
 # ============================================================
 # Utilixo —— Cloudflare Workers + Assets
+# 域名：hoo.us.ci
 #
-# ★★ 本次修复的唯一改动：zone_name
-#    错：zone_name = "us.ci"     ← 母域不在你账号里，所以报
-#                                  "Could not find zone for us.ci"
-#    对：zone_name = "hoo.us.ci" ← 与 4 号站 yok.us.ci 写法一致
-#
-#    规律：zone_name 填「你在 CF 面板"网站"列表里看到的那个名字」，
-#          不是它的母域。us.ci 系列每个子域是单独添加的，
-#          所以 hoo.us.ci 自己就是一个 zone。
+# ★ 请用本文件内容【整体替换】仓库里的 wrangler.toml
+#   不要只改某一行，直接全选覆盖，避免残留旧值
 # ============================================================
 
 # 与 Workers Builds 的 CI 名一致，消除 "Failed to match Worker name" 警告
 name = "7-gongju-zhan"
-account_id = "d49e51b1279804c22035a33a9c1cb06e"
+
 compatibility_date = "2026-09-01"
 main = "src/index.js"
 
+# ★★ 关键：这一行【必须删掉/注释掉】，不要写死
+#    Workers Builds 会自动使用当前连接的账号，永远不会冲突。
+#    写死就会触发 "account_id must match" 报错（已经连错两次）。
+# account_id = "aaf1535472bd88c1440f64028060678e"
+
+# zone_name 填「CF 面板网站列表里看到的那个名字」= hoo.us.ci，不是母域 us.ci
 routes = [
   { pattern = "hoo.us.ci/*",     zone_name = "hoo.us.ci" },
   { pattern = "www.hoo.us.ci/*", zone_name = "hoo.us.ci" }
@@ -26,7 +27,7 @@ routes = [
 directory = "./public"
 binding = "ASSETS"
 
-# ★ 必须开启，否则 Worker 代码不执行（www→apex 301 会变成死代码）
+# 必须开启，否则 Worker 代码不执行（www → apex 301 会变成死代码）
 run_worker_first = true
 
 [observability]
@@ -39,21 +40,3 @@ head_sampling_rate = 1
 
 # 避免 Workers Builds 预览构建报红叉
 [previews]
-
-# ============================================================
-# 备选：改用 saoo.me（zone 在你账号里已验证可用）
-#
-#   用子域（推荐，不影响现有 home.saoo.me）：
-#   routes = [
-#     { pattern = "utilixo.saoo.me/*", zone_name = "saoo.me" }
-#   ]
-#
-#   用根域名（会占用 saoo.me 本身）：
-#   routes = [
-#     { pattern = "saoo.me/*",     zone_name = "saoo.me" },
-#     { pattern = "www.saoo.me/*", zone_name = "saoo.me" }
-#   ]
-#
-#   注意：saoo.me 是「一个」zone，根域和所有子域共享它，
-#         所以 zone_name 一律填 "saoo.me"，不随子域变。
-# ============================================================
