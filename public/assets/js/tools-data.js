@@ -1,4 +1,4 @@
-/* Yarrow Tools — 工具目录（56 个）。分类色标与首页网格共用。 */
+/* Utilixo Tools — 工具目录（56 个）。分类色标与首页网格共用。 */
 window.YARROW_TOOLS = [
 /* ===== Text & Code 17 ===== */
 {id:"json-formatter",cat:"text",ic:"{ }",t:"JSON Formatter & Validator",d:"Pretty-print, minify, and validate JSON instantly."},
