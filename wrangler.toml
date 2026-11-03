@@ -7,7 +7,7 @@
 # ============================================================
 
 # 与 Workers Builds 的 CI 名一致，消除 "Failed to match Worker name" 警告
-name = "7-gongju-zhan"
+name = '7-gongju-zhan'
 
 # ★★ CF 报错里指定的正确账号 ID，必须原样填这个
 account_id = "aaf1535472bd88c1440f64028060678e"
