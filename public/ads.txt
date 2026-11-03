@@ -1,3 +1,6 @@
+# refreshed 2026-11-03
+google.com, pub-8915931557404979, DIRECT, f08c47fec0942fa0
+
 # SOVRN
 lijit.com, 618581, DIRECT, fafdf38b16bf6b2b #SOVRN
 lijit.com, 618581-eb, DIRECT, fafdf38b16bf6b2b #SOVRN
