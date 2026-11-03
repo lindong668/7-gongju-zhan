@@ -1,11 +1,11 @@
-# Yarrow Tools — Cloudflare Workers + Assets
-# 域名用占位符 __DOMAIN__，确定真实域名后统一替换
-name = '7-gongju-zhan'
+# Utilixo — Cloudflare Workers + Assets
+# 域名 hoo.us.ci
+name = "utilixo-tools"
 compatibility_date = "2026-09-01"
 main = "src/index.js"
 
 routes = [
-  { pattern = "hho.us.ci/*", zone_name = "hho.us.ci" }
+  { pattern = "hoo.us.ci/*", zone_name = "us.ci" }
 ]
 
 [assets]
