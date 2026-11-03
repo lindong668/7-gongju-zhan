@@ -22,6 +22,8 @@
   /* 复制成功提示：按页面语言显示，不再固定英文 */
   var COPY_TXT={en:'Copied!',zh:'已复制',ja:'コピーしました',de:'Kopiert!',
                 fr:'Copié !',es:'¡Copiado!',pt:'Copiado!'};
+  var EMPTY_TXT={en:'Nothing to copy',zh:'暂无可复制内容',ja:'コピーする内容がありません',
+                 de:'Nichts zum Kopieren',fr:'Rien à copier',es:'Nada que copiar',pt:'Nada para copiar'};
   var FAIL_TXT={en:'Copy failed',zh:'复制失败',ja:'コピーに失敗',de:'Kopieren fehlgeschlagen',
                 fr:'Échec de la copie',es:'Error al copiar',pt:'Falha ao copiar'};
   function langKey(){
@@ -66,6 +68,11 @@
     var L=langKey();
     if(txt===null||txt===undefined)txt='';
     txt=String(txt);
+    /* 结果为空时不谎报成功：明确告诉用户没有可复制的内容 */
+    if(!txt.trim()||txt.trim()==='—'||txt.trim()==='-'){
+      if(btn){var ob=btn.getAttribute('data-ot')||btn.textContent;if(!btn.getAttribute('data-ot'))btn.setAttribute('data-ot',ob);btn.textContent=EMPTY_TXT[L];setTimeout(function(){btn.textContent=ob;},1500);}
+      toast(EMPTY_TXT[L]);return;
+    }
     var done=function(){
       if(btn){
         var o=btn.getAttribute('data-ot')||btn.textContent;
