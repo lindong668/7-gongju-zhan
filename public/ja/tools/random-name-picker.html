@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>ランダム名前抽選ホイール — すべてのツール | Utilixo</title>
+<meta name="description" content="本物のアニメーションで公平に名前を抽選。">
+<link rel="canonical" href="https://hoo.us.ci/ja/tools/random-name-picker.html">
+<meta name="robots" content="index, follow">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Utilixo">
+<meta property="og:title" content="ランダム名前抽選ホイール — すべてのツール">
+<meta property="og:description" content="本物のアニメーションで公平に名前を抽選。">
+<meta property="og:url" content="https://hoo.us.ci/ja/tools/random-name-picker.html">
+<meta property="og:image" content="https://hoo.us.ci/assets/img/og-cover.png">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="ランダム名前抽選ホイール — すべてのツール">
+<meta name="twitter:description" content="本物のアニメーションで公平に名前を抽選。">
+<meta name="twitter:image" content="https://hoo.us.ci/assets/img/og-cover.png">
+<meta name="theme-color" content="#6366F1" media="(prefers-color-scheme: light)">
+<meta name="theme-color" content="#0C1020" media="(prefers-color-scheme: dark)">
+<link rel="icon" href="/assets/img/favicon.svg" type="image/svg+xml">
+<link rel="apple-touch-icon" href="/assets/img/favicon-180.png">
+<link rel="manifest" href="/manifest.webmanifest">
+<script>(function(){try{var k='utilixo-theme';var s=localStorage.getItem(k);if(!s){s=(window.matchMedia&&window.matchMedia('(prefers-color-scheme: dark)').matches)?'dark':'light';}document.documentElement.setAttribute('data-theme',s);}catch(e){}})();</script>
+<link rel="stylesheet" href="/assets/css/style-ja.css">
+<script type="application/ld+json">
+{
+ "@context": "https://schema.org",
+ "@type": "WebApplication",
+ "name": "Random Name Picker Wheel",
+ "url": "https://hoo.us.ci/tools/random-name-picker.html",
+ "applicationCategory": "UtilityApplication",
+ "operatingSystem": "Any (web browser)",
+ "browserRequirements": "Requires a modern browser with JavaScript enabled",
+ "offers": {
+  "@type": "Offer",
+  "price": "0",
+  "priceCurrency": "USD"
+ },
+ "description": "Spin a wheel to pick a name fairly. Enter any list, watch it spin, remove winners and keep going.",
+ "publisher": {
+  "@type": "Organization",
+  "name": "Utilixo",
+  "url": "https://hoo.us.ci/"
+ }
+}
+</script>
+<script type="application/ld+json">
+{
+ "@context": "https://schema.org",
+ "@type": "BreadcrumbList",
+ "itemListElement": [
+  {
+   "@type": "ListItem",
+   "position": 1,
+   "name": "Home",
+   "item": "https://hoo.us.ci/"
+  },
+  {
+   "@type": "ListItem",
+   "position": 2,
+   "name": "生成ツールと便利機能",
+   "item": "https://hoo.us.ci/category/generate.html"
+  },
+  {
+   "@type": "ListItem",
+   "position": 3,
+   "name": "Random Name Picker Wheel",
+   "item": "https://hoo.us.ci/tools/random-name-picker.html"
+  }
+ ]
+}
+</script>
+<link rel="alternate" hreflang="en" href="https://hoo.us.ci/tools/random-name-picker">
+<link rel="alternate" hreflang="zh" href="https://hoo.us.ci/zh/tools/random-name-picker">
+<link rel="alternate" hreflang="pt" href="https://hoo.us.ci/pt/tools/random-name-picker">
+<link rel="alternate" hreflang="es" href="https://hoo.us.ci/es/tools/random-name-picker">
+<link rel="alternate" hreflang="fr" href="https://hoo.us.ci/fr/tools/random-name-picker">
+<link rel="alternate" hreflang="de" href="https://hoo.us.ci/de/tools/random-name-picker">
+<link rel="alternate" hreflang="ja" href="https://hoo.us.ci/ja/tools/random-name-picker">
+<link rel="alternate" hreflang="x-default" href="https://hoo.us.ci/ja/tools/random-name-picker">
+</head>
+<body>
+<header class="hdr"><div class="wrap hdr-in">
+<a href="/ja/" class="logo"><span class="logo-mark">U</span><span>Utilixo<small>オンラインツール</small></span></a>
+<span class="hdr-sp"></span>
+<div class="hdr-search">
+<svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"><circle cx="11" cy="11" r="7"/><path d="M21 21l-4.3-4.3"/></svg>
+<input type="search" placeholder="56個のツールを検索…" aria-label="Search tools" data-filter>
+</div>
+<button class="icon-btn" id="themeBtn" onclick="utilixoToggle()" aria-label="Toggle theme">☾</button><div class="langsw"><select class="langsel" onchange="if(this.value)location.href=this.value" aria-label="Language"><option value="/tools/random-name-picker">English</option><option value="/zh/tools/random-name-picker">简体中文</option><option value="/pt/tools/random-name-picker">Português</option><option value="/es/tools/random-name-picker">Español</option><option value="/fr/tools/random-name-picker">Français</option><option value="/de/tools/random-name-picker">Deutsch</option><option value="/ja/tools/random-name-picker" selected>日本語</option></select></div>
+</div></header>
+<main class="wrap tool-wrap">
+<div class="crumb"><a href="/ja/">ホーム</a> › <a href="/ja/category/generate.html">生成ツールと便利機能</a> › ランダム名前抽選ホイール</div>
+<div class="tool-hd">
+<div style="display:flex;align-items:center;gap:12px;margin-bottom:10px">
+<span class="ic" style="background:var(--c-generate-bg);color:var(--c-generate)"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M12 12l6.5-4"/><path d="M12 12V3"/><path d="M12 12l-5.5 7"/><circle cx="12" cy="12" r="1.6"/></svg></span>
+<h1 style="margin:0">ランダム名前抽選ホイール</h1></div>
+<p>本物のアニメーションで公平に名前を抽選。</p></div>
+<div class="panel"><div class="fld"><label for="rnIn">名前（1行に1つ）</label><textarea id="rnIn" style="min-height:120px" oninput="rnDraw()">Ada
+Grace
+Alan
+Katherine
+Linus
+Barbara</textarea></div>
+<div class="row">
+<div class="fld"><label><input type="checkbox" id="rnRm" onchange="rnDraw()"> Remove winner after spin</label></div>
+<div class="fld"><label for="rnSp">回転時間（秒）</label><input id="rnSp" type="number" value="4" min="1" max="10" step="0.5"></div>
+</div>
+<div style="display:flex;gap:9px;flex-wrap:wrap">
+<button class="btn" onclick="rnSpin()">ホイールを回す</button>
+<button class="btn-o" onclick="rnDraw()">再抽選</button>
+<button class="btn-o" onclick="rnReset()">リストをリセット</button></div>
+<div class="wheel-box" style="margin-top:20px">
+<div class="wheel"><div class="wheel-pin"></div><div id="rnSvg"></div><div class="wheel-hub">GO</div></div>
+<div class="out" style="min-width:220px;text-align:center"><div class="k" style="font-size:11.5px;font-weight:800;color:var(--muted);text-transform:uppercase">結果</div><div class="out-val" id="rnRes" style="font-size:22px">—</div></div>
+</div>
+<p class="note">Fairness note: the wheel picks uniformly at random using crypto-grade randomness — the animation is decoration, the choice is already made before it starts.</p></div>
+</main>
+<footer class="ftr"><div class="wrap ftr-in">
+<div class="ftr-links">
+<a href="/ja/pages/about.html">サイトについて</a><a href="/ja/pages/contact.html">お問い合わせ</a>
+<a href="/ja/pages/privacy.html">プライバシーポリシー</a><a href="/ja/pages/terms.html">利用規約</a>
+<a href="/ja/pages/disclaimer.html">免責事項</a>
+</div>
+<p class="ftr-c">© 2026 Utilixo · 答えだけが欲しい人のために。すべてのツールはブラウザ内で動くため、入力内容がアップロードされたり保存されたりすることはありません。</p>
+</div></footer>
+<script src="/assets/js/app.js"></script>
+<script src="/assets/js/tools-data.js"></script>
+<script>
+
+var rnNames=[],rnAngle=0,rnSpinning=false;
+var RN_PAL=['#6366F1','#A855F7','#EC4899','#F43F5E','#F59E0B','#10B981','#06B6D4','#3B82F6','#8B5CF6','#14B8A6','#F97316','#84CC16'];
+function rnList(){
+  return document.getElementById('rnIn').value.split('\n').map(function(x){return x.trim();}).filter(Boolean);
+}
+function rnDraw(){
+  rnNames=rnList();
+  var n=rnNames.length;
+  var box=document.getElementById('rnSvg');
+  if(!n){box.innerHTML='';document.getElementById('rnRes').textContent='—';return;}
+  var R=140,cx=140,cy=140;
+  var s='<svg viewBox="0 0 280 280" style="display:block">';
+  var step=360/n;
+  for(var i=0;i<n;i++){
+    var a0=i*step*Math.PI/180,a1=(i+1)*step*Math.PI/180;
+    var x0=cx+R*Math.sin(a0),y0=cy-R*Math.cos(a0);
+    var x1=cx+R*Math.sin(a1),y1=cy-R*Math.cos(a1);
+    var large=step>180?1:0;
+    var col=RN_PAL[i%RN_PAL.length];
+    if(n===1){
+      s+='<circle cx="140" cy="140" r="140" fill="'+col+'"/>';
+    }else{
+      s+='<path d="M'+cx+' '+cy+' L'+x0.toFixed(2)+' '+y0.toFixed(2)+' A'+R+' '+R+' 0 '+large+' 1 '+x1.toFixed(2)+' '+y1.toFixed(2)+' Z" fill="'+col+'" stroke="rgba(255,255,255,.5)" stroke-width="1.5"/>';
+    }
+    var mid=(i+0.5)*step*Math.PI/180;
+    var tx=cx+(R*0.62)*Math.sin(mid),ty=cy-(R*0.62)*Math.cos(mid);
+    var label=rnNames[i].length>12?rnNames[i].slice(0,11)+'…':rnNames[i];
+    var rot=(i+0.5)*step;
+    s+='<text x="140" y="34" transform="rotate('+rot.toFixed(2)+' 140 140)" text-anchor="middle" fill="#fff" font-size="12" font-weight="700" font-family="system-ui,sans-serif">'+esc3(label)+'</text>';
+  }
+  s+='</svg>';
+  box.innerHTML=s;
+  box.firstChild.style.transform='rotate('+rnAngle+'deg)';
+}
+function esc3(s){return s.replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;');}
+function rnSpin(){
+  if(rnSpinning)return;
+  rnNames=rnList();
+  var n=rnNames.length;
+  if(!n){document.getElementById('rnRes').textContent='Add at least one name.';return;}
+  rnSpinning=true;
+  /* 先随机定结果，再算角度 */
+  var rnd=new Uint32Array(1);crypto.getRandomValues(rnd);
+  var idx=rnd[0]%n;
+  var step=360/n;
+  var targetAngle=360*5+(360-(idx+0.5)*step); /* 指针在正上方 */
+  var cur=rnAngle%360;
+  var delta=(targetAngle-rnAngle)%360;
+  if(delta<0)delta+=360;
+  rnAngle=rnAngle+360*5+delta;
+  var dur=Math.min(10,Math.max(1,parseFloat(document.getElementById('rnSp').value)||4));
+  var svg=document.querySelector('#rnSvg svg');
+  if(svg){
+    svg.style.transition='transform '+dur+'s cubic-bezier(.15,.85,.25,1)';
+    svg.style.transform='rotate('+rnAngle+'deg)';
+  }
+  document.getElementById('rnRes').textContent='…';
+  setTimeout(function(){
+    rnSpinning=false;
+    var winner=rnNames[idx];
+    document.getElementById('rnRes').textContent=winner;
+    if(document.getElementById('rnRm').checked){
+      var lines=document.getElementById('rnIn').value.split('\n');
+      var out=[],done=false;
+      lines.forEach(function(l){
+        if(!done&&l.trim()===winner){done=true;return;}
+        out.push(l);
+      });
+      document.getElementById('rnIn').value=out.join('\n');
+      rnAngle=0;
+      setTimeout(rnDraw,50);
+    }
+  },dur*1000+80);
+}
+function rnReset(){
+  document.getElementById('rnIn').value='Ada\nGrace\nAlan\nKatherine\nLinus\nBarbara';
+  rnAngle=0;rnDraw();
+  document.getElementById('rnRes').textContent='—';
+}
+document.addEventListener('DOMContentLoaded',rnDraw);
+document.addEventListener('DOMContentLoaded',function(){
+  try{
+    if('rnDraw'==='grInit'){grAdd();grAdd();grAdd();}
+    else if('rnDraw'==='gpInit'){gpAdd();gpAdd();gpAdd();}
+    else if('rnDraw'&&typeof window['rnDraw']==='function'){window['rnDraw']();}
+  }catch(e){console.warn(e);}
+});
+</script>
+</body></html>
