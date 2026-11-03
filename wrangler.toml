@@ -3,21 +3,22 @@
 # 域名：hoo.us.ci
 #
 # ★ 请用本文件内容【整体替换】仓库里的 wrangler.toml
-#   不要只改某一行，直接全选覆盖，避免残留旧值
+#   不要只改某一行 —— 两次失败都是因为旧值残留
 # ============================================================
 
 # 与 Workers Builds 的 CI 名一致，消除 "Failed to match Worker name" 警告
 name = "7-gongju-zhan"
 
+# ★★ CF 报错里指定的正确账号 ID，必须原样填这个
+account_id = "aaf1535472bd88c1440f64028060678e"
+
 compatibility_date = "2026-09-01"
 main = "src/index.js"
 
-# ★★ 关键：这一行【必须删掉/注释掉】，不要写死
-#    Workers Builds 会自动使用当前连接的账号，永远不会冲突。
-#    写死就会触发 "account_id must match" 报错（已经连错两次）。
-# account_id = "aaf1535472bd88c1440f64028060678e"
+# 关闭 Wrangler 遥测（按官方 telemetry.md：项目级写法，无引号）
+send_metrics = false
 
-# zone_name 填「CF 面板网站列表里看到的那个名字」= hoo.us.ci，不是母域 us.ci
+# zone_name = CF 面板「网站」列表里显示的名字 = hoo.us.ci，不是母域 us.ci
 routes = [
   { pattern = "hoo.us.ci/*",     zone_name = "hoo.us.ci" },
   { pattern = "www.hoo.us.ci/*", zone_name = "hoo.us.ci" }
