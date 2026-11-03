@@ -47,7 +47,7 @@ export default {
 
     // ---- ads.txt：AdSense 要求根目录可访问，且必须是 text/plain ----
     if (p === '/ads.txt') {
-      return new Response('google.com, pub-0000000000000000, DIRECT, f08c47fec0942fa0\n', {
+      return new Response('google.com, pub-8915931557404979, DIRECT, f08c47fec0942fa0\n', {
         headers: { 'content-type': 'text/plain; charset=utf-8', 'cache-control': 'public, max-age=86400' }
       });
     }
