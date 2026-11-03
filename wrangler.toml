@@ -1,43 +1,23 @@
-# ============================================================
-# Utilixo —— Cloudflare Workers + Assets
-# 域名：hho.us.ci
-#
-# ★ 请用本文件内容【整体替换】仓库里的 wrangler.toml
-#   不要只改某一行 —— 两次失败都是因为旧值残留
-# ============================================================
-
-# 与 Workers Builds 的 CI 名一致，消除 "Failed to match Worker name" 警告
-name = '7-gongju-zhan'
-
-# ★★ CF 报错里指定的正确账号 ID，必须原样填这个
-account_id = "aaf1535472bd88c1440f64028060678e"
-
+# Utilixo — Cloudflare Workers + Assets
+# 域名 hho.us.ci
+name = "utilixo-tools"
 compatibility_date = "2026-09-01"
 main = "src/index.js"
 
-# 关闭 Wrangler 遥测（按官方 telemetry.md：项目级写法，无引号）
+# 关闭遥测（官方写法，无引号）
 send_metrics = false
 
-# zone_name = CF 面板「网站」列表里显示的名字 = hoo.us.ci，不是母域 us.ci
 routes = [
-  { pattern = "hho.us.ci/*",     zone_name = "hho.us.ci" },
-  { pattern = "www.hho.us.ci/*", zone_name = "hho.us.ci" }
+  { pattern = "hho.us.ci/*", zone_name = "hho.us.ci" }
 ]
 
 [assets]
 directory = "./public"
 binding = "ASSETS"
 
-# 必须开启，否则 Worker 代码不执行（www → apex 301 会变成死代码）
-run_worker_first = true
-
 [observability]
 enabled = true
-
 [observability.logs]
 enabled = true
 invocation_logs = true
 head_sampling_rate = 1
-
-# 避免 Workers Builds 预览构建报红叉
-[previews]

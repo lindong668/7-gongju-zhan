@@ -11,4 +11,4 @@ Allow: /
 User-agent: *
 Allow: /
 
-Sitemap: https://hoo.us.ci/sitemap.xml
+Sitemap: https://hho.us.ci/sitemap.xml
