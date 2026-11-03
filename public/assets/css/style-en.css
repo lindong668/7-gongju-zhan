@@ -160,7 +160,7 @@ a{color:inherit;text-decoration:none}
 }
 [data-theme="light"] .card{background:var(--panel2)}
 .card::before{
-  content:"";position:absolute;inset:0;opacity:0;transition:.22s;
+  content:"";position:absolute;inset:0;opacity:0;transition:.22s;z-index:0;pointer-events:none;
   background:radial-gradient(420px circle at 18% 0%,var(--panel2),transparent 62%);
 }
 .card:hover{transform:translateY(-3px);border-color:var(--line2);box-shadow:var(--shadow)}
@@ -168,16 +168,26 @@ a{color:inherit;text-decoration:none}
 .card.hide{display:none}
 .ic{
   flex-shrink:0;width:44px;height:44px;border-radius:13px;
-  display:grid;place-items:center;
+  display:grid;place-items:center;position:relative;z-index:1;
 }
 .ic svg{width:23px;height:23px}
-.card-tx{min-width:0;display:flex;flex-direction:column;gap:4px}
+.card-tx{min-width:0;display:flex;flex-direction:column;gap:4px;position:relative;z-index:1}
 .card-t{font-size:14.5px;font-weight:750;letter-spacing:-.01em;line-height:1.3}
 .card-d{font-size:12.8px;color:var(--tx3);line-height:1.5}
 
 /* ---------------- 工具页 ---------------- */
 .crumb{font-size:12.5px;color:var(--tx3);padding:20px 0 12px}
 .crumb a:hover{color:var(--acc)}
+/* 工具页「返回首页」按钮 */
+.ux-back{
+  display:inline-flex;align-items:center;gap:7px;
+  padding:8px 15px;border-radius:10px;
+  border:1px solid var(--line2);background:var(--panel2);
+  color:var(--tx2);font-size:13.5px;font-weight:700;
+  text-decoration:none;transition:.2s;line-height:1.2;
+}
+.ux-back:hover{border-color:var(--acc);color:var(--acc);transform:translateX(-3px)}
+
 .tool-wrap{padding-bottom:50px;flex:1}
 .tool-hd{margin-bottom:22px;max-width:760px}
 .tool-hd h1{margin:0 0 8px;font-size:clamp(23px,3.6vw,32px);font-weight:820;letter-spacing:-.025em}

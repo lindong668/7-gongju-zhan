@@ -19,18 +19,61 @@
     var b=document.getElementById('themeBtn');
     if(b)b.textContent=nx==='dark'?'☀':'☾';
   };
+  /* 复制成功提示：按页面语言显示，不再固定英文 */
+  var COPY_TXT={en:'Copied!',zh:'已复制',ja:'コピーしました',de:'Kopiert!',
+                fr:'Copié !',es:'¡Copiado!',pt:'Copiado!'};
+  var FAIL_TXT={en:'Copy failed',zh:'复制失败',ja:'コピーに失敗',de:'Kopieren fehlgeschlagen',
+                fr:'Échec de la copie',es:'Error al copiar',pt:'Falha ao copiar'};
+  function langKey(){
+    var L=(document.documentElement.lang||'en').toLowerCase().slice(0,2);
+    return COPY_TXT[L]?L:'en';
+  }
+  /* 屏幕中央的提示条，比只改按钮文字明显得多 */
+  function toast(msg){
+    var old=document.getElementById('uxToast');if(old)old.remove();
+    var d=document.createElement('div');d.id='uxToast';d.textContent=msg;
+    d.style.cssText='position:fixed;left:50%;bottom:34px;transform:translateX(-50%);'+
+      'z-index:9999;padding:11px 22px;border-radius:11px;font-size:14px;font-weight:700;'+
+      'background:#0F172A;color:#fff;box-shadow:0 10px 30px rgba(0,0,0,.35);'+
+      'opacity:0;transition:opacity .18s,transform .18s;pointer-events:none;max-width:90vw;text-align:center';
+    document.body.appendChild(d);
+    requestAnimationFrame(function(){d.style.opacity='1';d.style.transform='translateX(-50%) translateY(-6px)';});
+    setTimeout(function(){d.style.opacity='0';setTimeout(function(){if(d.parentNode)d.remove();},220);},1500);
+  }
   window.utilixoCopy=function(txt,btn){
+    var L=langKey();
+    if(txt===null||txt===undefined)txt='';
+    txt=String(txt);
     var done=function(){
-      if(btn){var o=btn.textContent;btn.textContent='Copied!';setTimeout(function(){btn.textContent=o;},1400);}
+      if(btn){
+        var o=btn.getAttribute('data-ot')||btn.textContent;
+        if(!btn.getAttribute('data-ot'))btn.setAttribute('data-ot',o);
+        btn.textContent=COPY_TXT[L];
+        setTimeout(function(){btn.textContent=o;},1500);
+      }
+      toast(COPY_TXT[L]);
     };
+    var fail=function(){
+      if(btn){var o=btn.getAttribute('data-ot')||btn.textContent;btn.textContent=FAIL_TXT[L];
+        setTimeout(function(){btn.textContent=o;},1500);}
+      toast(FAIL_TXT[L]+' — '+txt.slice(0,0));
+    };
+    /* 优先用现代剪贴板接口；失败或不存在时回退到 execCommand */
     if(navigator.clipboard&&navigator.clipboard.writeText){
-      navigator.clipboard.writeText(txt).then(done,function(){fallback();});
-    }else{fallback();}
-    function fallback(){
-      var ta=document.createElement('textarea');ta.value=txt;ta.style.position='fixed';ta.style.opacity='0';
-      document.body.appendChild(ta);ta.select();
-      try{document.execCommand('copy');done();}catch(e){}
+      navigator.clipboard.writeText(txt).then(function(){done();},function(){legacy();});
+    }else{legacy();}
+    function legacy(){
+      var ta=document.createElement('textarea');
+      ta.value=txt;
+      /* 必须可见才能被选中：放在视口内且仅透明，不能用 display:none */
+      ta.style.cssText='position:fixed;top:10px;left:10px;width:1px;height:1px;opacity:0;padding:0;border:0;';
+      ta.setAttribute('readonly','');
+      document.body.appendChild(ta);
+      ta.focus();ta.select();ta.setSelectionRange(0,txt.length);
+      var ok=false;
+      try{ok=document.execCommand('copy');}catch(e){ok=false;}
       document.body.removeChild(ta);
+      if(ok)done();else fail();
     }
   };
   /* 搜索过滤：首页与分类页共用 */

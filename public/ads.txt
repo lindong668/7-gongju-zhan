@@ -1,1 +1,2 @@
-google.com, pub-0000000000000000, DIRECT, f08c47fec0942fa0
+# refreshed 2026-11-03
+google.com, pub-8915931557404979, DIRECT, f08c47fec0942fa0
