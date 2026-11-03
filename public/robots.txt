@@ -1,4 +1,4 @@
-# robots.txt — Yarrow Tools
+# robots.txt — Utilixo Tools
 User-agent: Mediapartners-Google
 Allow: /
 
@@ -11,4 +11,4 @@ Allow: /
 User-agent: *
 Allow: /
 
-Sitemap: https://__DOMAIN__/sitemap.xml
+Sitemap: https://hoo.us.ci/sitemap.xml
