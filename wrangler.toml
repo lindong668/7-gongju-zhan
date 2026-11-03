@@ -20,8 +20,8 @@ send_metrics = false
 
 # zone_name = CF 面板「网站」列表里显示的名字 = hoo.us.ci，不是母域 us.ci
 routes = [
-  { pattern = "hoo.us.ci/*",     zone_name = "hoo.us.ci" },
-  { pattern = "www.hoo.us.ci/*", zone_name = "hoo.us.ci" }
+  { pattern = "hho.us.ci/*",     zone_name = "hho.us.ci" },
+  { pattern = "www.hho.us.ci/*", zone_name = "hho.us.ci" }
 ]
 
 [assets]
