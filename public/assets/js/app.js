@@ -40,6 +40,28 @@
     requestAnimationFrame(function(){d.style.opacity='1';d.style.transform='translateX(-50%) translateY(-6px)';});
     setTimeout(function(){d.style.opacity='0';setTimeout(function(){if(d.parentNode)d.remove();},220);},1500);
   }
+  /* 通用提示条，开放给各工具页调用（按页面语言显示） */
+  var UX_TXT={
+    updated:{en:'List updated',zh:'名单已更新',ja:'リストを更新しました',
+             de:'Liste aktualisiert',fr:'Liste mise à jour',
+             es:'Lista actualizada',pt:'Lista atualizada'},
+    empty:{en:'Please enter at least one name',zh:'请先输入至少一个名字',
+           ja:'名前を1つ以上入力してください',de:'Bitte mindestens einen Namen eingeben',
+           fr:'Veuillez saisir au moins un nom',es:'Introduce al menos un nombre',
+           pt:'Digite pelo menos um nome'},
+    needUpdate:{en:'Click "Update list" to apply changes',
+                zh:'改完名字请点「更新名单」生效',
+                ja:'変更後は「リストを更新」をクリックしてください',
+                de:'Klicken Sie auf „Liste aktualisieren“, um zu übernehmen',
+                fr:'Cliquez sur « Mettre à jour la liste » pour appliquer',
+                es:'Haz clic en «Actualizar lista» para aplicar',
+                pt:'Clique em «Atualizar lista» para aplicar'}
+  };
+  window.utilixoTxt=function(k){
+    var m=UX_TXT[k];if(!m)return '';
+    var L=langKey();return m[L]||m.en;
+  };
+  window.utilixoToast=toast;
   window.utilixoCopy=function(txt,btn){
     var L=langKey();
     if(txt===null||txt===undefined)txt='';
