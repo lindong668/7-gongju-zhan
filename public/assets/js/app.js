@@ -3,7 +3,12 @@
   var K='utilixo-theme';
   try{
     var s=localStorage.getItem(K);
-    if(!s){s=(window.matchMedia&&window.matchMedia('(prefers-color-scheme: dark)').matches)?'dark':'light';}
+    if(!s){
+      // 每个语言有自己的默认主题，7 套 UI 的第一观感因此不同
+      var L=(document.documentElement.lang||'en').toLowerCase().slice(0,2);
+      var DEF={en:'dark',zh:'light',ja:'light',de:'dark',fr:'light',es:'light',pt:'dark'};
+      s=DEF[L]||'light';
+    }
     document.documentElement.setAttribute('data-theme',s);
   }catch(e){}
   window.utilixoToggle=function(){
