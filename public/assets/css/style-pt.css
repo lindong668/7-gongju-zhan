@@ -309,9 +309,10 @@ select{cursor:pointer;appearance:none;background-image:linear-gradient(45deg,tra
   color:var(--tx);background:var(--panel);
   border:1px solid var(--line);border-radius:9px;
   padding:6px 7px;cursor:pointer;max-width:120px;
-  color-scheme:dark;
+  color-scheme:light;
 }
 [data-theme="light"] .langsel{color-scheme:light;background:var(--panel2)}
+[data-theme="dark"] .langsel{color-scheme:dark}
 .langsel:hover{border-color:var(--acc);color:var(--acc)}
 .langsel:focus{outline:2px solid var(--acc);outline-offset:1px}
 @media(max-width:600px){
@@ -382,19 +383,20 @@ textarea,.out,.res b{font-family:ui-monospace,Menlo,Consolas,monospace}
 input[type=text],input[type=number],input[type=search],input[type=date],input[type=time],input[type=email],select,textarea{border-radius:14px}
 
 /* 默认主题（首次访问，未手动切换时） */
-html:not([data-theme]){
-  --bg:#08111F;
-  --bg2:#0E1B2E;
-  --panel:rgba(255,255,255,.05);
-  --panel2:rgba(255,255,255,.08);
-  --line:rgba(255,255,255,.11);
-  --line2:rgba(255,255,255,.18);
-  --tx:#E6F0FA;
-  --tx2:#A3B8CE;
-  --tx3:#6E8399;
-  --acc:#22C55E;
-  --acc2:#38BDF8;
-  --shadow:0 16px 38px rgba(0,0,0,.46);
+html:not([data-theme])
+{
+  --bg:#F2F7FB;
+  --bg2:#E4EEF7;
+  --panel:#FFFFFF;
+  --panel2:#FFFFFF;
+  --line:rgba(12,42,72,.12);
+  --line2:rgba(12,42,72,.20);
+  --tx:#0F2136;
+  --tx2:#456075;
+  --tx3:#8497A9;
+  --acc:#15803D;
+  --acc2:#0284C7;
+  --shadow:0 12px 28px rgba(15,33,54,.10);
 }
 
 @media(max-width:1000px){

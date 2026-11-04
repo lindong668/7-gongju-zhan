@@ -1,16 +1,11 @@
 /* Utilixo Tools — 全局：主题、搜索过滤、复制 */
 (function(){
   var K='utilixo-theme';
+  /* 主题只认「用户手动选择」：默认浅色，系统深浅色与语言均不参与 */
   try{
     var s=localStorage.getItem(K);
-    if(!s){
-      // 每个语言有自己的默认主题，7 套 UI 的第一观感因此不同
-      var L=(document.documentElement.lang||'en').toLowerCase().slice(0,2);
-      var DEF={en:'dark',zh:'light',ja:'light',de:'dark',fr:'light',es:'light',pt:'dark'};
-      s=DEF[L]||'light';
-    }
-    document.documentElement.setAttribute('data-theme',s);
-  }catch(e){}
+    document.documentElement.setAttribute('data-theme',s==='dark'?'dark':'light');
+  }catch(e){document.documentElement.setAttribute('data-theme','light');}
   window.utilixoToggle=function(){
     var cur=document.documentElement.getAttribute('data-theme')||'light';
     var nx=cur==='dark'?'light':'dark';

@@ -309,9 +309,10 @@ select{cursor:pointer;appearance:none;background-image:linear-gradient(45deg,tra
   color:var(--tx);background:var(--panel);
   border:1px solid var(--line);border-radius:9px;
   padding:6px 7px;cursor:pointer;max-width:120px;
-  color-scheme:dark;
+  color-scheme:light;
 }
 [data-theme="light"] .langsel{color-scheme:light;background:var(--panel2)}
+[data-theme="dark"] .langsel{color-scheme:dark}
 .langsel:hover{border-color:var(--acc);color:var(--acc)}
 .langsel:focus{outline:2px solid var(--acc);outline-offset:1px}
 @media(max-width:600px){
@@ -382,19 +383,20 @@ textarea,.out,.res b{font-family:ui-monospace,SFMono-Regular,Menlo,Consolas,mono
 input[type=text],input[type=number],input[type=search],input[type=date],input[type=time],input[type=email],select,textarea{border-radius:18px}
 
 /* 默认主题（首次访问，未手动切换时） */
-html:not([data-theme]){
-  --bg:#0A0D16;
-  --bg2:#0F1322;
-  --panel:rgba(255,255,255,.045);
-  --panel2:rgba(255,255,255,.075);
-  --line:rgba(255,255,255,.10);
-  --line2:rgba(255,255,255,.16);
-  --tx:#E9EDF6;
-  --tx2:#A6B0C6;
-  --tx3:#6C7790;
-  --acc:#5EEAD4;
-  --acc2:#818CF8;
-  --shadow:0 18px 44px rgba(0,0,0,.44);
+html:not([data-theme])
+{
+  --bg:#F4F6FB;
+  --bg2:#EAEEF7;
+  --panel:rgba(255,255,255,.86);
+  --panel2:#FFFFFF;
+  --line:rgba(15,23,42,.10);
+  --line2:rgba(15,23,42,.16);
+  --tx:#141B2D;
+  --tx2:#4B5673;
+  --tx3:#8892A8;
+  --acc:#0D9488;
+  --acc2:#4F46E5;
+  --shadow:0 14px 34px rgba(20,27,45,.10);
 }
 
 @media(max-width:1000px){

@@ -309,9 +309,10 @@ select{cursor:pointer;appearance:none;background-image:linear-gradient(45deg,tra
   color:var(--tx);background:var(--panel);
   border:1px solid var(--line);border-radius:9px;
   padding:6px 7px;cursor:pointer;max-width:120px;
-  color-scheme:dark;
+  color-scheme:light;
 }
 [data-theme="light"] .langsel{color-scheme:light;background:var(--panel2)}
+[data-theme="dark"] .langsel{color-scheme:dark}
 .langsel:hover{border-color:var(--acc);color:var(--acc)}
 .langsel:focus{outline:2px solid var(--acc);outline-offset:1px}
 @media(max-width:600px){
@@ -384,7 +385,8 @@ input[type=text],input[type=number],input[type=search],input[type=date],input[ty
 .prose p,.prose li{line-height:1.95}
 
 /* 默认主题（首次访问，未手动切换时） */
-html:not([data-theme]){
+html:not([data-theme])
+{
   --bg:#FBFAF8;
   --bg2:#F3F0EC;
   --panel:#FFFFFF;
