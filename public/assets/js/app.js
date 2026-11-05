@@ -26,6 +26,7 @@
     return COPY_TXT[L]?L:'en';
   }
   /* 屏幕中央的提示条，比只改按钮文字明显得多 */
+  window.toast=function(m){toast(m);};
   function toast(msg){
     var old=document.getElementById('uxToast');if(old)old.remove();
     var d=document.createElement('div');d.id='uxToast';d.textContent=msg;

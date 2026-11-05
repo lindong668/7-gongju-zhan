@@ -113,7 +113,16 @@ export default {
       const u = new URL(request.url);
       u.pathname = t;
       const r = await env.ASSETS.fetch(new Request(u.toString(), request));
-      if (r && r.status === 200) return await withFlag(r, request);
+      if (r && r.status === 200) {
+        // Only non-index .html pages are canonicalised with a 301;
+        // home and language indexes keep their trailing-slash canonical.
+        if (/\.html$/.test(t) && !/index\.html$/.test(t)) {
+          const u2 = new URL(request.url);
+          u2.pathname = t;
+          return Response.redirect(u2.toString(), 301);
+        }
+        return await withFlag(r, request);
+      }
     }
 
     // ---- 首页兜底 ----
