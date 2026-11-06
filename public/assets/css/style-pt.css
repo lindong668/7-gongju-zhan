@@ -446,3 +446,10 @@ html:not([data-theme])
 [data-theme="dark"] .guide-link{color:#7DD3FC!important}
 [data-theme="dark"] .guide-link:hover{color:#BAE6FD!important;background:rgba(125,211,252,.14)}
 .ux-actions,.ux-row{display:inline-flex!important;flex-direction:row!important;align-items:center!important;gap:10px!important;flex-wrap:wrap!important;margin:6px 8px 6px 0!important;vertical-align:middle}
+
+/* ===== 本地预览台实测修正 v1：计算/复制两键在任何语言、手机窄屏都同一行 =====
+   原因：原规则 flex-wrap:wrap 让德/法/西/葡长按钮换行（实测 dy=53）。
+   只命中同时带 ux-actions ux-row 的容器，不影响其他按钮组。 */
+.ux-actions.ux-row{display:flex!important;flex-direction:row!important;flex-wrap:nowrap!important;width:100%!important;max-width:100%!important;box-sizing:border-box;align-items:stretch!important;gap:10px!important;margin:6px 0!important;vertical-align:middle}
+.ux-actions.ux-row>.btn,.ux-actions.ux-row>.btn-o{flex:1 1 0!important;min-width:0!important;max-width:100%!important;white-space:normal!important;overflow-wrap:anywhere;line-height:1.25;padding:10px 9px!important;font-size:13px!important;margin:0!important}
+@media(max-width:420px){.ux-actions.ux-row{gap:6px!important}.ux-actions.ux-row>.btn,.ux-actions.ux-row>.btn-o{padding:9px 6px!important;font-size:12px!important}}
