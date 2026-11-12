@@ -1,0 +1,28 @@
+# Utilixo — Cloudflare Workers + Assets
+# 域名 hho.us.ci
+name = "7-gongju-zhan"
+compatibility_date = "2026-09-01"
+main = "src/index.js"
+
+# 关闭遥测（官方写法，无引号）
+send_metrics = false
+
+routes = [
+  { pattern = "hho.us.ci/*", zone_name = "hho.us.ci" }
+]
+
+[assets]
+directory = "./public"
+binding = "ASSETS"
+# run_worker_first=true：所有请求先过 Worker（410 / 硬 404 / 安全头 / URL 映射才真正生效）。
+# html_handling="none"：ASSETS.fetch 不做 .html 重定向，Worker 内部映射 /xxx -> /xxx.html 才能拿到 200。
+# 最终 URL 统一为无扩展名；.html 由 Worker 显式 307 回无扩展名。两项勿改回默认值。
+run_worker_first = true
+html_handling = "none"
+
+[observability]
+enabled = true
+[observability.logs]
+enabled = true
+invocation_logs = true
+head_sampling_rate = 1

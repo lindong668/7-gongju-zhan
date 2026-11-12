@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+
+<html lang="ja">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1" name="viewport"/>
+<title>チップ・割り勘計算機 — すべてのツール | Utilixo</title>
+<meta content="チップを計算し、任意の人数で割り勘。「会計金額」・「チップ率 %」・「人数」を入力して「計算」を押すと結果パネルに表示されます。処理はブラウザ内で完結し、入力内容は送信されません。" name="description"/>
+<link href="https://hho.us.ci/ja/tools/tip-calculator" rel="canonical"/>
+<link href="https://hho.us.ci/tools/tip-calculator" hreflang="en" rel="alternate"/>
+<link href="https://hho.us.ci/zh/tools/tip-calculator" hreflang="zh-CN" rel="alternate"/>
+<link href="https://hho.us.ci/pt/tools/tip-calculator" hreflang="pt-BR" rel="alternate"/>
+<link href="https://hho.us.ci/es/tools/tip-calculator" hreflang="es" rel="alternate"/>
+<link href="https://hho.us.ci/fr/tools/tip-calculator" hreflang="fr" rel="alternate"/>
+<link href="https://hho.us.ci/de/tools/tip-calculator" hreflang="de" rel="alternate"/>
+<link href="https://hho.us.ci/ja/tools/tip-calculator" hreflang="ja" rel="alternate"/>
+<link href="https://hho.us.ci/tools/tip-calculator" hreflang="x-default" rel="alternate"/>
+<meta content="index, follow" name="robots"/>
+<meta content="website" property="og:type"/>
+<meta content="ja_JP" property="og:locale"/>
+<meta content="en_US" property="og:locale:alternate"/>
+<meta content="zh_CN" property="og:locale:alternate"/>
+<meta content="pt_BR" property="og:locale:alternate"/>
+<meta content="es_ES" property="og:locale:alternate"/>
+<meta content="fr_FR" property="og:locale:alternate"/>
+<meta content="de_DE" property="og:locale:alternate"/>
+<meta content="Utilixo" property="og:site_name"/>
+<meta content="チップ・割り勘計算機 — すべてのツール" property="og:title"/>
+<meta content="チップを計算し、任意の人数で割り勘。「会計金額」・「チップ率 %」・「人数」を入力して「計算」を押すと結果パネルに表示されます。処理はブラウザ内で完結し、入力内容は送信されません。" property="og:description"/>
+<meta content="https://hho.us.ci/ja/tools/tip-calculator" property="og:url"/>
+<meta content="https://hho.us.ci/assets/img/og-cover.png" property="og:image"/>
+<meta content="summary_large_image" name="twitter:card"/>
+<meta content="チップ・割り勘計算機 — すべてのツール" name="twitter:title"/>
+<meta content="チップを計算し、任意の人数で割り勘。「会計金額」・「チップ率 %」・「人数」を入力して「計算」を押すと結果パネルに表示されます。処理はブラウザ内で完結し、入力内容は送信されません。" name="twitter:description"/>
+<meta content="https://hho.us.ci/assets/img/og-cover.png" name="twitter:image"/>
+<meta name="theme-color" content="#F4F6FB">
+
+<link href="/assets/img/favicon.svg" rel="icon" type="image/svg+xml"/>
+<link href="/assets/img/favicon-180.png" rel="apple-touch-icon"/>
+<link href="/manifest.webmanifest" rel="manifest"/>
+<script>(function(){try{var k='utilixo-theme';var s=localStorage.getItem(k);document.documentElement.setAttribute('data-theme',s==='dark'?'dark':'light');}catch(e){document.documentElement.setAttribute('data-theme','light');}})();</script>
+<link href="/assets/css/style-ja.css" rel="stylesheet"/>
+<script type="application/ld+json">
+{
+ "@context": "https://schema.org",
+ "@type": "WebApplication",
+ "name": "チップ・割り勘計算機",
+ "url": "https://hho.us.ci/ja/tools/tip-calculator",
+ "applicationCategory": "UtilityApplication",
+ "operatingSystem": "Any (web browser)",
+ "browserRequirements": "JavaScript が有効な最新のブラウザが必要です",
+ "offers": {
+  "@type": "Offer",
+  "price": "0",
+  "priceCurrency": "USD"
+ },
+ "description": "チップを計算し、任意の人数で割り勘。「会計金額」・「チップ率 %」・「人数」を入力して「計算」を押すと結果パネルに表示されます。処理はブラウザ内で完結し、入力内容は送信されません。",
+ "publisher": {
+  "@type": "Organization",
+  "name": "Utilixo",
+  "url": "https://hho.us.ci/"
+ }
+}
+</script>
+<script type="application/ld+json">
+{
+ "@context": "https://schema.org",
+ "@type": "BreadcrumbList",
+ "itemListElement": [
+  {
+   "@type": "ListItem",
+   "position": 1,
+   "name": "ホーム",
+   "item": "https://hho.us.ci/ja/"
+  },
+  {
+   "@type": "ListItem",
+   "position": 2,
+   "name": "金融・家計",
+   "item": "https://hho.us.ci/ja/category/finance"
+  },
+  {
+   "@type": "ListItem",
+   "position": 3,
+   "name": "チップ・割り勘計算機",
+   "item": "https://hho.us.ci/ja/tools/tip-calculator"
+  }
+ ]
+}
+</script>
+</head>
+<body>
+<header class="hdr"><div class="wrap hdr-in">
+<a class="logo" href="/ja/"><span class="logo-mark">U</span><span>Utilixo<small>オンラインツール</small></span></a>
+<span class="hdr-sp"></span>
+<div class="hdr-search">
+<svg fill="none" height="15" stroke="currentColor" stroke-linecap="round" stroke-width="2.2" viewbox="0 0 24 24" width="15"><circle cx="11" cy="11" r="7"></circle><path d="M21 21l-4.3-4.3"></path></svg>
+<input aria-label="ツールを検索" data-filter="" placeholder="56個のツールを検索…" type="search"/>
+</div>
+<button aria-label="テーマ切替" class="icon-btn" id="themeBtn" onclick="utilixoToggle()">☾</button><div class="langsw"><select aria-label="言語" class="langsel" onchange="if(this.value)location.href=this.value"><option value="/tools/tip-calculator">English</option><option value="/zh/tools/tip-calculator">简体中文</option><option value="/pt/tools/tip-calculator">Português</option><option value="/es/tools/tip-calculator">Español</option><option value="/fr/tools/tip-calculator">Français</option><option value="/de/tools/tip-calculator">Deutsch</option><option selected="" value="/ja/tools/tip-calculator">日本語</option></select></div>
+</div></header>
+<main class="wrap tool-wrap">
+<div class="crumb"><a href="/ja/">ホーム</a> › <a href="/ja/category/finance">家計・金融計算</a> › Tip Calculator &amp; Bill Splitter</div><div style="margin:12px 0 0"><a class="ux-back" href="/ja/">← ホームへ戻る</a></div>
+<div class="tool-hd">
+<div style="display:flex;align-items:center;gap:12px;margin-bottom:10px">
+<span class="ic" style="background:var(--c-finance-bg);color:var(--c-finance)"><svg aria-hidden="true" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.9" viewbox="0 0 24 24"><rect height="12" rx="2" width="18" x="3" y="6"></rect><circle cx="12" cy="12" r="2.6"></circle><path d="M6 10v4"></path><path d="M18 10v4"></path></svg></span>
+<h1 style="margin:0">チップ・割り勘計算機</h1></div>
+<p>チップを計算し、任意の人数で割り勘。項目を入力してボタンを押すと結果が表示されます。</p></div>
+<div class="panel"><div class="row">
+<div class="fld"><label for="tBill">会計金額</label><input id="tBill" type="number" value="85.50"/></div>
+<div class="fld"><label for="tPct">チップ率 %</label><input id="tPct" type="number" value="18"/></div>
+<div class="fld"><label for="tPpl">人数</label><input id="tPpl" min="1" type="number" value="4"/></div>
+</div>
+<div style="display:flex;gap:8px;flex-wrap:wrap;margin:10px 0">
+<button class="btn-o" onclick="tSet(15)">15%</button><button class="btn-o" onclick="tSet(18)">18%</button>
+<button class="btn-o" onclick="tSet(20)">20%</button><button class="btn-o" onclick="tSet(0)">チップなし</button></div>
+<div class="res-grid">
+<div class="res-cell"><div class="k">チップ</div><div class="v" id="tTip">—</div></div>
+<div class="res-cell"><div class="k">合計</div><div class="v" id="tTot">—</div></div>
+<div class="res-cell"><div class="k">1人あたり</div><div class="v" id="tPer">—</div></div>
+</div></div>
+<div class="ux-actions ux-row"><button class="btn ux-go" onclick="tRun()">計算</button><button class="btn ux-copy" onclick="utilixoCopy((document.getElementById('tTot')||{}).innerText||'' , this)">コピー</button></div><section class="ux-guide" data-guide="1" style="margin:26px 0 0;padding:24px;border:1px solid var(--bd,rgba(127,127,127,.25));border-radius:14px;line-height:1.8"><h2 style="font-size:1.3rem;margin:0 0 12px">チップ・割り勘計算機について</h2><p style="margin:0 0 12px">チップを計算し、任意の人数で割り勘。「会計金額」・「チップ率 %」・「人数」を入力して「計算」を押すと結果パネルに表示されます。処理はブラウザ内で完結し、入力内容は送信されません。</p><p style="margin:0 0 12px">チップ・割り勘計算機は上のフォームの「会計金額」・「チップ率 %」・「人数」を読み取り、結果パネルへ答えを書き出します。ログインやサーバーへの送信は不要で、ページ内の JavaScript が端末上で処理します。</p><h2 style="font-size:1.3rem;margin:24px 0 12px">使い方</h2><ol style="margin:0 0 12px;padding-left:22px"><li style="margin:0 0 8px">家計・金融計算カテゴリからチップ・割り勘計算機を開くか、ヘッダーの検索ボックスで探してください。</li><li style="margin:0 0 8px">ページの項目を入力します：「会計金額」・「チップ率 %」・「人数」。</li><li style="margin:0 0 8px">「計算」を押します。新しい結果が前回の結果を上書きし、表示されるのは常に現在の 1 回分だけで、2 つが並ぶことはありません。</li><li style="margin:0 0 8px">「コピー」で結果をクリップボードへコピーできます。実際にコピーできたときだけメッセージが出ます。</li></ol><h2 style="font-size:1.3rem;margin:24px 0 12px">使用例</h2><p style="margin:0 0 12px">開いたときの初期値は 会計金額 = 85.50、チップ率 % = 18、人数 = 4 です。まず「計算」を 1 回押して出力の形を確認し、自分のデータに差し替えてもう一度押すと、結果が新しい値で更新されます。</p><h2 style="font-size:1.3rem;margin:24px 0 12px">よくある質問</h2><h3 style="font-size:1rem;margin:18px 0 6px">入力した内容は送信されますか？</h3><p style="margin:0 0 10px">いいえ。チップ・割り勘計算機は「会計金額」・「チップ率 %」・「人数」をブラウザ内の JavaScript で処理します。入力と結果は端末内に残り、Utilixoで複製は保存されません。</p><h3 style="font-size:1rem;margin:18px 0 6px">複数回の結果を並べて比較できますか？</h3><p style="margin:0 0 10px">できません。「計算」を押すたびに現在の入力で再計算され、前の結果を上書きします。比較したい場合は前回の値を控えてください。</p><h3 style="font-size:1rem;margin:18px 0 6px">チップ・割り勘計算機で気を付けることは？</h3><p style="margin:0 0 10px">結果はページ上の項目（「会計金額」・「チップ率 %」・「人数」）だけで決まります。いずれかを変えて「計算」を押し直すと更新されます。</p><h3 style="font-size:1rem;margin:18px 0 6px">結果を持ち出すには？</h3><p style="margin:0 0 10px">結果が出たら「コピー」を押してください。空の結果では成功メッセージは出ません。</p><h3 style="font-size:1rem;margin:18px 0 6px">登録や料金は必要ですか？</h3><p style="margin:0 0 10px">不要です。チップ・割り勘計算機は無料・登録不要・回数制限なしで、ページを開けばすぐ使えます。</p><h2 style="font-size:1.3rem;margin:24px 0 12px">関連ツール</h2><ul style="margin:0 0 12px;padding-left:22px"><li><a href="/ja/tools/compound-interest">複利計算ツール</a> — 任意の複利頻度で貯蓄の成長をシミュレーション。</li><li><a href="/ja/tools/discount-calculator">割引計算ツール</a> — セール価格、節約額、重複割引の計算。</li><li><a href="/ja/tools/loan-calculator">ローン返済シミュレーター</a> — 月々の返済額、総利息、完済までの内訳。</li></ul><h2 style="font-size:1.3rem;margin:24px 0 12px">関連ガイド</h2><p style="margin:0">より詳しい解説は<a class="guide-link" href="/ja/guides/finance">金融・家計ガイド</a>をご覧ください。このカテゴリの各ツールを、実例とコツとともに順に紹介しています。</p><script type="application/ld+json">{"@context": "https://schema.org", "@type": "FAQPage", "mainEntity": [{"@type": "Question", "name": "入力した内容は送信されますか？", "acceptedAnswer": {"@type": "Answer", "text": "いいえ。チップ・割り勘計算機は「会計金額」・「チップ率 %」・「人数」をブラウザ内の JavaScript で処理します。入力と結果は端末内に残り、Utilixoで複製は保存されません。"}}, {"@type": "Question", "name": "複数回の結果を並べて比較できますか？", "acceptedAnswer": {"@type": "Answer", "text": "できません。「計算」を押すたびに現在の入力で再計算され、前の結果を上書きします。比較したい場合は前回の値を控えてください。"}}, {"@type": "Question", "name": "チップ・割り勘計算機で気を付けることは？", "acceptedAnswer": {"@type": "Answer", "text": "結果はページ上の項目（「会計金額」・「チップ率 %」・「人数」）だけで決まります。いずれかを変えて「計算」を押し直すと更新されます。"}}, {"@type": "Question", "name": "結果を持ち出すには？", "acceptedAnswer": {"@type": "Answer", "text": "結果が出たら「コピー」を押してください。空の結果では成功メッセージは出ません。"}}, {"@type": "Question", "name": "登録や料金は必要ですか？", "acceptedAnswer": {"@type": "Answer", "text": "不要です。チップ・割り勘計算機は無料・登録不要・回数制限なしで、ページを開けばすぐ使えます。"}}]}</script></section>
+</main>
+<footer class="ftr"><div class="wrap ftr-in">
+<div class="ftr-links">
+<a href="/ja/pages/about">サイトについて</a><a href="/ja/pages/contact">お問い合わせ</a>
+<a href="/ja/pages/privacy">プライバシーポリシー</a><a href="/ja/pages/terms">利用規約</a>
+<a href="/ja/pages/disclaimer">免責事項</a>
+</div>
+<p class="ftr-c">© 2026 Utilixo · 答えだけが欲しい人のために。すべてのツールはブラウザ内で動くため、入力内容がアップロードされたり保存されたりすることはありません。</p>
+</div></footer>
+<script src="/assets/js/app.js"></script>
+<script>
+
+function fMoney(x){return '¥'+x.toLocaleString('ja-JP',{minimumFractionDigits:2,maximumFractionDigits:2});}
+function tSet(v){document.getElementById('tPct').value=v;tRun();}
+function tRun(){
+  var b=parseFloat(document.getElementById('tBill').value)||0;
+  var p=parseFloat(document.getElementById('tPct').value)||0;
+  var n=parseInt(document.getElementById('tPpl').value,10)||1;
+  if(n<1)n=1;
+  var tip=b*p/100, tot=b+tip, per=tot/n;
+  document.getElementById('tTip').textContent=fMoney(tip);
+  document.getElementById('tTot').textContent=fMoney(tot);
+  document.getElementById('tPer').textContent=fMoney(per);
+}
+document.addEventListener('DOMContentLoaded',function(){
+  try{
+    if('tRun'==='grInit'){grAdd();grAdd();grAdd();}
+    else if('tRun'==='gpInit'){gpAdd();gpAdd();gpAdd();}
+    else if('tRun'&&typeof window['tRun']==='function'){window['tRun']();}
+  }catch(e){console.warn(e);}
+});
+
+try{tRun();}catch(e){}
+</script>
+</body></html>

@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+
+<html lang="ja">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1" name="viewport"/>
+<title>基数64エンコード・デコード — すべてのツール | Utilixo</title>
+<meta content="UTF-8対応の安全なBase64エンコードとデコード。“テキスト”を入力して「エンコード →」を押すと結果パネルに表示されます。処理はブラウザ内で完結し、入力内容は送信されません。" name="description"/>
+<link href="https://hho.us.ci/ja/tools/base64-tool" rel="canonical"/>
+<link href="https://hho.us.ci/tools/base64-tool" hreflang="en" rel="alternate"/>
+<link href="https://hho.us.ci/zh/tools/base64-tool" hreflang="zh-CN" rel="alternate"/>
+<link href="https://hho.us.ci/pt/tools/base64-tool" hreflang="pt-BR" rel="alternate"/>
+<link href="https://hho.us.ci/es/tools/base64-tool" hreflang="es" rel="alternate"/>
+<link href="https://hho.us.ci/fr/tools/base64-tool" hreflang="fr" rel="alternate"/>
+<link href="https://hho.us.ci/de/tools/base64-tool" hreflang="de" rel="alternate"/>
+<link href="https://hho.us.ci/ja/tools/base64-tool" hreflang="ja" rel="alternate"/>
+<link href="https://hho.us.ci/tools/base64-tool" hreflang="x-default" rel="alternate"/>
+<meta content="index, follow" name="robots"/>
+<meta content="website" property="og:type"/>
+<meta content="ja_JP" property="og:locale"/>
+<meta content="en_US" property="og:locale:alternate"/>
+<meta content="zh_CN" property="og:locale:alternate"/>
+<meta content="pt_BR" property="og:locale:alternate"/>
+<meta content="es_ES" property="og:locale:alternate"/>
+<meta content="fr_FR" property="og:locale:alternate"/>
+<meta content="de_DE" property="og:locale:alternate"/>
+<meta content="Utilixo" property="og:site_name"/>
+<meta content="基数64エンコード・デコード — すべてのツール" property="og:title"/>
+<meta content="UTF-8対応の安全なBase64エンコードとデコード。“テキスト”を入力して「エンコード →」を押すと結果パネルに表示されます。処理はブラウザ内で完結し、入力内容は送信されません。" property="og:description"/>
+<meta content="https://hho.us.ci/ja/tools/base64-tool" property="og:url"/>
+<meta content="https://hho.us.ci/assets/img/og-cover.png" property="og:image"/>
+<meta content="summary_large_image" name="twitter:card"/>
+<meta content="基数64エンコード・デコード — すべてのツール" name="twitter:title"/>
+<meta content="UTF-8対応の安全なBase64エンコードとデコード。“テキスト”を入力して「エンコード →」を押すと結果パネルに表示されます。処理はブラウザ内で完結し、入力内容は送信されません。" name="twitter:description"/>
+<meta content="https://hho.us.ci/assets/img/og-cover.png" name="twitter:image"/>
+<meta name="theme-color" content="#F4F6FB">
+
+<link href="/assets/img/favicon.svg" rel="icon" type="image/svg+xml"/>
+<link href="/assets/img/favicon-180.png" rel="apple-touch-icon"/>
+<link href="/manifest.webmanifest" rel="manifest"/>
+<script>(function(){try{var k='utilixo-theme';var s=localStorage.getItem(k);document.documentElement.setAttribute('data-theme',s==='dark'?'dark':'light');}catch(e){document.documentElement.setAttribute('data-theme','light');}})();</script>
+<link href="/assets/css/style-ja.css" rel="stylesheet"/>
+<script type="application/ld+json">
+{
+ "@context": "https://schema.org",
+ "@type": "WebApplication",
+ "name": "Base64エンコード・デコード",
+ "url": "https://hho.us.ci/ja/tools/base64-tool",
+ "applicationCategory": "UtilityApplication",
+ "operatingSystem": "Any (web browser)",
+ "browserRequirements": "JavaScript が有効な最新のブラウザが必要です",
+ "offers": {
+  "@type": "Offer",
+  "price": "0",
+  "priceCurrency": "USD"
+ },
+ "description": "UTF-8対応の安全なBase64エンコードとデコード。“テキスト”を入力して「エンコード →」を押すと結果パネルに表示されます。処理はブラウザ内で完結し、入力内容は送信されません。",
+ "publisher": {
+  "@type": "Organization",
+  "name": "Utilixo",
+  "url": "https://hho.us.ci/"
+ }
+}
+</script>
+<script type="application/ld+json">
+{
+ "@context": "https://schema.org",
+ "@type": "BreadcrumbList",
+ "itemListElement": [
+  {
+   "@type": "ListItem",
+   "position": 1,
+   "name": "ホーム",
+   "item": "https://hho.us.ci/ja/"
+  },
+  {
+   "@type": "ListItem",
+   "position": 2,
+   "name": "テキストとコード",
+   "item": "https://hho.us.ci/ja/category/text"
+  },
+  {
+   "@type": "ListItem",
+   "position": 3,
+   "name": "Base64エンコード・デコード",
+   "item": "https://hho.us.ci/ja/tools/base64-tool"
+  }
+ ]
+}
+</script>
+</head>
+<body>
+<header class="hdr"><div class="wrap hdr-in">
+<a class="logo" href="/ja/"><span class="logo-mark">U</span><span>Utilixo<small>オンラインツール</small></span></a>
+<span class="hdr-sp"></span>
+<div class="hdr-search">
+<svg fill="none" height="15" stroke="currentColor" stroke-linecap="round" stroke-width="2.2" viewbox="0 0 24 24" width="15"><circle cx="11" cy="11" r="7"></circle><path d="M21 21l-4.3-4.3"></path></svg>
+<input aria-label="ツールを検索" data-filter="" placeholder="56個のツールを検索…" type="search"/>
+</div>
+<button aria-label="テーマ切替" class="icon-btn" id="themeBtn" onclick="utilixoToggle()">☾</button><div class="langsw"><select aria-label="言語" class="langsel" onchange="if(this.value)location.href=this.value"><option value="/tools/base64-tool">English</option><option value="/zh/tools/base64-tool">简体中文</option><option value="/pt/tools/base64-tool">Português</option><option value="/es/tools/base64-tool">Español</option><option value="/fr/tools/base64-tool">Français</option><option value="/de/tools/base64-tool">Deutsch</option><option selected="" value="/ja/tools/base64-tool">日本語</option></select></div>
+</div></header>
+<main class="wrap tool-wrap">
+<div class="crumb"><a href="/ja/">ホーム</a> › <a href="/ja/category/text">テキストとコード</a> › Base64エンコード・デコード</div><div style="margin:12px 0 0"><a class="ux-back" href="/ja/">← ホームへ戻る</a></div>
+<div class="tool-hd">
+<div style="display:flex;align-items:center;gap:12px;margin-bottom:10px">
+<span class="ic" style="background:var(--c-text-bg);color:var(--c-text)"><svg aria-hidden="true" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.9" viewbox="0 0 24 24"><rect height="7" rx="1.5" width="7" x="3" y="4"></rect><rect height="7" rx="1.5" width="7" x="14" y="13"></rect><path d="M6.5 11v3a3 3 0 0 0 3 3h1.5"></path><path d="M17.5 13v-3a3 3 0 0 0-3-3H13"></path></svg></span>
+<h1 style="margin:0">Base64エンコード・デコード</h1></div>
+<p>UTF-8対応の安全なBase64エンコードとデコード。項目を入力してボタンを押すと結果が表示されます。</p></div>
+<div class="panel"><div class="fld"><label for="bIn">テキスト</label><textarea id="bIn" placeholder="テキストを入力、またはBase64を貼り付けてデコード"></textarea></div>
+<div style="display:flex;gap:9px;flex-wrap:wrap">
+<div class="ux-actions ux-row"><button class="btn ux-go" onclick="bEnc()">エンコード →</button><button class="btn-o ux-copy" onclick="utilixoCopy(document.getElementById('bOut').value,this)">コピー</button></div>
+<button class="btn-o" onclick="bDec()">← デコード</button></div>
+<div id="bMsg"></div>
+<div class="fld" style="margin-top:12px"><label>結果</label><textarea id="bOut" readonly=""></textarea></div>
+</div>
+<section class="ux-guide" data-guide="1" style="margin:26px 0 0;padding:24px;border:1px solid var(--bd,rgba(127,127,127,.25));border-radius:14px;line-height:1.8"><h2 style="font-size:1.3rem;margin:0 0 12px">Base64エンコード・デコードについて</h2><p style="margin:0 0 12px">UTF-8対応の安全なBase64エンコードとデコード。“テキスト”を入力して「エンコード →」を押すと結果パネルに表示されます。処理はブラウザ内で完結し、入力内容は送信されません。</p><p style="margin:0 0 12px">Base64エンコード・デコードは上のフォームの“テキスト”を読み取り、結果パネルへ答えを書き出します。ログインやサーバーへの送信は不要で、ページ内の JavaScript が端末上で処理します。</p><h2 style="font-size:1.3rem;margin:24px 0 12px">使い方</h2><ol style="margin:0 0 12px;padding-left:22px"><li style="margin:0 0 8px">テキストとコードカテゴリからBase64エンコード・デコードを開くか、ヘッダーの検索ボックスで探してください。</li><li style="margin:0 0 8px">ページの項目を入力します：“テキスト”。</li><li style="margin:0 0 8px">「エンコード →」を押します。新しい結果が前回の結果を上書きし、表示されるのは常に現在の 1 回分だけで、2 つが並ぶことはありません。</li><li style="margin:0 0 8px">「コピー」で結果をクリップボードへコピーできます。実際にコピーできたときだけメッセージが出ます。</li></ol><h2 style="font-size:1.3rem;margin:24px 0 12px">使用例</h2><p style="margin:0 0 12px">上の項目に自分のデータを入力し、「エンコード →」を押すと結果が出ます。入力を変えてもう一度押すと、現在の入力で再計算され前の結果を置き換えます。</p><h2 style="font-size:1.3rem;margin:24px 0 12px">よくある質問</h2><h3 style="font-size:1rem;margin:18px 0 6px">入力した内容は送信されますか？</h3><p style="margin:0 0 10px">いいえ。Base64エンコード・デコードは“テキスト”をブラウザ内の JavaScript で処理します。入力と結果は端末内に残り、Utilixoで複製は保存されません。</p><h3 style="font-size:1rem;margin:18px 0 6px">複数回の結果を並べて比較できますか？</h3><p style="margin:0 0 10px">できません。「エンコード →」を押すたびに現在の入力で再計算され、前の結果を上書きします。比較したい場合は前回の値を控えてください。</p><h3 style="font-size:1rem;margin:18px 0 6px">Base64エンコード・デコードで気を付けることは？</h3><p style="margin:0 0 10px">結果はページ上の項目（“テキスト”）だけで決まります。いずれかを変えて「エンコード →」を押し直すと更新されます。</p><h3 style="font-size:1rem;margin:18px 0 6px">結果を持ち出すには？</h3><p style="margin:0 0 10px">結果が出たら「コピー」を押してください。空の結果では成功メッセージは出ません。</p><h3 style="font-size:1rem;margin:18px 0 6px">登録や料金は必要ですか？</h3><p style="margin:0 0 10px">不要です。Base64エンコード・デコードは無料・登録不要・回数制限なしで、ページを開けばすぐ使えます。</p><h2 style="font-size:1.3rem;margin:24px 0 12px">関連ツール</h2><ul style="margin:0 0 12px;padding-left:22px"><li><a href="/ja/tools/duplicate-line-remover">重複行削除ツール</a> — 重複行を除去し、リストの並べ替えや整形も可能。</li><li><a href="/ja/tools/hash-generator">ハッシュ生成ツール</a> — MD5、SHA-1、SHA-256、SHA-512のチェックサム。</li><li><a href="/ja/tools/html-entity">HTMLエンティティ変換</a> — HTMLエンティティを安全にエスケープ・復号。</li></ul><h2 style="font-size:1.3rem;margin:24px 0 12px">関連ガイド</h2><p style="margin:0">より詳しい解説は<a class="guide-link" href="/ja/guides/text">テキストとコードガイド</a>をご覧ください。このカテゴリの各ツールを、実例とコツとともに順に紹介しています。</p><script type="application/ld+json">{"@context": "https://schema.org", "@type": "FAQPage", "mainEntity": [{"@type": "Question", "name": "入力した内容は送信されますか？", "acceptedAnswer": {"@type": "Answer", "text": "いいえ。Base64エンコード・デコードは“テキスト”をブラウザ内の JavaScript で処理します。入力と結果は端末内に残り、Utilixoで複製は保存されません。"}}, {"@type": "Question", "name": "複数回の結果を並べて比較できますか？", "acceptedAnswer": {"@type": "Answer", "text": "できません。「エンコード →」を押すたびに現在の入力で再計算され、前の結果を上書きします。比較したい場合は前回の値を控えてください。"}}, {"@type": "Question", "name": "Base64エンコード・デコードで気を付けることは？", "acceptedAnswer": {"@type": "Answer", "text": "結果はページ上の項目（“テキスト”）だけで決まります。いずれかを変えて「エンコード →」を押し直すと更新されます。"}}, {"@type": "Question", "name": "結果を持ち出すには？", "acceptedAnswer": {"@type": "Answer", "text": "結果が出たら「コピー」を押してください。空の結果では成功メッセージは出ません。"}}, {"@type": "Question", "name": "登録や料金は必要ですか？", "acceptedAnswer": {"@type": "Answer", "text": "不要です。Base64エンコード・デコードは無料・登録不要・回数制限なしで、ページを開けばすぐ使えます。"}}]}</script></section>
+</main>
+<footer class="ftr"><div class="wrap ftr-in">
+<div class="ftr-links">
+<a href="/ja/pages/about">サイトについて</a><a href="/ja/pages/contact">お問い合わせ</a>
+<a href="/ja/pages/privacy">プライバシーポリシー</a><a href="/ja/pages/terms">利用規約</a>
+<a href="/ja/pages/disclaimer">免責事項</a>
+</div>
+<p class="ftr-c">© 2026 Utilixo · 答えだけが欲しい人のために。すべてのツールはブラウザ内で動くため、入力内容がアップロードされたり保存されたりすることはありません。</p>
+</div></footer>
+<script src="/assets/js/app.js"></script>
+<script>
+
+function bMsg(t,ok){document.getElementById('bMsg').innerHTML='<div class="'+(ok?'ok-t':'err-t')+'">'+t+'</div>';}
+function bEnc(){
+  var v=document.getElementById('bIn').value;
+  if(!v){bMsg('エンコードする文字列を入力してください。',false);return;}
+  try{document.getElementById('bOut').value=btoa(unescape(encodeURIComponent(v)));bMsg('エンコードしました。',true);}
+  catch(e){bMsg('エラー：'+"入力内容を確認して、もう一度お試しください。",false);}
+}
+function bDec(){
+  var v=document.getElementById('bIn').value.trim();
+  if(!v){bMsg('デコードする Base64 を貼り付けてください。',false);return;}
+  try{document.getElementById('bOut').value=decodeURIComponent(escape(atob(v.replace(/\s/g,''))));bMsg('Decoded.',true);}
+  catch(e){bMsg('Base64 が無効です：'+"入力内容を確認して、もう一度お試しください。",false);}
+}
+document.addEventListener('DOMContentLoaded',function(){
+  try{
+    if('bEnc'==='grInit'){grAdd();grAdd();grAdd();}
+    else if('bEnc'==='gpInit'){gpAdd();gpAdd();gpAdd();}
+    else if('bEnc'&&typeof window['bEnc']==='function'){window['bEnc']();}
+  }catch(e){console.warn(e);}
+});
+</script>
+</body></html>

@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1" name="viewport"/>
+<title>骰子模拟器 — 全部工具 | Utilixo</title>
+<meta content="投掷任意数量、任意面数的骰子。填写“骰子数量”、“每个骰子面数”、“修正值”后点「掷骰子」，结果会显示在结果区；运算全部在浏览器本地完成，输入内容不会上传。页面只显示当前一次结果，不保存历史，也不会并排对比。" name="description"/>
+<link href="https://hho.us.ci/zh/tools/dice-roller" rel="canonical"/>
+<link href="https://hho.us.ci/tools/dice-roller" hreflang="en" rel="alternate"/>
+<link href="https://hho.us.ci/zh/tools/dice-roller" hreflang="zh-CN" rel="alternate"/>
+<link href="https://hho.us.ci/pt/tools/dice-roller" hreflang="pt-BR" rel="alternate"/>
+<link href="https://hho.us.ci/es/tools/dice-roller" hreflang="es" rel="alternate"/>
+<link href="https://hho.us.ci/fr/tools/dice-roller" hreflang="fr" rel="alternate"/>
+<link href="https://hho.us.ci/de/tools/dice-roller" hreflang="de" rel="alternate"/>
+<link href="https://hho.us.ci/ja/tools/dice-roller" hreflang="ja" rel="alternate"/>
+<link href="https://hho.us.ci/tools/dice-roller" hreflang="x-default" rel="alternate"/>
+<meta content="index, follow" name="robots"/>
+<meta content="website" property="og:type"/>
+<meta content="zh_CN" property="og:locale"/>
+<meta content="en_US" property="og:locale:alternate"/>
+<meta content="pt_BR" property="og:locale:alternate"/>
+<meta content="es_ES" property="og:locale:alternate"/>
+<meta content="fr_FR" property="og:locale:alternate"/>
+<meta content="de_DE" property="og:locale:alternate"/>
+<meta content="ja_JP" property="og:locale:alternate"/>
+<meta content="Utilixo" property="og:site_name"/>
+<meta content="骰子模拟器 — 全部工具" property="og:title"/>
+<meta content="投掷任意数量、任意面数的骰子。填写“骰子数量”、“每个骰子面数”、“修正值”后点「掷骰子」，结果会显示在结果区；运算全部在浏览器本地完成，输入内容不会上传。页面只显示当前一次结果，不保存历史，也不会并排对比。" property="og:description"/>
+<meta content="https://hho.us.ci/zh/tools/dice-roller" property="og:url"/>
+<meta content="https://hho.us.ci/assets/img/og-cover.png" property="og:image"/>
+<meta content="summary_large_image" name="twitter:card"/>
+<meta content="骰子模拟器 — 全部工具" name="twitter:title"/>
+<meta content="投掷任意数量、任意面数的骰子。填写“骰子数量”、“每个骰子面数”、“修正值”后点「掷骰子」，结果会显示在结果区；运算全部在浏览器本地完成，输入内容不会上传。页面只显示当前一次结果，不保存历史，也不会并排对比。" name="twitter:description"/>
+<meta content="https://hho.us.ci/assets/img/og-cover.png" name="twitter:image"/>
+<meta name="theme-color" content="#F4F6FB">
+
+<link href="/assets/img/favicon.svg" rel="icon" type="image/svg+xml"/>
+<link href="/assets/img/favicon-180.png" rel="apple-touch-icon"/>
+<link href="/manifest.webmanifest" rel="manifest"/>
+<script>(function(){try{var k='utilixo-theme';var s=localStorage.getItem(k);document.documentElement.setAttribute('data-theme',s==='dark'?'dark':'light');}catch(e){document.documentElement.setAttribute('data-theme','light');}})();</script>
+<link href="/assets/css/style-zh.css" rel="stylesheet"/>
+<script type="application/ld+json">
+{
+ "@context": "https://schema.org",
+ "@type": "WebApplication",
+ "name": "骰子模拟器",
+ "url": "https://hho.us.ci/zh/tools/dice-roller",
+ "applicationCategory": "UtilityApplication",
+ "operatingSystem": "Any (web browser)",
+ "browserRequirements": "需要启用 JavaScript 的现代浏览器",
+ "offers": {
+  "@type": "Offer",
+  "price": "0",
+  "priceCurrency": "USD"
+ },
+ "description": "投掷任意数量、任意面数的骰子。填写“骰子数量”、“每个骰子面数”、“修正值”后点「掷骰子」，结果会显示在结果区；运算全部在浏览器本地完成，输入内容不会上传。页面只显示当前一次结果，不保存历史，也不会并排对比。",
+ "publisher": {
+  "@type": "Organization",
+  "name": "Utilixo",
+  "url": "https://hho.us.ci/"
+ }
+}
+</script>
+<script type="application/ld+json">
+{
+ "@context": "https://schema.org",
+ "@type": "BreadcrumbList",
+ "itemListElement": [
+  {
+   "@type": "ListItem",
+   "position": 1,
+   "name": "首页",
+   "item": "https://hho.us.ci/zh/"
+  },
+  {
+   "@type": "ListItem",
+   "position": 2,
+   "name": "生成与实用工具",
+   "item": "https://hho.us.ci/zh/category/generate"
+  },
+  {
+   "@type": "ListItem",
+   "position": 3,
+   "name": "骰子模拟器",
+   "item": "https://hho.us.ci/zh/tools/dice-roller"
+  }
+ ]
+}
+</script>
+</head>
+<body>
+<header class="hdr"><div class="wrap hdr-in">
+<a class="logo" href="/zh/"><span class="logo-mark">U</span><span>Utilixo<small>在线工具箱</small></span></a>
+<span class="hdr-sp"></span>
+<div class="hdr-search">
+<svg fill="none" height="15" stroke="currentColor" stroke-linecap="round" stroke-width="2.2" viewbox="0 0 24 24" width="15"><circle cx="11" cy="11" r="7"></circle><path d="M21 21l-4.3-4.3"></path></svg>
+<input aria-label="搜索工具" data-filter="" placeholder="搜索 56 个工具…" type="search"/>
+</div>
+<button aria-label="切换主题" class="icon-btn" id="themeBtn" onclick="utilixoToggle()">☾</button><div class="langsw"><select aria-label="语言" class="langsel" onchange="if(this.value)location.href=this.value"><option value="/tools/dice-roller">English</option><option selected="" value="/zh/tools/dice-roller">简体中文</option><option value="/pt/tools/dice-roller">Português</option><option value="/es/tools/dice-roller">Español</option><option value="/fr/tools/dice-roller">Français</option><option value="/de/tools/dice-roller">Deutsch</option><option value="/ja/tools/dice-roller">日本語</option></select></div>
+</div></header>
+<main class="wrap tool-wrap">
+<div class="crumb"><a href="/zh/">首页</a> › <a href="/zh/category/generate">生成与工具</a> › 骰子模拟器</div><div style="margin:12px 0 0"><a class="ux-back" href="/zh/">← 返回首页</a></div>
+<div class="tool-hd">
+<div style="display:flex;align-items:center;gap:12px;margin-bottom:10px">
+<span class="ic" style="background:var(--c-generate-bg);color:var(--c-generate)"><svg aria-hidden="true" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.9" viewbox="0 0 24 24"><rect height="17" rx="4" width="17" x="3.5" y="3.5"></rect><circle cx="8.5" cy="8.5" r="1.4"></circle><circle cx="15.5" cy="15.5" r="1.4"></circle><circle cx="12" cy="12" r="1.4"></circle></svg></span>
+<h1 style="margin:0">骰子模拟器</h1></div>
+<p>投掷任意数量、任意面数的骰子。填好字段后点页面按钮即可看到结果。</p></div>
+<div class="panel"><div class="row">
+<div class="fld"><label for="diN">骰子数量</label><input id="diN" max="20" min="1" type="number" value="2"/></div>
+<div class="fld"><label for="diS">每个骰子面数</label><select id="diS"><option value="4">d4</option><option selected="" value="6">d6</option><option value="8">d8</option><option value="10">10 面骰</option><option value="12">12 面骰</option><option selected="" value="20">20 面骰</option><option value="100">100 面骰</option></select></div>
+<div class="fld"><label for="diM">修正值</label><input id="diM" type="number" value="0"/></div>
+</div>
+<div class="ux-actions ux-row"><button class="btn ux-go" onclick="diRoll()">掷骰子</button><button class="btn ux-copy" onclick="utilixoCopy(document.getElementById('diTot').textContent,this)">复制</button></div>
+<div class="out" style="margin-top:14px;text-align:center"><div class="k" style="font-size:11.5px;font-weight:800;color:var(--muted);text-transform:uppercase">合计</div><div class="out-val" id="diTot" style="font-size:38px">—</div></div>
+<div id="diDice" style="display:flex;gap:10px;flex-wrap:wrap;justify-content:center;margin-top:14px"></div>
+<div class="res-grid" style="margin-top:14px">
+<div class="res-cell"><div class="k">最小可能</div><div class="v" id="diMin">—</div></div>
+<div class="res-cell"><div class="k">最大可能</div><div class="v" id="diMax">—</div></div>
+<div class="res-cell"><div class="k">平均值</div><div class="v" id="diAvg">—</div></div>
+</div></div>
+<section class="ux-guide" data-guide="1" style="margin:26px 0 0;padding:24px;border:1px solid var(--bd,rgba(127,127,127,.25));border-radius:14px;line-height:1.8"><h2 style="font-size:1.3rem;margin:0 0 12px">关于骰子模拟器</h2><p style="margin:0 0 12px">投掷任意数量、任意面数的骰子。填写“骰子数量”、“每个骰子面数”、“修正值”后点「掷骰子」，结果会显示在结果区；运算全部在浏览器本地完成，输入内容不会上传。</p><p style="margin:0 0 12px">骰子模拟器 读取上方表单里的“骰子数量”、“每个骰子面数”、“修正值”，把答案写进结果区。页面不需要登录，也不会把数据发到服务器：所有计算都由本页的脚本在你的设备上完成。</p><h2 style="font-size:1.3rem;margin:24px 0 12px">如何使用</h2><ol style="margin:0 0 12px;padding-left:22px"><li style="margin:0 0 8px">从生成与工具分类打开骰子模拟器，也可以用页头的搜索框找到它。</li><li style="margin:0 0 8px">按页面上的字段逐一填写：“骰子数量”、“每个骰子面数”、“修正值”。</li><li style="margin:0 0 8px">点「掷骰子」。新结果会覆盖上一次的结果，页面只显示当前这一轮，不会把两次结果并排放在一起。</li><li style="margin:0 0 8px">点「复制」把结果复制到剪贴板；只有真的复制到内容时才会出现成功提示。</li></ol><h2 style="font-size:1.3rem;margin:24px 0 12px">使用示例</h2><p style="margin:0 0 12px">页面打开时这几个字段已有默认值：骰子数量 = 2、修正值 = 0。先点一次「掷骰子」看看结果长什么样，再换成自己的数据重新点一次，新结果会替换旧结果。</p><h2 style="font-size:1.3rem;margin:24px 0 12px">常见问题</h2><h3 style="font-size:1rem;margin:18px 0 6px">我输入的内容会被上传吗？</h3><p style="margin:0 0 10px">不会。骰子模拟器 用浏览器里的脚本处理“骰子数量”、“每个骰子面数”、“修正值”，输入和结果都留在你的设备上，Utilixo 不保存副本。</p><h3 style="font-size:1rem;margin:18px 0 6px">能不能保留多次结果做对比？</h3><p style="margin:0 0 10px">不能并排保留。每次点「掷骰子」都会按当前输入重算并覆盖上一次结果；想对比请自己先记下前一次的数值。</p><h3 style="font-size:1rem;margin:18px 0 6px">用骰子模拟器时要注意什么？</h3><p style="margin:0 0 10px">结果只取决于页面上这几个字段（“骰子数量”、“每个骰子面数”、“修正值”）；改动其中任意一项，再点「掷骰子」就会得到更新后的结果。</p><h3 style="font-size:1rem;margin:18px 0 6px">结果怎么带走？</h3><p style="margin:0 0 10px">结果出现后点「复制」即可复制；结果为空时不会出现成功提示。</p><h3 style="font-size:1rem;margin:18px 0 6px">需要注册或付费吗？</h3><p style="margin:0 0 10px">不需要。骰子模拟器 免费、无需注册，也没有次数限制，打开页面直接用。</p><h2 style="font-size:1.3rem;margin:24px 0 12px">相关工具</h2><ul style="margin:0 0 12px;padding-left:22px"><li><a href="/zh/tools/box-shadow-generator">CSS 阴影生成器</a> — 多层阴影实时预览并可复制 CSS 代码。</li><li><a href="/zh/tools/coin-flip">抛硬币</a> — 抛一次或多次硬币并统计结果。</li><li><a href="/zh/tools/color-picker">取色器</a> — 选取颜色并读取 HEX、RGB、HSL 与对比度。</li></ul><h2 style="font-size:1.3rem;margin:24px 0 12px">延伸阅读</h2><p style="margin:0">想看更完整的说明，可以读这篇<a class="guide-link" href="/zh/guides/generate">生成与实用工具分类指南</a>，里面逐个介绍了本分类的工具，并附了实际用法和小技巧。</p><script type="application/ld+json">{"@context": "https://schema.org", "@type": "FAQPage", "mainEntity": [{"@type": "Question", "name": "我输入的内容会被上传吗？", "acceptedAnswer": {"@type": "Answer", "text": "不会。骰子模拟器 用浏览器里的脚本处理“骰子数量”、“每个骰子面数”、“修正值”，输入和结果都留在你的设备上，Utilixo 不保存副本。"}}, {"@type": "Question", "name": "能不能保留多次结果做对比？", "acceptedAnswer": {"@type": "Answer", "text": "不能并排保留。每次点「掷骰子」都会按当前输入重算并覆盖上一次结果；想对比请自己先记下前一次的数值。"}}, {"@type": "Question", "name": "用骰子模拟器时要注意什么？", "acceptedAnswer": {"@type": "Answer", "text": "结果只取决于页面上这几个字段（“骰子数量”、“每个骰子面数”、“修正值”）；改动其中任意一项，再点「掷骰子」就会得到更新后的结果。"}}, {"@type": "Question", "name": "结果怎么带走？", "acceptedAnswer": {"@type": "Answer", "text": "结果出现后点「复制」即可复制；结果为空时不会出现成功提示。"}}, {"@type": "Question", "name": "需要注册或付费吗？", "acceptedAnswer": {"@type": "Answer", "text": "不需要。骰子模拟器 免费、无需注册，也没有次数限制，打开页面直接用。"}}]}</script></section>
+</main>
+<footer class="ftr"><div class="wrap ftr-in">
+<div class="ftr-links">
+<a href="/zh/pages/about">关于我们</a><a href="/zh/pages/contact">联系我们</a>
+<a href="/zh/pages/privacy">隐私政策</a><a href="/zh/pages/terms">服务条款</a>
+<a href="/zh/pages/disclaimer">免责声明</a>
+</div>
+<p class="ftr-c">© 2026 Utilixo · 给只想马上知道答案的人。所有工具都在你的浏览器本地运行，输入的内容不会上传、不会保存、不会给第三方。</p>
+</div></footer>
+<script src="/assets/js/app.js"></script>
+<script>
+
+function diRoll(){
+  var n=Math.min(20,Math.max(1,parseInt(document.getElementById('diN').value,10)||1));
+  var s=parseInt(document.getElementById('diS').value,10)||6;
+  var m=parseInt(document.getElementById('diM').value,10)||0;
+  var arr=new Uint32Array(n);crypto.getRandomValues(arr);
+  var rolls=[],sum=0;
+  for(var i=0;i<n;i++){var r=arr[i]%s+1;rolls.push(r);sum+=r;}
+  sum+=m;
+  document.getElementById('diTot').textContent=sum;
+  var h='';
+  rolls.forEach(function(r){
+    h+='<div style="width:52px;height:52px;border-radius:12px;background:linear-gradient(135deg,#0E7490,#2563EB);color:#fff;border:1px solid rgba(255,255,255,.3);text-shadow:0 1px 2px rgba(0,0,0,.28);user-select:none;-webkit-user-select:none;display:flex;align-items:center;justify-content:center;font-weight:800;font-size:19px;box-shadow:0 4px 12px rgba(99,102,241,.3)">'+r+'</div>';
+  });
+  if(m)h+='<div style="width:52px;height:52px;border-radius:12px;background:var(--card-2);border:1px solid var(--border);color:var(--text-2);display:flex;align-items:center;justify-content:center;font-weight:800;font-size:15px">'+(m>0?'+':'')+m+'</div>';
+  document.getElementById('diDice').innerHTML=h;
+  document.getElementById('diMin').textContent=n*1+m;
+  document.getElementById('diMax').textContent=n*s+m;
+  document.getElementById('diAvg').textContent=(n*(s+1)/2+m).toFixed(1);
+}
+document.addEventListener('DOMContentLoaded',function(){
+  try{
+    if(''==='grInit'){grAdd();grAdd();grAdd();}
+    else if(''==='gpInit'){gpAdd();gpAdd();gpAdd();}
+    else if(''&&typeof window['']==='function'){window['']();}
+  }catch(e){console.warn(e);}
+});
+</script>
+</body></html>

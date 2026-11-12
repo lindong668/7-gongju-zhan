@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+
+<html lang="es">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1" name="viewport"/>
+<title>Contador de Palabras y Caracteres | Utilixo</title>
+<meta content="Cuenta palabras, caracteres, frases y tiempo de lectura. Pulsa Calcular; el resultado aparece en el panel de resultados." name="description"/>
+<link href="https://hho.us.ci/es/tools/word-counter" rel="canonical"/>
+<link href="https://hho.us.ci/tools/word-counter" hreflang="en" rel="alternate"/>
+<link href="https://hho.us.ci/zh/tools/word-counter" hreflang="zh-CN" rel="alternate"/>
+<link href="https://hho.us.ci/pt/tools/word-counter" hreflang="pt-BR" rel="alternate"/>
+<link href="https://hho.us.ci/es/tools/word-counter" hreflang="es" rel="alternate"/>
+<link href="https://hho.us.ci/fr/tools/word-counter" hreflang="fr" rel="alternate"/>
+<link href="https://hho.us.ci/de/tools/word-counter" hreflang="de" rel="alternate"/>
+<link href="https://hho.us.ci/ja/tools/word-counter" hreflang="ja" rel="alternate"/>
+<link href="https://hho.us.ci/tools/word-counter" hreflang="x-default" rel="alternate"/>
+<meta content="index, follow" name="robots"/>
+<meta content="website" property="og:type"/>
+<meta content="es_ES" property="og:locale"/>
+<meta content="en_US" property="og:locale:alternate"/>
+<meta content="zh_CN" property="og:locale:alternate"/>
+<meta content="pt_BR" property="og:locale:alternate"/>
+<meta content="fr_FR" property="og:locale:alternate"/>
+<meta content="de_DE" property="og:locale:alternate"/>
+<meta content="ja_JP" property="og:locale:alternate"/>
+<meta content="Utilixo" property="og:site_name"/>
+<meta content="Contador de Palabras y Caracteres | Utilixo" property="og:title"/>
+<meta content="Cuenta palabras, caracteres, frases y tiempo de lectura. Pulsa Calcular; el resultado aparece en el panel de resultados." property="og:description"/>
+<meta content="https://hho.us.ci/es/tools/word-counter" property="og:url"/>
+<meta content="https://hho.us.ci/assets/img/og-cover.png" property="og:image"/>
+<meta content="summary_large_image" name="twitter:card"/>
+<meta content="Contador de Palabras y Caracteres | Utilixo" name="twitter:title"/>
+<meta content="Cuenta palabras, caracteres, frases y tiempo de lectura. Pulsa Calcular; el resultado aparece en el panel de resultados." name="twitter:description"/>
+<meta content="https://hho.us.ci/assets/img/og-cover.png" name="twitter:image"/>
+<meta name="theme-color" content="#F4F6FB">
+
+<link href="/assets/img/favicon.svg" rel="icon" type="image/svg+xml"/>
+<link href="/assets/img/favicon-180.png" rel="apple-touch-icon"/>
+<link href="/manifest.webmanifest" rel="manifest"/>
+<script>(function(){try{var k='utilixo-theme';var s=localStorage.getItem(k);document.documentElement.setAttribute('data-theme',s==='dark'?'dark':'light');}catch(e){document.documentElement.setAttribute('data-theme','light');}})();</script>
+<link href="/assets/css/style-es.css" rel="stylesheet"/>
+<script type="application/ld+json">
+{
+ "@context": "https://schema.org",
+ "@type": "WebApplication",
+ "name": "Contador de Palabras y Caracteres",
+ "url": "https://hho.us.ci/es/tools/word-counter",
+ "applicationCategory": "UtilityApplication",
+ "operatingSystem": "Any (web browser)",
+ "browserRequirements": "Requiere un navegador moderno con JavaScript activado",
+ "offers": {
+  "@type": "Offer",
+  "price": "0",
+  "priceCurrency": "USD"
+ },
+ "description": "Cuenta palabras, caracteres, frases y tiempo de lectura. Pulsa Calcular; el resultado aparece en el panel de resultados. Todo se ejecuta localmente en el navegador, nada se envía. Solo se muestra el resultado actual — sin historial ni comparación en paralelo.",
+ "publisher": {
+  "@type": "Organization",
+  "name": "Utilixo",
+  "url": "https://hho.us.ci/"
+ }
+}
+</script>
+<script type="application/ld+json">
+{
+ "@context": "https://schema.org",
+ "@type": "BreadcrumbList",
+ "itemListElement": [
+  {
+   "@type": "ListItem",
+   "position": 1,
+   "name": "Inicio",
+   "item": "https://hho.us.ci/es/"
+  },
+  {
+   "@type": "ListItem",
+   "position": 2,
+   "name": "Texto y Código",
+   "item": "https://hho.us.ci/es/category/text"
+  },
+  {
+   "@type": "ListItem",
+   "position": 3,
+   "name": "Contador de Palabras y Caracteres",
+   "item": "https://hho.us.ci/es/tools/word-counter"
+  }
+ ]
+}
+</script>
+</head>
+<body>
+<header class="hdr"><div class="wrap hdr-in">
+<a class="logo" href="/es/"><span class="logo-mark">U</span><span>Utilixo<small>Herramientas online</small></span></a>
+<span class="hdr-sp"></span>
+<div class="hdr-search">
+<svg fill="none" height="15" stroke="currentColor" stroke-linecap="round" stroke-width="2.2" viewbox="0 0 24 24" width="15"><circle cx="11" cy="11" r="7"></circle><path d="M21 21l-4.3-4.3"></path></svg>
+<input aria-label="Buscar herramientas" data-filter="" placeholder="Buscar entre 56 herramientas…" type="search"/>
+</div>
+<button aria-label="Cambiar tema" class="icon-btn" id="themeBtn" onclick="utilixoToggle()">☾</button><div class="langsw"><select aria-label="Idioma" class="langsel" onchange="if(this.value)location.href=this.value"><option value="/tools/word-counter">English</option><option value="/zh/tools/word-counter">简体中文</option><option value="/pt/tools/word-counter">Português</option><option selected="" value="/es/tools/word-counter">Español</option><option value="/fr/tools/word-counter">Français</option><option value="/de/tools/word-counter">Deutsch</option><option value="/ja/tools/word-counter">日本語</option></select></div>
+</div></header>
+<main class="wrap tool-wrap">
+<div class="crumb"><a href="/es/">Inicio</a> › <a href="/es/category/text">Texto y código</a> › Word &amp; Character Counter</div><div style="margin:12px 0 0"><a class="ux-back" href="/es/">← Volver al inicio</a></div>
+<div class="tool-hd">
+<div style="display:flex;align-items:center;gap:12px;margin-bottom:10px">
+<span class="ic" style="background:var(--c-text-bg);color:var(--c-text)"><svg aria-hidden="true" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.9" viewbox="0 0 24 24"><path d="M4 7V5h16v2"></path><path d="M9 5v14"></path><path d="M15 5v14"></path><path d="M4 19h2"></path><path d="M18 19h2"></path></svg></span>
+<h1 style="margin:0">Contador de Palabras y Caracteres</h1></div>
+<p>Cuenta palabras, caracteres, frases y tiempo de lectura. Introduce tus valores y pulsa el botón para ver el resultado.</p></div>
+<div class="panel"><div class="fld"><label for="wIn">Pega o escribe tu texto</label><textarea id="wIn" placeholder="Escribe algo aquí…"></textarea></div>
+<div class="res-grid">
+<div class="res-cell"><div class="k">Palabras</div><div class="v" id="wW">0</div></div>
+<div class="res-cell"><div class="k">Caracteres</div><div class="v" id="wC">0</div></div>
+<div class="res-cell"><div class="k">Sin espacios</div><div class="v" id="wNs">0</div></div>
+<div class="res-cell"><div class="k">Frases</div><div class="v" id="wS">0</div></div>
+<div class="res-cell"><div class="k">Párrafos</div><div class="v" id="wP">0</div></div>
+<div class="res-cell"><div class="k">Tiempo de lectura</div><div class="v" id="wR">0 min</div></div>
+</div>
+<p class="note">El tiempo de lectura se calcula a 200 palabras por minuto. El conteo se actualiza mientras escribes.</p></div>
+<div class="ux-actions ux-row"><button class="btn ux-go" onclick="wCount()">Calcular</button><button class="btn ux-copy" onclick="utilixoCopy((document.getElementById('wW')||{}).innerText||'' , this)">Copiar</button></div><section class="ux-guide" data-guide="1" style="margin:26px 0 0;padding:24px;border:1px solid var(--bd,rgba(127,127,127,.25));border-radius:14px;line-height:1.8"><h2 style="font-size:1.3rem;margin:0 0 12px">Acerca de Contador de Palabras y Caracteres</h2><p style="margin:0 0 12px">Cuenta palabras, caracteres, frases y tiempo de lectura. Pulsa Calcular; el resultado aparece en el panel de resultados. Todo se ejecuta localmente en el navegador, nada se envía. Solo se muestra el resultado actual — sin historial ni comparación en paralelo.</p><p style="margin:0 0 12px">Contador de Palabras y Caracteres lee “Pega o escribe tu texto” del formulario y escribe la respuesta en el panel de resultados — El tiempo de lectura se calcula a 200 palabras por minuto. El conteo se actualiza mientras escribes. No hay cuenta ni envío al servidor: el JavaScript de la página trabaja en tu dispositivo.</p><h2 style="font-size:1.3rem;margin:24px 0 12px">Cómo usar esta herramienta</h2><ol style="margin:0 0 12px;padding-left:22px"><li style="margin:0 0 8px">Abre Contador de Palabras y Caracteres desde la categoría Texto y código o búscalo con el cuadro de búsqueda de la cabecera.</li><li style="margin:0 0 8px">Rellena los campos mostrados: “Pega o escribe tu texto”.</li><li style="margin:0 0 8px">Pulsa Calcular. El nuevo resultado sustituye al anterior; solo se muestra la ejecución actual, nunca dos resultados en paralelo.</li><li style="margin:0 0 8px">Usa Copiar para copiar el resultado. El aviso solo aparece cuando realmente se ha copiado contenido.</li></ol><h2 style="font-size:1.3rem;margin:24px 0 12px">Ejemplo práctico</h2><p style="margin:0 0 12px">Introduce tus valores en los campos y pulsa Calcular. Tras cualquier cambio, un nuevo clic recalcula con los datos actuales y sustituye el resultado anterior.</p><h2 style="font-size:1.3rem;margin:24px 0 12px">Preguntas frecuentes</h2><h3 style="font-size:1rem;margin:18px 0 6px">¿Se suben mis datos a algún sitio?</h3><p style="margin:0 0 10px">No. Contador de Palabras y Caracteres procesa “Pega o escribe tu texto” con JavaScript en el navegador. Entradas y resultado quedan en tu dispositivo; Utilixo no guarda ninguna copia.</p><h3 style="font-size:1rem;margin:18px 0 6px">¿Puedo comparar varios resultados?</h3><p style="margin:0 0 10px">No en paralelo. Cada clic en Calcular recalcula con las entradas actuales y sobrescribe el resultado anterior. Anota tú los valores previos.</p><h3 style="font-size:1rem;margin:18px 0 6px">¿Algo a tener en cuenta con Contador de Palabras y Caracteres?</h3><p style="margin:0 0 10px">El tiempo de lectura se calcula a 200 palabras por minuto. El conteo se actualiza mientras escribes.</p><h3 style="font-size:1rem;margin:18px 0 6px">¿Cómo me llevo el resultado?</h3><p style="margin:0 0 10px">Tras ver el resultado, pulsa Copiar. Si está vacío no aparece el aviso de éxito.</p><h3 style="font-size:1rem;margin:18px 0 6px">¿Hay que registrarse o pagar?</h3><p style="margin:0 0 10px">No. Contador de Palabras y Caracteres es gratis, sin registro y sin límite de usos. Abre la página y úsalo.</p><h2 style="font-size:1.3rem;margin:24px 0 12px">Herramientas relacionadas</h2><ul style="margin:0 0 12px;padding-left:22px"><li><a href="/es/tools/base64-tool">Codificar / Decodificar Base64</a> — Codifica y decodifica Base64, compatible con UTF-8.</li><li><a href="/es/tools/duplicate-line-remover">Eliminador de Líneas Duplicadas</a> — Quita líneas repetidas y ordena o limpia una lista.</li><li><a href="/es/tools/hash-generator">Generador de Hash</a> — Sumas de verificación MD5, SHA-1, SHA-256 y SHA-512.</li></ul><h2 style="font-size:1.3rem;margin:24px 0 12px">Lecturas adicionales</h2><p style="margin:0">Para una explicación más completa, lee la <a class="guide-link" href="/es/guides/text">guía de la categoría Texto y Código</a>, que repasa cada herramienta con ejemplos prácticos y consejos.</p><script type="application/ld+json">{"@context": "https://schema.org", "@type": "FAQPage", "mainEntity": [{"@type": "Question", "name": "¿Se suben mis datos a algún sitio?", "acceptedAnswer": {"@type": "Answer", "text": "No. Contador de Palabras y Caracteres procesa “Pega o escribe tu texto” con JavaScript en el navegador. Entradas y resultado quedan en tu dispositivo; Utilixo no guarda ninguna copia."}}, {"@type": "Question", "name": "¿Puedo comparar varios resultados?", "acceptedAnswer": {"@type": "Answer", "text": "No en paralelo. Cada clic en Calcular recalcula con las entradas actuales y sobrescribe el resultado anterior. Anota tú los valores previos."}}, {"@type": "Question", "name": "¿Algo a tener en cuenta con Contador de Palabras y Caracteres?", "acceptedAnswer": {"@type": "Answer", "text": "El tiempo de lectura se calcula a 200 palabras por minuto. El conteo se actualiza mientras escribes."}}, {"@type": "Question", "name": "¿Cómo me llevo el resultado?", "acceptedAnswer": {"@type": "Answer", "text": "Tras ver el resultado, pulsa Copiar. Si está vacío no aparece el aviso de éxito."}}, {"@type": "Question", "name": "¿Hay que registrarse o pagar?", "acceptedAnswer": {"@type": "Answer", "text": "No. Contador de Palabras y Caracteres es gratis, sin registro y sin límite de usos. Abre la página y úsalo."}}]}</script></section>
+</main>
+<footer class="ftr"><div class="wrap ftr-in">
+<div class="ftr-links">
+<a href="/es/pages/about">Sobre nosotros</a><a href="/es/pages/contact">Contacto</a>
+<a href="/es/pages/privacy">Privacidad</a><a href="/es/pages/terms">Términos</a>
+<a href="/es/pages/disclaimer">Descargo de responsabilidad</a>
+</div>
+<p class="ftr-c">© 2026 Utilixo · Para quien solo quiere la respuesta. Todas las herramientas funcionan en tu navegador: nada se sube, se guarda ni se comparte.</p>
+</div></footer>
+<script src="/assets/js/app.js"></script>
+<script>
+
+function wCount(){
+  var t=document.getElementById('wIn').value;
+  var words=t.trim()?t.trim().split(/\s+/).length:0;
+  var chars=t.length;
+  var nos=t.replace(/\s/g,'').length;
+  var sents=(t.match(/[.!?]+(?:\s|$)/g)||[]).length;
+  if(t.trim()&&sents===0)sents=1;
+  var paras=(t.split(/\n\s*\n/).filter(function(x){return x.trim();}).length)||(t.trim()?1:0);
+  var mins=words/200;
+  var rt=mins<1?'< 1 min':Math.round(mins)+' min';
+  document.getElementById('wW').textContent=words;
+  document.getElementById('wC').textContent=chars;
+  document.getElementById('wNs').textContent=nos;
+  document.getElementById('wS').textContent=sents;
+  document.getElementById('wP').textContent=paras;
+  document.getElementById('wR').textContent=rt;
+}
+document.addEventListener('DOMContentLoaded',function(){
+  try{
+    if('wCount'==='grInit'){grAdd();grAdd();grAdd();}
+    else if('wCount'==='gpInit'){gpAdd();gpAdd();gpAdd();}
+    else if('wCount'&&typeof window['wCount']==='function'){window['wCount']();}
+  }catch(e){console.warn(e);}
+});
+
+try{wCount();}catch(e){}
+</script>
+</body></html>

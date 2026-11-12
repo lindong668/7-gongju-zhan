@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+
+<html lang="ja">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1" name="viewport"/>
+<title>YAML⇔JSON変換ツール — すべてのツール | Utilixo</title>
+<meta content="YAMLをJSONに、JSONをYAMLに変換。「変換」を押すと結果パネルに表示されます。処理はブラウザ内で完結し、入力内容は送信されません。表示されるのは現在の 1 回分だけで、履歴や並べての比較はありません。" name="description"/>
+<link href="https://hho.us.ci/ja/tools/yaml-json-converter" rel="canonical"/>
+<link href="https://hho.us.ci/tools/yaml-json-converter" hreflang="en" rel="alternate"/>
+<link href="https://hho.us.ci/zh/tools/yaml-json-converter" hreflang="zh-CN" rel="alternate"/>
+<link href="https://hho.us.ci/pt/tools/yaml-json-converter" hreflang="pt-BR" rel="alternate"/>
+<link href="https://hho.us.ci/es/tools/yaml-json-converter" hreflang="es" rel="alternate"/>
+<link href="https://hho.us.ci/fr/tools/yaml-json-converter" hreflang="fr" rel="alternate"/>
+<link href="https://hho.us.ci/de/tools/yaml-json-converter" hreflang="de" rel="alternate"/>
+<link href="https://hho.us.ci/ja/tools/yaml-json-converter" hreflang="ja" rel="alternate"/>
+<link href="https://hho.us.ci/tools/yaml-json-converter" hreflang="x-default" rel="alternate"/>
+<meta content="index, follow" name="robots"/>
+<meta content="website" property="og:type"/>
+<meta content="ja_JP" property="og:locale"/>
+<meta content="en_US" property="og:locale:alternate"/>
+<meta content="zh_CN" property="og:locale:alternate"/>
+<meta content="pt_BR" property="og:locale:alternate"/>
+<meta content="es_ES" property="og:locale:alternate"/>
+<meta content="fr_FR" property="og:locale:alternate"/>
+<meta content="de_DE" property="og:locale:alternate"/>
+<meta content="Utilixo" property="og:site_name"/>
+<meta content="YAML⇔JSON変換ツール — すべてのツール" property="og:title"/>
+<meta content="YAMLをJSONに、JSONをYAMLに変換。「変換」を押すと結果パネルに表示されます。処理はブラウザ内で完結し、入力内容は送信されません。表示されるのは現在の 1 回分だけで、履歴や並べての比較はありません。" property="og:description"/>
+<meta content="https://hho.us.ci/ja/tools/yaml-json-converter" property="og:url"/>
+<meta content="https://hho.us.ci/assets/img/og-cover.png" property="og:image"/>
+<meta content="summary_large_image" name="twitter:card"/>
+<meta content="YAML⇔JSON変換ツール — すべてのツール" name="twitter:title"/>
+<meta content="YAMLをJSONに、JSONをYAMLに変換。「変換」を押すと結果パネルに表示されます。処理はブラウザ内で完結し、入力内容は送信されません。表示されるのは現在の 1 回分だけで、履歴や並べての比較はありません。" name="twitter:description"/>
+<meta content="https://hho.us.ci/assets/img/og-cover.png" name="twitter:image"/>
+<meta name="theme-color" content="#F4F6FB">
+
+<link href="/assets/img/favicon.svg" rel="icon" type="image/svg+xml"/>
+<link href="/assets/img/favicon-180.png" rel="apple-touch-icon"/>
+<link href="/manifest.webmanifest" rel="manifest"/>
+<script>(function(){try{var k='utilixo-theme';var s=localStorage.getItem(k);document.documentElement.setAttribute('data-theme',s==='dark'?'dark':'light');}catch(e){document.documentElement.setAttribute('data-theme','light');}})();</script>
+<link href="/assets/css/style-ja.css" rel="stylesheet"/>
+<script type="application/ld+json">
+{
+ "@context": "https://schema.org",
+ "@type": "WebApplication",
+ "name": "YAML⇔JSON変換ツール",
+ "url": "https://hho.us.ci/ja/tools/yaml-json-converter",
+ "applicationCategory": "UtilityApplication",
+ "operatingSystem": "Any (web browser)",
+ "browserRequirements": "JavaScript が有効な最新のブラウザが必要です",
+ "offers": {
+  "@type": "Offer",
+  "price": "0",
+  "priceCurrency": "USD"
+ },
+ "description": "YAMLをJSONに、JSONをYAMLに変換。「変換」を押すと結果パネルに表示されます。処理はブラウザ内で完結し、入力内容は送信されません。表示されるのは現在の 1 回分だけで、履歴や並べての比較はありません。",
+ "publisher": {
+  "@type": "Organization",
+  "name": "Utilixo",
+  "url": "https://hho.us.ci/"
+ }
+}
+</script>
+<script type="application/ld+json">
+{
+ "@context": "https://schema.org",
+ "@type": "BreadcrumbList",
+ "itemListElement": [
+  {
+   "@type": "ListItem",
+   "position": 1,
+   "name": "ホーム",
+   "item": "https://hho.us.ci/ja/"
+  },
+  {
+   "@type": "ListItem",
+   "position": 2,
+   "name": "単位変換",
+   "item": "https://hho.us.ci/ja/category/convert"
+  },
+  {
+   "@type": "ListItem",
+   "position": 3,
+   "name": "YAML⇔JSON変換ツール",
+   "item": "https://hho.us.ci/ja/tools/yaml-json-converter"
+  }
+ ]
+}
+</script>
+</head>
+<body>
+<header class="hdr"><div class="wrap hdr-in">
+<a class="logo" href="/ja/"><span class="logo-mark">U</span><span>Utilixo<small>オンラインツール</small></span></a>
+<span class="hdr-sp"></span>
+<div class="hdr-search">
+<svg fill="none" height="15" stroke="currentColor" stroke-linecap="round" stroke-width="2.2" viewbox="0 0 24 24" width="15"><circle cx="11" cy="11" r="7"></circle><path d="M21 21l-4.3-4.3"></path></svg>
+<input aria-label="ツールを検索" data-filter="" placeholder="56個のツールを検索…" type="search"/>
+</div>
+<button aria-label="テーマ切替" class="icon-btn" id="themeBtn" onclick="utilixoToggle()">☾</button><div class="langsw"><select aria-label="言語" class="langsel" onchange="if(this.value)location.href=this.value"><option value="/tools/yaml-json-converter">English</option><option value="/zh/tools/yaml-json-converter">简体中文</option><option value="/pt/tools/yaml-json-converter">Português</option><option value="/es/tools/yaml-json-converter">Español</option><option value="/fr/tools/yaml-json-converter">Français</option><option value="/de/tools/yaml-json-converter">Deutsch</option><option selected="" value="/ja/tools/yaml-json-converter">日本語</option></select></div>
+</div></header>
+<main class="wrap tool-wrap">
+<div class="crumb"><a href="/ja/">ホーム</a> › <a href="/ja/category/convert">単位変換</a> › YAML⇔JSON変換ツール</div><div style="margin:12px 0 0"><a class="ux-back" href="/ja/">← ホームへ戻る</a></div>
+<div class="tool-hd">
+<div style="display:flex;align-items:center;gap:12px;margin-bottom:10px">
+<span class="ic" style="background:var(--c-convert-bg);color:var(--c-convert)"><svg aria-hidden="true" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.9" viewbox="0 0 24 24"><path d="M5 4v4h4"></path><path d="M5 12v4h4"></path><path d="M5 8h9"></path><path d="M5 16h9"></path><path d="M17 6v12"></path></svg></span>
+<h1 style="margin:0">YAML⇔JSON変換ツール</h1></div>
+<p>YAMLをJSONに、JSONをYAMLに変換。項目を入力してボタンを押すと結果が表示されます。</p></div>
+<div class="panel"><div class="fld"><label>モード</label><select id="yjM" onchange="yjM()"><option value="y2j">YAML → JSON</option><option value="j2y">JSON → YAML</option></select></div>
+<div class="row">
+<div class="fld"><label id="yjL1">YAML</label><textarea id="yjIn" style="min-height:170px">name: Utilixo
+version: 1
+tags:
+  - fast
+  - private
+owner:
+  name: Ada
+  role: engineer</textarea></div>
+<div class="fld"><label id="yjL2">JSON</label><textarea id="yjOut" readonly="" style="min-height:170px"></textarea></div>
+</div>
+<div id="yjMsg"></div>
+
+<p class="note">一般的な構文に対応しています：マッピング、シーケンス、スカラー、真偽値、数値、null。アンカー、エイリアス、複数ドキュメントには対応していません。</p></div>
+<div class="ux-actions ux-row"><button class="btn ux-go" onclick="yjRun()">変換</button><button class="btn-o ux-copy" onclick="utilixoCopy(document.getElementById('yjOut').value,this)">出力をコピー</button></div><section class="ux-guide" data-guide="1" style="margin:26px 0 0;padding:24px;border:1px solid var(--bd,rgba(127,127,127,.25));border-radius:14px;line-height:1.8"><h2 style="font-size:1.3rem;margin:0 0 12px">YAML⇔JSON変換ツールについて</h2><p style="margin:0 0 12px">YAMLをJSONに、JSONをYAMLに変換。「変換」を押すと結果パネルに表示されます。処理はブラウザ内で完結し、入力内容は送信されません。</p><p style="margin:0 0 12px">YAML⇔JSON変換ツールは上のフォームの入力内容を読み取り、結果パネルへ答えを書き出します。一般的な構文に対応しています：マッピング、シーケンス、スカラー、真偽値、数値、null。アンカー、エイリアス、複数ドキュメントには対応していません。ログインやサーバーへの送信は不要で、ページ内の JavaScript が端末上で処理します。</p><h2 style="font-size:1.3rem;margin:24px 0 12px">使い方</h2><ol style="margin:0 0 12px;padding-left:22px"><li style="margin:0 0 8px">単位変換カテゴリからYAML⇔JSON変換ツールを開くか、ヘッダーの検索ボックスで探してください。</li><li style="margin:0 0 8px">「変換」を押します。新しい結果が前回の結果を上書きし、表示されるのは常に現在の 1 回分だけで、2 つが並ぶことはありません。</li><li style="margin:0 0 8px">「出力をコピー」で結果をクリップボードへコピーできます。実際にコピーできたときだけメッセージが出ます。</li></ol><h2 style="font-size:1.3rem;margin:24px 0 12px">使用例</h2><p style="margin:0 0 12px">上の項目に自分のデータを入力し、「変換」を押すと結果が出ます。入力を変えてもう一度押すと、現在の入力で再計算され前の結果を置き換えます。</p><h2 style="font-size:1.3rem;margin:24px 0 12px">よくある質問</h2><h3 style="font-size:1rem;margin:18px 0 6px">入力した内容は送信されますか？</h3><p style="margin:0 0 10px">いいえ。YAML⇔JSON変換ツールは入力内容をブラウザ内の JavaScript で処理します。入力と結果は端末内に残り、Utilixoで複製は保存されません。</p><h3 style="font-size:1rem;margin:18px 0 6px">複数回の結果を並べて比較できますか？</h3><p style="margin:0 0 10px">できません。「変換」を押すたびに現在の入力で再計算され、前の結果を上書きします。比較したい場合は前回の値を控えてください。</p><h3 style="font-size:1rem;margin:18px 0 6px">YAML⇔JSON変換ツールで気を付けることは？</h3><p style="margin:0 0 10px">一般的な構文に対応しています：マッピング、シーケンス、スカラー、真偽値、数値、null。アンカー、エイリアス、複数ドキュメントには対応していません。</p><h3 style="font-size:1rem;margin:18px 0 6px">結果を持ち出すには？</h3><p style="margin:0 0 10px">結果が出たら「出力をコピー」を押してください。空の結果では成功メッセージは出ません。</p><h3 style="font-size:1rem;margin:18px 0 6px">登録や料金は必要ですか？</h3><p style="margin:0 0 10px">不要です。YAML⇔JSON変換ツールは無料・登録不要・回数制限なしで、ページを開けばすぐ使えます。</p><h2 style="font-size:1.3rem;margin:24px 0 12px">関連ツール</h2><ul style="margin:0 0 12px;padding-left:22px"><li><a href="/ja/tools/color-converter">カラー変換ツール</a> — HEX、RGB、HSLを相互変換、プレビュー付き。</li><li><a href="/ja/tools/csv-json-converter">CSV⇔JSON変換ツール</a> — CSVをJSONに、JSONをCSVに変換。</li><li><a href="/ja/tools/data-storage-converter">データ容量変換ツール</a> — ビット、バイト、KB、MB、GB、TB（1000・1024基準）。</li></ul><h2 style="font-size:1.3rem;margin:24px 0 12px">関連ガイド</h2><p style="margin:0">より詳しい解説は<a class="guide-link" href="/ja/guides/convert">単位変換ガイド</a>をご覧ください。このカテゴリの各ツールを、実例とコツとともに順に紹介しています。</p><script type="application/ld+json">{"@context": "https://schema.org", "@type": "FAQPage", "mainEntity": [{"@type": "Question", "name": "入力した内容は送信されますか？", "acceptedAnswer": {"@type": "Answer", "text": "いいえ。YAML⇔JSON変換ツールは入力内容をブラウザ内の JavaScript で処理します。入力と結果は端末内に残り、Utilixoで複製は保存されません。"}}, {"@type": "Question", "name": "複数回の結果を並べて比較できますか？", "acceptedAnswer": {"@type": "Answer", "text": "できません。「変換」を押すたびに現在の入力で再計算され、前の結果を上書きします。比較したい場合は前回の値を控えてください。"}}, {"@type": "Question", "name": "YAML⇔JSON変換ツールで気を付けることは？", "acceptedAnswer": {"@type": "Answer", "text": "一般的な構文に対応しています：マッピング、シーケンス、スカラー、真偽値、数値、null。アンカー、エイリアス、複数ドキュメントには対応していません。"}}, {"@type": "Question", "name": "結果を持ち出すには？", "acceptedAnswer": {"@type": "Answer", "text": "結果が出たら「出力をコピー」を押してください。空の結果では成功メッセージは出ません。"}}, {"@type": "Question", "name": "登録や料金は必要ですか？", "acceptedAnswer": {"@type": "Answer", "text": "不要です。YAML⇔JSON変換ツールは無料・登録不要・回数制限なしで、ページを開けばすぐ使えます。"}}]}</script></section>
+</main>
+<footer class="ftr"><div class="wrap ftr-in">
+<div class="ftr-links">
+<a href="/ja/pages/about">サイトについて</a><a href="/ja/pages/contact">お問い合わせ</a>
+<a href="/ja/pages/privacy">プライバシーポリシー</a><a href="/ja/pages/terms">利用規約</a>
+<a href="/ja/pages/disclaimer">免責事項</a>
+</div>
+<p class="ftr-c">© 2026 Utilixo · 答えだけが欲しい人のために。すべてのツールはブラウザ内で動くため、入力内容がアップロードされたり保存されたりすることはありません。</p>
+</div></footer>
+<script src="/assets/js/app.js"></script>
+<script>
+
+function yjM(){
+  var m=document.getElementById('yjM').value;
+  document.getElementById('yjL1').textContent=m==='y2j'?'YAML':'JSON';
+  document.getElementById('yjL2').textContent=m==='y2j'?'JSON':'YAML';
+  var i=document.getElementById('yjIn'),o=document.getElementById('yjOut');
+  var t=i.value;i.value=o.value;o.value=t;
+  yjRun();
+}
+function yjScalar(s){
+  s=s.trim();
+  if(/^".*"$/.test(s)||/^'.*'$/.test(s))return s.slice(1,-1);
+  if(s===''||s==='null'||s==='~')return null;
+  if(s==='true')return true;
+  if(s==='false')return false;
+  if(/^-?\d+$/.test(s))return parseInt(s,10);
+  if(/^-?\d*\.\d+$/.test(s))return parseFloat(s);
+  return s;
+}
+function yjIsList(lines,i,indent){
+  if(i>=lines.length)return false;
+  var n=lines[i];
+  var m=n.match(/^(\s*)-\s?(.*)$/);
+  return !!m&&m[1].length===indent;
+}
+function yjParse(lines,i,indent){
+  var isList=yjIsList(lines,i,indent);
+  if(isList){
+    var arr=[];
+    while(i<lines.length){
+      var m=lines[i].match(/^(\s*)-\s?(.*)$/);
+      if(!m||+m[1].length!==indent)break;
+      var rest=m[2];
+      if(rest===''){
+        var sub=yjParse(lines,i+1,indent+2);
+        arr.push(sub.v);i=sub.i;
+      }else if(/^[^\s:]+:\s*$/.test(rest)){
+        var sub2=yjParse(lines,i+1,indent+2);
+        var o={};o[rest.replace(/:$/,'')]=sub2.v;
+        arr.push(o);i=sub2.i;
+      }else{arr.push(yjScalar(rest));i++;}
+    }
+    return {v:arr,i:i};
+  }
+  var obj={};
+  while(i<lines.length){
+    var l=lines[i];
+    if(!l.trim()||/^\s*#/.test(l)){i++;continue;}
+    var m2=l.match(/^(\s*)([^:]+):\s*(.*)$/);
+    if(!m2)break;
+    var ind=m2[1].length;
+    if(ind<indent)break;
+    if(ind>indent)break;
+    var key=m2[2].trim(),val=m2[3];
+    if(val===''){
+      var sub3=yjParse(lines,i+1,indent+2);
+      obj[key]=sub3.v;i=sub3.i;
+    }else{obj[key]=yjScalar(val);i++;}
+  }
+  return {v:obj,i:i};
+}
+function yjToText(v,indent){
+  indent=indent||0;
+  var pad=' '.repeat(indent);
+  if(Array.isArray(v)){
+    return v.map(function(x){
+      if(x&&typeof x==='object'){
+        var inner=yjToText(x,indent+2);
+        return pad+'- '+inner.replace(new RegExp('^\\s{'+ (indent+2) +'}'),'').trim();
+      }
+      return pad+'- '+String(x===null?'null':x);
+    }).join('\n');
+  }
+  if(v&&typeof v==='object'){
+    return Object.keys(v).map(function(k){
+      var x=v[k];
+      if(x&&typeof x==='object'&&(Array.isArray(x)?x.length:Object.keys(x).length)){
+        return pad+k+':\n'+yjToText(x,indent+2);
+      }
+      return pad+k+': '+(x===null?'null':String(x));
+    }).join('\n');
+  }
+  return pad+String(v);
+}
+function yjRun(){
+  var m=document.getElementById('yjM').value;
+  var raw=document.getElementById('yjIn').value;
+  var o=document.getElementById('yjOut'),msg=document.getElementById('yjMsg');
+  try{
+    if(m==='y2j'){
+      var lines=raw.replace(/\r/g,'').split('\n');
+      var r=yjParse(lines,0,0);
+      o.value=JSON.stringify(r.v,null,2);
+      msg.innerHTML='<div class="ok-t">JSON に変換しました。</div>';
+    }else{
+      var d=JSON.parse(raw);
+      o.value=yjToText(d,0);
+      msg.innerHTML='<div class="ok-t">YAML として出力しました。</div>';
+    }
+  }catch(e){msg.innerHTML='<div class="err-t">'+"入力内容を確認して、もう一度お試しください。"+'</div>';}
+}
+document.addEventListener('DOMContentLoaded',function(){
+  try{
+    if('yjRun'==='grInit'){grAdd();grAdd();grAdd();}
+    else if('yjRun'==='gpInit'){gpAdd();gpAdd();gpAdd();}
+    else if('yjRun'&&typeof window['yjRun']==='function'){window['yjRun']();}
+  }catch(e){console.warn(e);}
+});
+
+try{yjRun();}catch(e){}
+</script>
+</body></html>

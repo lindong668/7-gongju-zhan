@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+
+<html lang="ja">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1" name="viewport"/>
+<title>SQL整形ツール — すべてのツール | Utilixo</title>
+<meta content="キーワードの大文字化と改行でSQLを読みやすく整形。“SQL”を入力して「整形」を押すと結果パネルに表示されます。処理はブラウザ内で完結し、入力内容は送信されません。" name="description"/>
+<link href="https://hho.us.ci/ja/tools/sql-formatter" rel="canonical"/>
+<link href="https://hho.us.ci/tools/sql-formatter" hreflang="en" rel="alternate"/>
+<link href="https://hho.us.ci/zh/tools/sql-formatter" hreflang="zh-CN" rel="alternate"/>
+<link href="https://hho.us.ci/pt/tools/sql-formatter" hreflang="pt-BR" rel="alternate"/>
+<link href="https://hho.us.ci/es/tools/sql-formatter" hreflang="es" rel="alternate"/>
+<link href="https://hho.us.ci/fr/tools/sql-formatter" hreflang="fr" rel="alternate"/>
+<link href="https://hho.us.ci/de/tools/sql-formatter" hreflang="de" rel="alternate"/>
+<link href="https://hho.us.ci/ja/tools/sql-formatter" hreflang="ja" rel="alternate"/>
+<link href="https://hho.us.ci/tools/sql-formatter" hreflang="x-default" rel="alternate"/>
+<meta content="index, follow" name="robots"/>
+<meta content="website" property="og:type"/>
+<meta content="ja_JP" property="og:locale"/>
+<meta content="en_US" property="og:locale:alternate"/>
+<meta content="zh_CN" property="og:locale:alternate"/>
+<meta content="pt_BR" property="og:locale:alternate"/>
+<meta content="es_ES" property="og:locale:alternate"/>
+<meta content="fr_FR" property="og:locale:alternate"/>
+<meta content="de_DE" property="og:locale:alternate"/>
+<meta content="Utilixo" property="og:site_name"/>
+<meta content="SQL整形ツール — すべてのツール" property="og:title"/>
+<meta content="キーワードの大文字化と改行でSQLを読みやすく整形。“SQL”を入力して「整形」を押すと結果パネルに表示されます。処理はブラウザ内で完結し、入力内容は送信されません。" property="og:description"/>
+<meta content="https://hho.us.ci/ja/tools/sql-formatter" property="og:url"/>
+<meta content="https://hho.us.ci/assets/img/og-cover.png" property="og:image"/>
+<meta content="summary_large_image" name="twitter:card"/>
+<meta content="SQL整形ツール — すべてのツール" name="twitter:title"/>
+<meta content="キーワードの大文字化と改行でSQLを読みやすく整形。“SQL”を入力して「整形」を押すと結果パネルに表示されます。処理はブラウザ内で完結し、入力内容は送信されません。" name="twitter:description"/>
+<meta content="https://hho.us.ci/assets/img/og-cover.png" name="twitter:image"/>
+<meta name="theme-color" content="#F4F6FB">
+
+<link href="/assets/img/favicon.svg" rel="icon" type="image/svg+xml"/>
+<link href="/assets/img/favicon-180.png" rel="apple-touch-icon"/>
+<link href="/manifest.webmanifest" rel="manifest"/>
+<script>(function(){try{var k='utilixo-theme';var s=localStorage.getItem(k);document.documentElement.setAttribute('data-theme',s==='dark'?'dark':'light');}catch(e){document.documentElement.setAttribute('data-theme','light');}})();</script>
+<link href="/assets/css/style-ja.css" rel="stylesheet"/>
+<script type="application/ld+json">
+{
+ "@context": "https://schema.org",
+ "@type": "WebApplication",
+ "name": "SQL整形ツール",
+ "url": "https://hho.us.ci/ja/tools/sql-formatter",
+ "applicationCategory": "UtilityApplication",
+ "operatingSystem": "Any (web browser)",
+ "browserRequirements": "JavaScript が有効な最新のブラウザが必要です",
+ "offers": {
+  "@type": "Offer",
+  "price": "0",
+  "priceCurrency": "USD"
+ },
+ "description": "キーワードの大文字化と改行でSQLを読みやすく整形。“SQL”を入力して「整形」を押すと結果パネルに表示されます。処理はブラウザ内で完結し、入力内容は送信されません。",
+ "publisher": {
+  "@type": "Organization",
+  "name": "Utilixo",
+  "url": "https://hho.us.ci/"
+ }
+}
+</script>
+<script type="application/ld+json">
+{
+ "@context": "https://schema.org",
+ "@type": "BreadcrumbList",
+ "itemListElement": [
+  {
+   "@type": "ListItem",
+   "position": 1,
+   "name": "ホーム",
+   "item": "https://hho.us.ci/ja/"
+  },
+  {
+   "@type": "ListItem",
+   "position": 2,
+   "name": "テキストとコード",
+   "item": "https://hho.us.ci/ja/category/text"
+  },
+  {
+   "@type": "ListItem",
+   "position": 3,
+   "name": "SQL整形ツール",
+   "item": "https://hho.us.ci/ja/tools/sql-formatter"
+  }
+ ]
+}
+</script>
+</head>
+<body>
+<header class="hdr"><div class="wrap hdr-in">
+<a class="logo" href="/ja/"><span class="logo-mark">U</span><span>Utilixo<small>オンラインツール</small></span></a>
+<span class="hdr-sp"></span>
+<div class="hdr-search">
+<svg fill="none" height="15" stroke="currentColor" stroke-linecap="round" stroke-width="2.2" viewbox="0 0 24 24" width="15"><circle cx="11" cy="11" r="7"></circle><path d="M21 21l-4.3-4.3"></path></svg>
+<input aria-label="ツールを検索" data-filter="" placeholder="56個のツールを検索…" type="search"/>
+</div>
+<button aria-label="テーマ切替" class="icon-btn" id="themeBtn" onclick="utilixoToggle()">☾</button><div class="langsw"><select aria-label="言語" class="langsel" onchange="if(this.value)location.href=this.value"><option value="/tools/sql-formatter">English</option><option value="/zh/tools/sql-formatter">简体中文</option><option value="/pt/tools/sql-formatter">Português</option><option value="/es/tools/sql-formatter">Español</option><option value="/fr/tools/sql-formatter">Français</option><option value="/de/tools/sql-formatter">Deutsch</option><option selected="" value="/ja/tools/sql-formatter">日本語</option></select></div>
+</div></header>
+<main class="wrap tool-wrap">
+<div class="crumb"><a href="/ja/">ホーム</a> › <a href="/ja/category/text">テキストとコード</a> › SQL整形ツール</div><div style="margin:12px 0 0"><a class="ux-back" href="/ja/">← ホームへ戻る</a></div>
+<div class="tool-hd">
+<div style="display:flex;align-items:center;gap:12px;margin-bottom:10px">
+<span class="ic" style="background:var(--c-text-bg);color:var(--c-text)"><svg aria-hidden="true" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.9" viewbox="0 0 24 24"><ellipse cx="12" cy="6" rx="8" ry="3"></ellipse><path d="M4 6v6c0 1.7 3.6 3 8 3s8-1.3 8-3V6"></path><path d="M4 12v6c0 1.7 3.6 3 8 3s8-1.3 8-3v-6"></path></svg></span>
+<h1 style="margin:0">SQL整形ツール</h1></div>
+<p>キーワードの大文字化と改行でSQLを読みやすく整形。項目を入力してボタンを押すと結果が表示されます。</p></div>
+<div class="panel"><div class="fld"><label for="qIn">SQL</label><textarea id="qIn" style="min-height:140px">select id, name, email from users where status = 'active' and created_at &gt; '2026-01-01' order by name limit 50</textarea></div>
+<div class="ux-actions ux-row"><button class="btn ux-go" onclick="qRun()">整形</button><button class="btn-o ux-copy" onclick="utilixoCopy(document.getElementById('qOut').value,this)">コピー</button></div>
+<div class="fld" style="margin-top:12px"><label>整形結果</label><textarea id="qOut" readonly="" style="min-height:150px"></textarea></div>
+</div>
+<section class="ux-guide" data-guide="1" style="margin:26px 0 0;padding:24px;border:1px solid var(--bd,rgba(127,127,127,.25));border-radius:14px;line-height:1.8"><h2 style="font-size:1.3rem;margin:0 0 12px">SQL整形ツールについて</h2><p style="margin:0 0 12px">キーワードの大文字化と改行でSQLを読みやすく整形。“SQL”を入力して「整形」を押すと結果パネルに表示されます。処理はブラウザ内で完結し、入力内容は送信されません。</p><p style="margin:0 0 12px">SQL整形ツールは上のフォームの“SQL”を読み取り、結果パネルへ答えを書き出します。ログインやサーバーへの送信は不要で、ページ内の JavaScript が端末上で処理します。</p><h2 style="font-size:1.3rem;margin:24px 0 12px">使い方</h2><ol style="margin:0 0 12px;padding-left:22px"><li style="margin:0 0 8px">テキストとコードカテゴリからSQL整形ツールを開くか、ヘッダーの検索ボックスで探してください。</li><li style="margin:0 0 8px">ページの項目を入力します：“SQL”。</li><li style="margin:0 0 8px">「整形」を押します。新しい結果が前回の結果を上書きし、表示されるのは常に現在の 1 回分だけで、2 つが並ぶことはありません。</li><li style="margin:0 0 8px">「コピー」で結果をクリップボードへコピーできます。実際にコピーできたときだけメッセージが出ます。</li></ol><h2 style="font-size:1.3rem;margin:24px 0 12px">使用例</h2><p style="margin:0 0 12px">上の項目に自分のデータを入力し、「整形」を押すと結果が出ます。入力を変えてもう一度押すと、現在の入力で再計算され前の結果を置き換えます。</p><h2 style="font-size:1.3rem;margin:24px 0 12px">よくある質問</h2><h3 style="font-size:1rem;margin:18px 0 6px">入力した内容は送信されますか？</h3><p style="margin:0 0 10px">いいえ。SQL整形ツールは“SQL”をブラウザ内の JavaScript で処理します。入力と結果は端末内に残り、Utilixoで複製は保存されません。</p><h3 style="font-size:1rem;margin:18px 0 6px">複数回の結果を並べて比較できますか？</h3><p style="margin:0 0 10px">できません。「整形」を押すたびに現在の入力で再計算され、前の結果を上書きします。比較したい場合は前回の値を控えてください。</p><h3 style="font-size:1rem;margin:18px 0 6px">SQL整形ツールで気を付けることは？</h3><p style="margin:0 0 10px">結果はページ上の項目（“SQL”）だけで決まります。いずれかを変えて「整形」を押し直すと更新されます。</p><h3 style="font-size:1rem;margin:18px 0 6px">結果を持ち出すには？</h3><p style="margin:0 0 10px">結果が出たら「コピー」を押してください。空の結果では成功メッセージは出ません。</p><h3 style="font-size:1rem;margin:18px 0 6px">登録や料金は必要ですか？</h3><p style="margin:0 0 10px">不要です。SQL整形ツールは無料・登録不要・回数制限なしで、ページを開けばすぐ使えます。</p><h2 style="font-size:1.3rem;margin:24px 0 12px">関連ツール</h2><ul style="margin:0 0 12px;padding-left:22px"><li><a href="/ja/tools/base64-tool">Base64エンコード・デコード</a> — UTF-8対応の安全なBase64エンコードとデコード。</li><li><a href="/ja/tools/duplicate-line-remover">重複行削除ツール</a> — 重複行を除去し、リストの並べ替えや整形も可能。</li><li><a href="/ja/tools/hash-generator">ハッシュ生成ツール</a> — MD5、SHA-1、SHA-256、SHA-512のチェックサム。</li></ul><h2 style="font-size:1.3rem;margin:24px 0 12px">関連ガイド</h2><p style="margin:0">より詳しい解説は<a class="guide-link" href="/ja/guides/text">テキストとコードガイド</a>をご覧ください。このカテゴリの各ツールを、実例とコツとともに順に紹介しています。</p><script type="application/ld+json">{"@context": "https://schema.org", "@type": "FAQPage", "mainEntity": [{"@type": "Question", "name": "入力した内容は送信されますか？", "acceptedAnswer": {"@type": "Answer", "text": "いいえ。SQL整形ツールは“SQL”をブラウザ内の JavaScript で処理します。入力と結果は端末内に残り、Utilixoで複製は保存されません。"}}, {"@type": "Question", "name": "複数回の結果を並べて比較できますか？", "acceptedAnswer": {"@type": "Answer", "text": "できません。「整形」を押すたびに現在の入力で再計算され、前の結果を上書きします。比較したい場合は前回の値を控えてください。"}}, {"@type": "Question", "name": "SQL整形ツールで気を付けることは？", "acceptedAnswer": {"@type": "Answer", "text": "結果はページ上の項目（“SQL”）だけで決まります。いずれかを変えて「整形」を押し直すと更新されます。"}}, {"@type": "Question", "name": "結果を持ち出すには？", "acceptedAnswer": {"@type": "Answer", "text": "結果が出たら「コピー」を押してください。空の結果では成功メッセージは出ません。"}}, {"@type": "Question", "name": "登録や料金は必要ですか？", "acceptedAnswer": {"@type": "Answer", "text": "不要です。SQL整形ツールは無料・登録不要・回数制限なしで、ページを開けばすぐ使えます。"}}]}</script></section>
+</main>
+<footer class="ftr"><div class="wrap ftr-in">
+<div class="ftr-links">
+<a href="/ja/pages/about">サイトについて</a><a href="/ja/pages/contact">お問い合わせ</a>
+<a href="/ja/pages/privacy">プライバシーポリシー</a><a href="/ja/pages/terms">利用規約</a>
+<a href="/ja/pages/disclaimer">免責事項</a>
+</div>
+<p class="ftr-c">© 2026 Utilixo · 答えだけが欲しい人のために。すべてのツールはブラウザ内で動くため、入力内容がアップロードされたり保存されたりすることはありません。</p>
+</div></footer>
+<script src="/assets/js/app.js"></script>
+<script>
+
+var QKW=['SELECT','FROM','WHERE','AND','OR','GROUP BY','ORDER BY','HAVING','LIMIT','OFFSET','INSERT INTO','VALUES','UPDATE','SET','DELETE FROM','LEFT JOIN','RIGHT JOIN','INNER JOIN','OUTER JOIN','JOIN','ON','UNION ALL','UNION','CREATE TABLE','ALTER TABLE','DROP TABLE','AS','DISTINCT','CASE','WHEN','THEN','ELSE','END','IN','NOT','NULL','IS','LIKE','BETWEEN','ASC','DESC','COUNT','SUM','AVG','MIN','MAX'];
+function qRun(){
+  var raw=document.getElementById('qIn').value;
+  raw=raw.replace(/--[^\n]*/g,'').replace(/\s+/g,' ').trim();
+  /* keep quoted strings intact: only code segments get keyword/comma breaks */
+  var parts=raw.split(/('(?:''|[^'])*'|"[^"]*"|`[^`]*`)/g);
+  var s='';
+  for(var i=0;i<parts.length;i+=2){
+    var code=parts[i];
+    QKW.forEach(function(k){
+      var re=new RegExp('\\b'+k.replace(/ /g,'\\s+')+'\\b','gi');
+      code=code.replace(re,function(m0){return '\n'+k+' ';});
+    });
+    code=code.replace(/,/g,',\n  ');
+    s+=code+(parts[i+1]||'');
+  }
+  var lines=s.split('\n').map(function(l){return l.trim();}).filter(Boolean);
+  var out=[],indent=0;
+  lines.forEach(function(l){
+    if(/^(SELECT|FROM|WHERE|GROUP BY|ORDER BY|HAVING|LIMIT|OFFSET)$/.test(l)){
+      out.push(l);
+      if(l==='SELECT')indent=2;else indent=1;
+    }else if(/^(AND|OR)$/.test(l)){
+      out.push('  '+l+' ');
+    }else{
+      out.push(' '.repeat(indent)+l);
+    }
+  });
+  document.getElementById('qOut').value=out.join('\n');
+}
+document.addEventListener('DOMContentLoaded',function(){
+  try{
+    if('qRun'==='grInit'){grAdd();grAdd();grAdd();}
+    else if('qRun'==='gpInit'){gpAdd();gpAdd();gpAdd();}
+    else if('qRun'&&typeof window['qRun']==='function'){window['qRun']();}
+  }catch(e){console.warn(e);}
+});
+</script>
+</body></html>

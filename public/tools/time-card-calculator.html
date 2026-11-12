@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1" name="viewport"/>
+<title>Time Card &amp; Work Hours Calculator | Utilixo</title>
+<meta content="Add up shift hours, subtract breaks, apply an overtime threshold and see gross pay. Press Calculate to see the result in the results panel." name="description"/>
+<link href="https://hho.us.ci/tools/time-card-calculator" rel="canonical"/>
+<link href="https://hho.us.ci/tools/time-card-calculator" hreflang="en" rel="alternate"/>
+<link href="https://hho.us.ci/zh/tools/time-card-calculator" hreflang="zh-CN" rel="alternate"/>
+<link href="https://hho.us.ci/pt/tools/time-card-calculator" hreflang="pt-BR" rel="alternate"/>
+<link href="https://hho.us.ci/es/tools/time-card-calculator" hreflang="es" rel="alternate"/>
+<link href="https://hho.us.ci/fr/tools/time-card-calculator" hreflang="fr" rel="alternate"/>
+<link href="https://hho.us.ci/de/tools/time-card-calculator" hreflang="de" rel="alternate"/>
+<link href="https://hho.us.ci/ja/tools/time-card-calculator" hreflang="ja" rel="alternate"/>
+<link href="https://hho.us.ci/tools/time-card-calculator" hreflang="x-default" rel="alternate"/>
+<meta content="index, follow" name="robots"/>
+<meta content="website" property="og:type"/>
+<meta content="en_US" property="og:locale"/>
+<meta content="zh_CN" property="og:locale:alternate"/>
+<meta content="pt_BR" property="og:locale:alternate"/>
+<meta content="es_ES" property="og:locale:alternate"/>
+<meta content="fr_FR" property="og:locale:alternate"/>
+<meta content="de_DE" property="og:locale:alternate"/>
+<meta content="ja_JP" property="og:locale:alternate"/>
+<meta content="Utilixo" property="og:site_name"/>
+<meta content="Time Card &amp; Work Hours Calculator | Utilixo" property="og:title"/>
+<meta content="Add up shift hours, subtract breaks, apply an overtime threshold and see gross pay. Press Calculate to see the result in the results panel." property="og:description"/>
+<meta content="https://hho.us.ci/tools/time-card-calculator" property="og:url"/>
+<meta content="https://hho.us.ci/assets/img/og-cover.png" property="og:image"/>
+<meta content="summary_large_image" name="twitter:card"/>
+<meta content="Time Card &amp; Work Hours Calculator | Utilixo" name="twitter:title"/>
+<meta content="Add up shift hours, subtract breaks, apply an overtime threshold and see gross pay. Press Calculate to see the result in the results panel." name="twitter:description"/>
+<meta content="https://hho.us.ci/assets/img/og-cover.png" name="twitter:image"/>
+<meta name="theme-color" content="#F4F6FB">
+
+<link href="/assets/img/favicon.svg" rel="icon" type="image/svg+xml"/>
+<link href="/assets/img/favicon-180.png" rel="apple-touch-icon"/>
+<link href="/manifest.webmanifest" rel="manifest"/>
+<script>(function(){try{var k='utilixo-theme';var s=localStorage.getItem(k);document.documentElement.setAttribute('data-theme',s==='dark'?'dark':'light');}catch(e){document.documentElement.setAttribute('data-theme','light');}})();</script>
+<link href="/assets/css/style-en.css" rel="stylesheet"/>
+<script type="application/ld+json">
+{
+ "@context": "https://schema.org",
+ "@type": "WebApplication",
+ "name": "Time Card &amp; Work Hours Calculator",
+ "url": "https://hho.us.ci/tools/time-card-calculator",
+ "applicationCategory": "UtilityApplication",
+ "operatingSystem": "Any (web browser)",
+ "browserRequirements": "Requires a modern browser with JavaScript enabled",
+ "offers": {
+  "@type": "Offer",
+  "price": "0",
+  "priceCurrency": "USD"
+ },
+ "description": "Add up shift hours, subtract breaks, apply an overtime threshold and see gross pay. Press Calculate to see the result in the results panel. Everything runs locally in your browser; nothing is uploaded. Only the current result is shown — no history or side-by-side comparison.",
+ "publisher": {
+  "@type": "Organization",
+  "name": "Utilixo",
+  "url": "https://hho.us.ci/"
+ }
+}
+</script>
+<script type="application/ld+json">
+{
+ "@context": "https://schema.org",
+ "@type": "BreadcrumbList",
+ "itemListElement": [
+  {
+   "@type": "ListItem",
+   "position": 1,
+   "name": "Home",
+   "item": "https://hho.us.ci/"
+  },
+  {
+   "@type": "ListItem",
+   "position": 2,
+   "name": "Finance",
+   "item": "https://hho.us.ci/category/finance"
+  },
+  {
+   "@type": "ListItem",
+   "position": 3,
+   "name": "Time Card &amp; Work Hours Calculator",
+   "item": "https://hho.us.ci/tools/time-card-calculator"
+  }
+ ]
+}
+</script>
+</head>
+<body>
+<header class="hdr"><div class="wrap hdr-in">
+<a class="logo" href="/"><span class="logo-mark">U</span><span>Utilixo<small>Online Utilities</small></span></a>
+<span class="hdr-sp"></span>
+<div class="hdr-search">
+<svg fill="none" height="15" stroke="currentColor" stroke-linecap="round" stroke-width="2.2" viewbox="0 0 24 24" width="15"><circle cx="11" cy="11" r="7"></circle><path d="M21 21l-4.3-4.3"></path></svg>
+<input aria-label="Search tools" data-filter="" placeholder="Search 56 utilities…" type="search"/>
+</div>
+<button aria-label="Toggle theme" class="icon-btn" id="themeBtn" onclick="utilixoToggle()">☾</button><div class="langsw"><select aria-label="Language" class="langsel" onchange="if(this.value)location.href=this.value"><option selected="" value="/tools/time-card-calculator">English</option><option value="/zh/tools/time-card-calculator">简体中文</option><option value="/pt/tools/time-card-calculator">Português</option><option value="/es/tools/time-card-calculator">Español</option><option value="/fr/tools/time-card-calculator">Français</option><option value="/de/tools/time-card-calculator">Deutsch</option><option value="/ja/tools/time-card-calculator">日本語</option></select></div>
+</div></header>
+<main class="wrap tool-wrap">
+<div class="crumb"><a href="/">Home</a> › <a href="/category/finance">Finance</a> › Time Card &amp; Work Hours Calculator</div><div style="margin:12px 0 0"><a class="ux-back" href="/">← Back to home</a></div>
+<div class="tool-hd">
+<div style="display:flex;align-items:center;gap:12px;margin-bottom:10px">
+<span class="ic" style="background:var(--c-finance-bg);color:var(--c-finance)"><svg aria-hidden="true" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.9" viewbox="0 0 24 24"><rect height="15" rx="2" width="18" x="3" y="5"></rect><path d="M3 10h18"></path><circle cx="12" cy="14.5" r="3"></circle><path d="M12 12.5v2l1.5 1"></path></svg></span>
+<h1 style="margin:0">Time Card &amp; Work Hours Calculator</h1></div>
+<p>Add up shift hours, subtract breaks, apply an overtime threshold and see gross pay. Enter your values and press the action button to see the result.</p></div>
+<div class="panel"><div class="row">
+<div class="fld"><label for="tcIn">Clock in</label><input id="tcIn" type="time" value="09:00"/></div>
+<div class="fld"><label for="tcOut">Clock out</label><input id="tcOut" type="time" value="18:00"/></div>
+<div class="fld"><label for="tcBrk">Break (minutes)</label><input id="tcBrk" type="number" value="30"/></div>
+</div>
+<div class="row">
+<div class="fld"><label for="tcDays">Days this period</label><input id="tcDays" type="number" value="5"/></div>
+<div class="fld"><label for="tcRate">Hourly rate</label><input id="tcRate" step="0.01" type="number" value="22"/></div>
+<div class="fld"><label for="tcOT">Overtime after (hours/day)</label><input id="tcOT" type="number" value="8"/></div>
+</div>
+<div class="row"><div class="fld"><label for="tcMul">Overtime multiplier</label><input id="tcMul" step="0.1" type="number" value="1.5"/></div></div>
+<div class="res-grid">
+<div class="res-cell"><div class="k">Regular hrs / period</div><div class="v" id="tcR">—</div></div>
+<div class="res-cell"><div class="k">Overtime hrs</div><div class="v" id="tcO">—</div></div>
+<div class="res-cell"><div class="k">Gross pay</div><div class="v" id="tcG">—</div></div>
+</div></div>
+<div class="ux-actions ux-row"><button class="btn ux-go" onclick="tcRun()">Calculate</button><button class="btn ux-copy" onclick="utilixoCopy((document.getElementById('tcR')||{}).innerText||'' , this)">Copy</button></div><section class="ux-guide" data-guide="1" style="margin:26px 0 0;padding:24px;border:1px solid var(--bd,rgba(127,127,127,.25));border-radius:14px;line-height:1.8"><h2 style="font-size:1.3rem;margin:0 0 12px">About Time Card &amp; Work Hours Calculator</h2><p style="margin:0 0 12px">Add up shift hours, subtract breaks, apply an overtime threshold and see gross pay. Press Calculate to see the result in the results panel. Everything runs locally in your browser; nothing is uploaded. Only the current result is shown — no history or side-by-side comparison.</p><p style="margin:0 0 12px">Time Card &amp; Work Hours Calculator reads &quot;Clock in&quot;, &quot;Clock out&quot;, &quot;Break (minutes)&quot;, &quot;Days this period&quot;, &quot;Hourly rate&quot; and &quot;Overtime after (hours/day)&quot; from the form above and writes the answer into the results panel. There is no account, no upload and no server round-trip: the JavaScript on this page does the work on your own device.</p><h2 style="font-size:1.3rem;margin:24px 0 12px">How to use Time Card &amp; Work Hours Calculator</h2><ol style="margin:0 0 12px;padding-left:22px"><li style="margin:0 0 8px">Open Time Card &amp; Work Hours Calculator from Finance, or find it with the search box in the header.</li><li style="margin:0 0 8px">Fill in the fields shown above: &quot;Clock in&quot;, &quot;Clock out&quot;, &quot;Break (minutes)&quot;, &quot;Days this period&quot;, &quot;Hourly rate&quot; and &quot;Overtime after (hours/day)&quot;.</li><li style="margin:0 0 8px">Press Calculate. The result replaces whatever was shown before; only the current run is displayed, never two results side by side.</li><li style="margin:0 0 8px">Use Copy to put the result on your clipboard. A message appears only when something was actually copied.</li></ol><h2 style="font-size:1.3rem;margin:24px 0 12px">A worked example</h2><p style="margin:0 0 12px">The form opens with these values: Clock in = 09:00; Clock out = 18:00; Break (minutes) = 30; Days this period = 5. Press Calculate once to see how the output is laid out, then replace them with your own data and press again — the new result replaces the old one.</p><h2 style="font-size:1.3rem;margin:24px 0 12px">Frequently asked questions</h2><h3 style="font-size:1rem;margin:18px 0 6px">Is what I type uploaded anywhere?</h3><p style="margin:0 0 10px">No. Time Card &amp; Work Hours Calculator processes &quot;Clock in&quot;, &quot;Clock out&quot;, &quot;Break (minutes)&quot;, &quot;Days this period&quot;, &quot;Hourly rate&quot; and &quot;Overtime after (hours/day)&quot; with JavaScript inside your browser. Your inputs and the result stay on your device; Utilixo keeps no copy of them.</p><h3 style="font-size:1rem;margin:18px 0 6px">Can I keep several results to compare?</h3><p style="margin:0 0 10px">No. Each press of Calculate rebuilds the result from the current inputs and overwrites the previous one. To compare runs, note the earlier result down yourself.</p><h3 style="font-size:1rem;margin:18px 0 6px">Anything specific to watch with Time Card &amp; Work Hours Calculator?</h3><p style="margin:0 0 10px">The result depends only on the fields shown above (&quot;Clock in&quot;, &quot;Clock out&quot;, &quot;Break (minutes)&quot;, &quot;Days this period&quot;, &quot;Hourly rate&quot; and &quot;Overtime after (hours/day)&quot;); change one of them and press Calculate again to get an updated answer.</p><h3 style="font-size:1rem;margin:18px 0 6px">How do I take the result away?</h3><p style="margin:0 0 10px">Press Copy after a result appears. The copy button only reports success when there is content to copy.</p><h3 style="font-size:1rem;margin:18px 0 6px">Do I need to sign up or pay?</h3><p style="margin:0 0 10px">No. Time Card &amp; Work Hours Calculator is free, needs no registration and has no usage limit. Open the page and use it.</p><h2 style="font-size:1.3rem;margin:24px 0 12px">Related tools</h2><ul style="margin:0 0 12px;padding-left:22px"><li><a href="/tools/compound-interest">Compound Interest Calculator</a> — Project how savings or a deposit grows with any compounding frequency and regular contributions.</li><li><a href="/tools/discount-calculator">Discount Calculator</a> — Sale price, amount saved, and what stacked discounts actually add up to.</li><li><a href="/tools/loan-calculator">Loan / EMI Calculator</a> — Monthly payment, total interest and a full amortization schedule for any fixed-rate loan.</li></ul><h2 style="font-size:1.3rem;margin:24px 0 12px">Further reading</h2><p style="margin:0">Read the <a class="guide-link" href="/guides/finance">Finance guide</a> for a longer walkthrough of every tool in this category, with practical examples and tips.</p><script type="application/ld+json">{"@context": "https://schema.org", "@type": "FAQPage", "mainEntity": [{"@type": "Question", "name": "Is what I type uploaded anywhere?", "acceptedAnswer": {"@type": "Answer", "text": "No. Time Card & Work Hours Calculator processes \"Clock in\", \"Clock out\", \"Break (minutes)\", \"Days this period\", \"Hourly rate\" and \"Overtime after (hours/day)\" with JavaScript inside your browser. Your inputs and the result stay on your device; Utilixo keeps no copy of them."}}, {"@type": "Question", "name": "Can I keep several results to compare?", "acceptedAnswer": {"@type": "Answer", "text": "No. Each press of Calculate rebuilds the result from the current inputs and overwrites the previous one. To compare runs, note the earlier result down yourself."}}, {"@type": "Question", "name": "Anything specific to watch with Time Card & Work Hours Calculator?", "acceptedAnswer": {"@type": "Answer", "text": "The result depends only on the fields shown above (\"Clock in\", \"Clock out\", \"Break (minutes)\", \"Days this period\", \"Hourly rate\" and \"Overtime after (hours/day)\"); change one of them and press Calculate again to get an updated answer."}}, {"@type": "Question", "name": "How do I take the result away?", "acceptedAnswer": {"@type": "Answer", "text": "Press Copy after a result appears. The copy button only reports success when there is content to copy."}}, {"@type": "Question", "name": "Do I need to sign up or pay?", "acceptedAnswer": {"@type": "Answer", "text": "No. Time Card & Work Hours Calculator is free, needs no registration and has no usage limit. Open the page and use it."}}]}</script></section>
+</main>
+<footer class="ftr"><div class="wrap ftr-in">
+<div class="ftr-links">
+<a href="/pages/about">About</a><a href="/pages/contact">Contact</a>
+<a href="/pages/privacy">Privacy</a><a href="/pages/terms">Terms</a>
+<a href="/pages/disclaimer">Disclaimer</a>
+</div>
+<p class="ftr-c">© 2026 Utilixo · Built for people who just need the answer. Every utility runs locally in your browser, so nothing you type is uploaded, stored or shared.</p>
+</div></footer>
+<script src="/assets/js/app.js"></script>
+<script>
+
+function tcMin(t){var p=(t||'').split(':');return (parseInt(p[0],10)||0)*60+(parseInt(p[1],10)||0);}
+function tcRun(){
+  var a=tcMin(document.getElementById('tcIn').value);
+  var b=tcMin(document.getElementById('tcOut').value);
+  var brk=parseFloat(document.getElementById('tcBrk').value)||0;
+  var days=parseFloat(document.getElementById('tcDays').value)||1;
+  var rate=parseFloat(document.getElementById('tcRate').value)||0;
+  var otThr=parseFloat(document.getElementById('tcOT').value)||8;
+  var mul=parseFloat(document.getElementById('tcMul').value)||1.5;
+  var perDay=b-a; if(perDay<0)perDay+=1440; /* Crosses midnight */
+  perDay=Math.max(0,perDay-brk)/60;
+  var reg=Math.min(perDay,otThr), ot=Math.max(0,perDay-otThr);
+  var tReg=reg*days, tOt=ot*days;
+  var gross=tReg*rate+tOt*rate*mul;
+  document.getElementById('tcR').textContent=tReg.toFixed(2);
+  document.getElementById('tcO').textContent=tOt.toFixed(2);
+  document.getElementById('tcG').textContent='$'+gross.toLocaleString('en-US',{minimumFractionDigits:2,maximumFractionDigits:2});
+}
+document.addEventListener('DOMContentLoaded',function(){
+  try{
+    if('tcRun'==='grInit'){grAdd();grAdd();grAdd();}
+    else if('tcRun'==='gpInit'){gpAdd();gpAdd();gpAdd();}
+    else if('tcRun'&&typeof window['tcRun']==='function'){window['tcRun']();}
+  }catch(e){console.warn(e);}
+});
+
+try{tcRun();}catch(e){}
+</script>
+</body></html>

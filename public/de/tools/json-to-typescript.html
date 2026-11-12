@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+
+<html lang="de">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1" name="viewport"/>
+<title>JSON zu TypScript — Alle Tools | Utilixo</title>
+<meta content="TS-Interfaces aus jedem JSON-Beispiel erzeugen. Erzeugen drücken – das Ergebnis erscheint im Ergebnisfeld." name="description"/>
+<link href="https://hho.us.ci/de/tools/json-to-typescript" rel="canonical"/>
+<link href="https://hho.us.ci/tools/json-to-typescript" hreflang="en" rel="alternate"/>
+<link href="https://hho.us.ci/zh/tools/json-to-typescript" hreflang="zh-CN" rel="alternate"/>
+<link href="https://hho.us.ci/pt/tools/json-to-typescript" hreflang="pt-BR" rel="alternate"/>
+<link href="https://hho.us.ci/es/tools/json-to-typescript" hreflang="es" rel="alternate"/>
+<link href="https://hho.us.ci/fr/tools/json-to-typescript" hreflang="fr" rel="alternate"/>
+<link href="https://hho.us.ci/de/tools/json-to-typescript" hreflang="de" rel="alternate"/>
+<link href="https://hho.us.ci/ja/tools/json-to-typescript" hreflang="ja" rel="alternate"/>
+<link href="https://hho.us.ci/tools/json-to-typescript" hreflang="x-default" rel="alternate"/>
+<meta content="index, follow" name="robots"/>
+<meta content="website" property="og:type"/>
+<meta content="de_DE" property="og:locale"/>
+<meta content="en_US" property="og:locale:alternate"/>
+<meta content="zh_CN" property="og:locale:alternate"/>
+<meta content="pt_BR" property="og:locale:alternate"/>
+<meta content="es_ES" property="og:locale:alternate"/>
+<meta content="fr_FR" property="og:locale:alternate"/>
+<meta content="ja_JP" property="og:locale:alternate"/>
+<meta content="Utilixo" property="og:site_name"/>
+<meta content="JSON zu TypScript — Alle Tools" property="og:title"/>
+<meta content="TS-Interfaces aus jedem JSON-Beispiel erzeugen. Erzeugen drücken – das Ergebnis erscheint im Ergebnisfeld." property="og:description"/>
+<meta content="https://hho.us.ci/de/tools/json-to-typescript" property="og:url"/>
+<meta content="https://hho.us.ci/assets/img/og-cover.png" property="og:image"/>
+<meta content="summary_large_image" name="twitter:card"/>
+<meta content="JSON zu TypScript — Alle Tools" name="twitter:title"/>
+<meta content="TS-Interfaces aus jedem JSON-Beispiel erzeugen. Erzeugen drücken – das Ergebnis erscheint im Ergebnisfeld." name="twitter:description"/>
+<meta content="https://hho.us.ci/assets/img/og-cover.png" name="twitter:image"/>
+<meta name="theme-color" content="#F4F6FB">
+
+<link href="/assets/img/favicon.svg" rel="icon" type="image/svg+xml"/>
+<link href="/assets/img/favicon-180.png" rel="apple-touch-icon"/>
+<link href="/manifest.webmanifest" rel="manifest"/>
+<script>(function(){try{var k='utilixo-theme';var s=localStorage.getItem(k);document.documentElement.setAttribute('data-theme',s==='dark'?'dark':'light');}catch(e){document.documentElement.setAttribute('data-theme','light');}})();</script>
+<link href="/assets/css/style-de.css" rel="stylesheet"/>
+<script type="application/ld+json">
+{
+ "@context": "https://schema.org",
+ "@type": "WebApplication",
+ "name": "JSON zu TypeScript",
+ "url": "https://hho.us.ci/de/tools/json-to-typescript",
+ "applicationCategory": "UtilityApplication",
+ "operatingSystem": "Any (web browser)",
+ "browserRequirements": "Erfordert einen modernen Browser mit aktiviertem JavaScript",
+ "offers": {
+  "@type": "Offer",
+  "price": "0",
+  "priceCurrency": "USD"
+ },
+ "description": "TS-Interfaces aus jedem JSON-Beispiel erzeugen. Erzeugen drücken – das Ergebnis erscheint im Ergebnisfeld. Alles läuft lokal im Browser, nichts wird hochgeladen. Angezeigt wird nur das aktuelle Ergebnis — ohne Verlauf und ohne Vergleich nebeneinander.",
+ "publisher": {
+  "@type": "Organization",
+  "name": "Utilixo",
+  "url": "https://hho.us.ci/"
+ }
+}
+</script>
+<script type="application/ld+json">
+{
+ "@context": "https://schema.org",
+ "@type": "BreadcrumbList",
+ "itemListElement": [
+  {
+   "@type": "ListItem",
+   "position": 1,
+   "name": "Start",
+   "item": "https://hho.us.ci/de/"
+  },
+  {
+   "@type": "ListItem",
+   "position": 2,
+   "name": "Text & Code",
+   "item": "https://hho.us.ci/de/category/text"
+  },
+  {
+   "@type": "ListItem",
+   "position": 3,
+   "name": "JSON zu TypeScript",
+   "item": "https://hho.us.ci/de/tools/json-to-typescript"
+  }
+ ]
+}
+</script>
+</head>
+<body>
+<header class="hdr"><div class="wrap hdr-in">
+<a class="logo" href="/de/"><span class="logo-mark">U</span><span>Utilixo<small>Online-Werkzeuge</small></span></a>
+<span class="hdr-sp"></span>
+<div class="hdr-search">
+<svg fill="none" height="15" stroke="currentColor" stroke-linecap="round" stroke-width="2.2" viewbox="0 0 24 24" width="15"><circle cx="11" cy="11" r="7"></circle><path d="M21 21l-4.3-4.3"></path></svg>
+<input aria-label="Werkzeuge suchen" data-filter="" placeholder="56 Werkzeuge durchsuchen…" type="search"/>
+</div>
+<button aria-label="Design wechseln" class="icon-btn" id="themeBtn" onclick="utilixoToggle()">☾</button><div class="langsw"><select aria-label="Sprache" class="langsel" onchange="if(this.value)location.href=this.value"><option value="/tools/json-to-typescript">English</option><option value="/zh/tools/json-to-typescript">简体中文</option><option value="/pt/tools/json-to-typescript">Português</option><option value="/es/tools/json-to-typescript">Español</option><option value="/fr/tools/json-to-typescript">Français</option><option selected="" value="/de/tools/json-to-typescript">Deutsch</option><option value="/ja/tools/json-to-typescript">日本語</option></select></div>
+</div></header>
+<main class="wrap tool-wrap">
+<div class="crumb"><a href="/de/">Start</a> › <a href="/de/category/text">Text &amp; Code</a> › JSON zu TypeScript</div><div style="margin:12px 0 0"><a class="ux-back" href="/de/">← Zurück zur Startseite</a></div>
+<div class="tool-hd">
+<div style="display:flex;align-items:center;gap:12px;margin-bottom:10px">
+<span class="ic" style="background:var(--c-text-bg);color:var(--c-text)"><svg aria-hidden="true" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.9" viewbox="0 0 24 24"><path d="M14 3H7a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V8z"></path><path d="M14 3v5h5"></path><path d="M9 13h6"></path><path d="M9 17h3"></path><path d="M17 13l3 3-3 3"></path></svg></span>
+<h1 style="margin:0">JSON zu TypeScript</h1></div>
+<p>TS-Interfaces aus jedem JSON-Beispiel erzeugen. Werte eingeben und die Schaltfläche drücken, um das Ergebnis zu sehen.</p></div>
+<div class="panel"><div class="fld"><label for="tsIn">JSON einfügen</label><textarea id="tsIn" placeholder='{"user":{"id":1,"name":"Ada","tags":["a","b"]},"ok":true}'></textarea></div>
+<div class="fld"><label for="tsName">Name des Wurzel-Interfaces</label><input id="tsName" value="Root"/></div>
+<div class="ux-actions ux-row"><button class="btn ux-go" onclick="tsGen()">Erzeugen</button><button class="btn-o ux-copy" onclick="utilixoCopy(document.getElementById('tsOut').value,this)">Kopieren</button></div>
+<div class="fld" style="margin-top:12px"><label>TypeScript</label><textarea id="tsOut" readonly="" style="min-height:180px"></textarea></div>
+</div>
+<section class="ux-guide" data-guide="1" style="margin:26px 0 0;padding:24px;border:1px solid var(--bd,rgba(127,127,127,.25));border-radius:14px;line-height:1.8"><h2 style="font-size:1.3rem;margin:0 0 12px">Über JSON zu TypeScript</h2><p style="margin:0 0 12px">TS-Interfaces aus jedem JSON-Beispiel erzeugen. Erzeugen drücken – das Ergebnis erscheint im Ergebnisfeld. Alles läuft lokal im Browser, nichts wird hochgeladen. Angezeigt wird nur das aktuelle Ergebnis — ohne Verlauf und ohne Vergleich nebeneinander.</p><p style="margin:0 0 12px">JSON zu TypeScript liest „JSON einfügen“ und „Name des Wurzel-Interfaces“ aus dem Formular und schreibt die Antwort ins Ergebnisfeld. Es gibt kein Konto und keinen Serveraufruf: das JavaScript der Seite rechnet auf Ihrem Gerät.</p><h2 style="font-size:1.3rem;margin:24px 0 12px">So verwenden Sie dieses Werkzeug</h2><ol style="margin:0 0 12px;padding-left:22px"><li style="margin:0 0 8px">Öffnen Sie JSON zu TypeScript über die Kategorie Text &amp; Code oder suchen Sie es über das Suchfeld im Kopf.</li><li style="margin:0 0 8px">Füllen Sie die angezeigten Felder aus: „JSON einfügen“ und „Name des Wurzel-Interfaces“.</li><li style="margin:0 0 8px">Drücken Sie Erzeugen. Das neue Ergebnis ersetzt das vorherige; angezeigt wird immer nur der aktuelle Lauf, nie zwei Ergebnisse nebeneinander.</li><li style="margin:0 0 8px">Mit Kopieren kopieren Sie das Ergebnis in die Zwischenablage. Eine Meldung erscheint nur, wenn wirklich etwas kopiert wurde.</li></ol><h2 style="font-size:1.3rem;margin:24px 0 12px">Ein Rechenbeispiel</h2><p style="margin:0 0 12px">Beim Öffnen sind diese Werte voreingestellt: Name des Wurzel-Interfaces = Root. Drücken Sie Erzeugen einmal, um die Ausgabe zu sehen, ersetzen Sie die Werte durch Ihre eigenen und drücken Sie erneut – das neue Ergebnis ersetzt das alte.</p><h2 style="font-size:1.3rem;margin:24px 0 12px">Häufig gestellte Fragen</h2><h3 style="font-size:1rem;margin:18px 0 6px">Werden meine Eingaben hochgeladen?</h3><p style="margin:0 0 10px">Nein. JSON zu TypeScript verarbeitet „JSON einfügen“ und „Name des Wurzel-Interfaces“ mit JavaScript im Browser. Eingaben und Ergebnis bleiben auf Ihrem Gerät, Utilixo speichert keine Kopie.</p><h3 style="font-size:1rem;margin:18px 0 6px">Kann ich mehrere Ergebnisse vergleichen?</h3><p style="margin:0 0 10px">Nicht nebeneinander. Jeder Klick auf Erzeugen berechnet aus den aktuellen Eingaben neu und überschreibt das vorherige Ergebnis. Notieren Sie sich frühere Werte selbst.</p><h3 style="font-size:1rem;margin:18px 0 6px">Was ist bei JSON zu TypeScript zu beachten?</h3><p style="margin:0 0 10px">Das Ergebnis hängt nur von den angezeigten Feldern ab („JSON einfügen“ und „Name des Wurzel-Interfaces“); ändern Sie eines und drücken Sie Erzeugen erneut.</p><h3 style="font-size:1rem;margin:18px 0 6px">Wie nehme ich das Ergebnis mit?</h3><p style="margin:0 0 10px">Nach einem Ergebnis Kopieren drücken. Bei leerem Ergebnis erscheint keine Erfolgsmeldung.</p><h3 style="font-size:1rem;margin:18px 0 6px">Brauche ich ein Konto oder muss ich zahlen?</h3><p style="margin:0 0 10px">Nein. JSON zu TypeScript ist kostenlos, ohne Registrierung und ohne Limit. Seite öffnen und loslegen.</p><h2 style="font-size:1.3rem;margin:24px 0 12px">Verwandte Werkzeuge</h2><ul style="margin:0 0 12px;padding-left:22px"><li><a href="/de/tools/base64-tool">Base64 Kodieren / Dekodieren</a> — Base64 sicher kodieren und dekodieren, UTF-8-fähig.</li><li><a href="/de/tools/duplicate-line-remover">Duplikatzeilen-Entferner</a> — Wiederholte Zeilen entfernen und Liste sortieren oder bereinigen.</li><li><a href="/de/tools/hash-generator">Hash-Generator</a> — Prüfsummen für MD5, SHA-1, SHA-256 und SHA-512.</li></ul><h2 style="font-size:1.3rem;margin:24px 0 12px">Weiterführende Lektüre</h2><p style="margin:0">Eine ausführlichere Erklärung finden Sie im <a class="guide-link" href="/de/guides/text">Leitfaden zu Text &amp; Code</a> mit praktischen Beispielen und Tipps zu jedem Werkzeug dieser Kategorie.</p><script type="application/ld+json">{"@context": "https://schema.org", "@type": "FAQPage", "mainEntity": [{"@type": "Question", "name": "Werden meine Eingaben hochgeladen?", "acceptedAnswer": {"@type": "Answer", "text": "Nein. JSON zu TypeScript verarbeitet „JSON einfügen“ und „Name des Wurzel-Interfaces“ mit JavaScript im Browser. Eingaben und Ergebnis bleiben auf Ihrem Gerät, Utilixo speichert keine Kopie."}}, {"@type": "Question", "name": "Kann ich mehrere Ergebnisse vergleichen?", "acceptedAnswer": {"@type": "Answer", "text": "Nicht nebeneinander. Jeder Klick auf Erzeugen berechnet aus den aktuellen Eingaben neu und überschreibt das vorherige Ergebnis. Notieren Sie sich frühere Werte selbst."}}, {"@type": "Question", "name": "Was ist bei JSON zu TypeScript zu beachten?", "acceptedAnswer": {"@type": "Answer", "text": "Das Ergebnis hängt nur von den angezeigten Feldern ab („JSON einfügen“ und „Name des Wurzel-Interfaces“); ändern Sie eines und drücken Sie Erzeugen erneut."}}, {"@type": "Question", "name": "Wie nehme ich das Ergebnis mit?", "acceptedAnswer": {"@type": "Answer", "text": "Nach einem Ergebnis Kopieren drücken. Bei leerem Ergebnis erscheint keine Erfolgsmeldung."}}, {"@type": "Question", "name": "Brauche ich ein Konto oder muss ich zahlen?", "acceptedAnswer": {"@type": "Answer", "text": "Nein. JSON zu TypeScript ist kostenlos, ohne Registrierung und ohne Limit. Seite öffnen und loslegen."}}]}</script></section>
+</main>
+<footer class="ftr"><div class="wrap ftr-in">
+<div class="ftr-links">
+<a href="/de/pages/about">Über uns</a><a href="/de/pages/contact">Kontakt</a>
+<a href="/de/pages/privacy">Datenschutz</a><a href="/de/pages/terms">Bedingungen</a>
+<a href="/de/pages/disclaimer">Haftungsausschluss</a>
+</div>
+<p class="ftr-c">© 2026 Utilixo · Für alle, die einfach die Antwort wollen. Alle Werkzeuge laufen lokal in deinem Browser – nichts wird hochgeladen, gespeichert oder weitergegeben.</p>
+</div></footer>
+<script src="/assets/js/app.js"></script>
+<script>
+
+function tsKey(k){return /^[A-Za-z_$][A-Za-z0-9_$]*$/.test(k)?k:JSON.stringify(k);}
+function tsType(v,d){
+  d=d||0;
+  var ind=new Array(d+1).join('  '), ind2=new Array(d+2).join('  ');
+  if(v===null)return 'null';
+  if(Array.isArray(v)){return v.length?tsType(v[0],d)+'[]':'unknown[]';}
+  var t=typeof v;
+  if(t==='number')return 'number';
+  if(t==='boolean')return 'boolean';
+  if(t==='string')return 'string';
+  if(t==='object'){
+    var k=Object.keys(v);
+    if(!k.length)return 'Record<string, unknown>';
+    var s='{\n';
+    for(var i=0;i<k.length;i++){s+=ind2+tsKey(k[i])+': '+tsType(v[k[i]],d+1)+';\n';}
+    return s+ind+'}';
+  }
+  return 'unknown';
+}
+function tsGen(){
+  var v=document.getElementById('tsIn').value.trim();
+  var nm=(document.getElementById('tsName').value.trim()||'Root').replace(/[^A-Za-z0-9_]/g,'')||'Root';
+  try{
+    var o=JSON.parse(v);
+    var body=tsType(o,0);
+    var out;
+    if(o!==null&&typeof o==='object'&&!Array.isArray(o)&&Object.keys(o).length){
+      out='interface '+nm+' '+body+'\n';
+    }else{
+      out='type '+nm+' = '+body+';\n';
+    }
+    document.getElementById('tsOut').value=out;
+  }catch(e){document.getElementById('tsOut').value='Ungültiges JSON: '+e.message;}
+}
+document.addEventListener('DOMContentLoaded',function(){
+  try{
+    if('tsGen'==='grInit'){grAdd();grAdd();grAdd();}
+    else if('tsGen'==='gpInit'){gpAdd();gpAdd();gpAdd();}
+    else if('tsGen'&&typeof window['tsGen']==='function'){window['tsGen']();}
+  }catch(e){console.warn(e);}
+});
+</script>
+</body></html>

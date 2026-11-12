@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1" name="viewport"/>
+<title>正则表达式测试工具 — 全部工具 | Utilixo</title>
+<meta content="实时测试 JavaScript 正则表达式的匹配结果。填写“表达式”、“修饰符”、“待测试文本”后点「测试」，结果会显示在结果区；运算全部在浏览器本地完成，输入内容不会上传。" name="description"/>
+<link href="https://hho.us.ci/zh/tools/regex-tester" rel="canonical"/>
+<link href="https://hho.us.ci/tools/regex-tester" hreflang="en" rel="alternate"/>
+<link href="https://hho.us.ci/zh/tools/regex-tester" hreflang="zh-CN" rel="alternate"/>
+<link href="https://hho.us.ci/pt/tools/regex-tester" hreflang="pt-BR" rel="alternate"/>
+<link href="https://hho.us.ci/es/tools/regex-tester" hreflang="es" rel="alternate"/>
+<link href="https://hho.us.ci/fr/tools/regex-tester" hreflang="fr" rel="alternate"/>
+<link href="https://hho.us.ci/de/tools/regex-tester" hreflang="de" rel="alternate"/>
+<link href="https://hho.us.ci/ja/tools/regex-tester" hreflang="ja" rel="alternate"/>
+<link href="https://hho.us.ci/tools/regex-tester" hreflang="x-default" rel="alternate"/>
+<meta content="index, follow" name="robots"/>
+<meta content="website" property="og:type"/>
+<meta content="zh_CN" property="og:locale"/>
+<meta content="en_US" property="og:locale:alternate"/>
+<meta content="pt_BR" property="og:locale:alternate"/>
+<meta content="es_ES" property="og:locale:alternate"/>
+<meta content="fr_FR" property="og:locale:alternate"/>
+<meta content="de_DE" property="og:locale:alternate"/>
+<meta content="ja_JP" property="og:locale:alternate"/>
+<meta content="Utilixo" property="og:site_name"/>
+<meta content="正则表达式测试工具 — 全部工具" property="og:title"/>
+<meta content="实时测试 JavaScript 正则表达式的匹配结果。填写“表达式”、“修饰符”、“待测试文本”后点「测试」，结果会显示在结果区；运算全部在浏览器本地完成，输入内容不会上传。" property="og:description"/>
+<meta content="https://hho.us.ci/zh/tools/regex-tester" property="og:url"/>
+<meta content="https://hho.us.ci/assets/img/og-cover.png" property="og:image"/>
+<meta content="summary_large_image" name="twitter:card"/>
+<meta content="正则表达式测试工具 — 全部工具" name="twitter:title"/>
+<meta content="实时测试 JavaScript 正则表达式的匹配结果。填写“表达式”、“修饰符”、“待测试文本”后点「测试」，结果会显示在结果区；运算全部在浏览器本地完成，输入内容不会上传。" name="twitter:description"/>
+<meta content="https://hho.us.ci/assets/img/og-cover.png" name="twitter:image"/>
+<meta name="theme-color" content="#F4F6FB">
+
+<link href="/assets/img/favicon.svg" rel="icon" type="image/svg+xml"/>
+<link href="/assets/img/favicon-180.png" rel="apple-touch-icon"/>
+<link href="/manifest.webmanifest" rel="manifest"/>
+<script>(function(){try{var k='utilixo-theme';var s=localStorage.getItem(k);document.documentElement.setAttribute('data-theme',s==='dark'?'dark':'light');}catch(e){document.documentElement.setAttribute('data-theme','light');}})();</script>
+<link href="/assets/css/style-zh.css" rel="stylesheet"/>
+<script type="application/ld+json">
+{
+ "@context": "https://schema.org",
+ "@type": "WebApplication",
+ "name": "正则表达式测试工具",
+ "url": "https://hho.us.ci/zh/tools/regex-tester",
+ "applicationCategory": "UtilityApplication",
+ "operatingSystem": "Any (web browser)",
+ "browserRequirements": "需要启用 JavaScript 的现代浏览器",
+ "offers": {
+  "@type": "Offer",
+  "price": "0",
+  "priceCurrency": "USD"
+ },
+ "description": "实时测试 JavaScript 正则表达式的匹配结果。填写“表达式”、“修饰符”、“待测试文本”后点「测试」，结果会显示在结果区；运算全部在浏览器本地完成，输入内容不会上传。",
+ "publisher": {
+  "@type": "Organization",
+  "name": "Utilixo",
+  "url": "https://hho.us.ci/"
+ }
+}
+</script>
+<script type="application/ld+json">
+{
+ "@context": "https://schema.org",
+ "@type": "BreadcrumbList",
+ "itemListElement": [
+  {
+   "@type": "ListItem",
+   "position": 1,
+   "name": "首页",
+   "item": "https://hho.us.ci/zh/"
+  },
+  {
+   "@type": "ListItem",
+   "position": 2,
+   "name": "文本与代码",
+   "item": "https://hho.us.ci/zh/category/text"
+  },
+  {
+   "@type": "ListItem",
+   "position": 3,
+   "name": "正则表达式测试工具",
+   "item": "https://hho.us.ci/zh/tools/regex-tester"
+  }
+ ]
+}
+</script>
+</head>
+<body>
+<header class="hdr"><div class="wrap hdr-in">
+<a class="logo" href="/zh/"><span class="logo-mark">U</span><span>Utilixo<small>在线工具箱</small></span></a>
+<span class="hdr-sp"></span>
+<div class="hdr-search">
+<svg fill="none" height="15" stroke="currentColor" stroke-linecap="round" stroke-width="2.2" viewbox="0 0 24 24" width="15"><circle cx="11" cy="11" r="7"></circle><path d="M21 21l-4.3-4.3"></path></svg>
+<input aria-label="搜索工具" data-filter="" placeholder="搜索 56 个工具…" type="search"/>
+</div>
+<button aria-label="切换主题" class="icon-btn" id="themeBtn" onclick="utilixoToggle()">☾</button><div class="langsw"><select aria-label="语言" class="langsel" onchange="if(this.value)location.href=this.value"><option value="/tools/regex-tester">English</option><option selected="" value="/zh/tools/regex-tester">简体中文</option><option value="/pt/tools/regex-tester">Português</option><option value="/es/tools/regex-tester">Español</option><option value="/fr/tools/regex-tester">Français</option><option value="/de/tools/regex-tester">Deutsch</option><option value="/ja/tools/regex-tester">日本語</option></select></div>
+</div></header>
+<main class="wrap tool-wrap">
+<div class="crumb"><a href="/zh/">首页</a> › <a href="/zh/category/text">文本与代码</a> › 正则表达式测试工具</div><div style="margin:12px 0 0"><a class="ux-back" href="/zh/">← 返回首页</a></div>
+<div class="tool-hd">
+<div style="display:flex;align-items:center;gap:12px;margin-bottom:10px">
+<span class="ic" style="background:var(--c-text-bg);color:var(--c-text)"><svg aria-hidden="true" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.9" viewbox="0 0 24 24"><path d="M6 4L4 20"></path><path d="M20 4l-2 16"></path><path d="M12 7l2.5 5L12 17l-2.5-5z"></path></svg></span>
+<h1 style="margin:0">正则表达式测试工具</h1></div>
+<p>实时测试 JavaScript 正则表达式的匹配结果。填好字段后点页面按钮即可看到结果。</p></div>
+<div class="panel"><div class="fld"><label for="rPat">表达式</label><input id="rPat" style="font-family:var(--mono)" value="\b[a-z]+@[a-z]+\.[a-z]{2,}\b"/></div>
+<div class="row"><div class="fld"><label for="rFlags">修饰符</label><input id="rFlags" style="font-family:var(--mono)" value="gi"/></div></div>
+<div class="fld"><label for="rTxt">待测试文本</label><textarea id="rTxt" placeholder="粘贴要比对的文本">Contact ada@example.com or grace@test.org for details.</textarea></div>
+<div class="ux-actions ux-row"><button class="btn ux-go" onclick="rRun()">测试</button><button class="btn ux-copy" onclick="var e=document.getElementById('rOut');utilixoCopy((e&amp;&amp;(e.innerText||e.value))||'',this)">复制</button></div>
+<div id="rOut" style="margin-top:14px"></div></div>
+<section class="ux-guide" data-guide="1" style="margin:26px 0 0;padding:24px;border:1px solid var(--bd,rgba(127,127,127,.25));border-radius:14px;line-height:1.8"><h2 style="font-size:1.3rem;margin:0 0 12px">关于正则表达式测试工具</h2><p style="margin:0 0 12px">实时测试 JavaScript 正则表达式的匹配结果。填写“表达式”、“修饰符”、“待测试文本”后点「测试」，结果会显示在结果区；运算全部在浏览器本地完成，输入内容不会上传。</p><p style="margin:0 0 12px">正则表达式测试工具 读取上方表单里的“表达式”、“修饰符”、“待测试文本”，把答案写进结果区。页面不需要登录，也不会把数据发到服务器：所有计算都由本页的脚本在你的设备上完成。</p><h2 style="font-size:1.3rem;margin:24px 0 12px">如何使用</h2><ol style="margin:0 0 12px;padding-left:22px"><li style="margin:0 0 8px">从文本与代码分类打开正则表达式测试工具，也可以用页头的搜索框找到它。</li><li style="margin:0 0 8px">按页面上的字段逐一填写：“表达式”、“修饰符”、“待测试文本”。</li><li style="margin:0 0 8px">点「测试」。新结果会覆盖上一次的结果，页面只显示当前这一轮，不会把两次结果并排放在一起。</li><li style="margin:0 0 8px">点「复制」把结果复制到剪贴板；只有真的复制到内容时才会出现成功提示。</li></ol><h2 style="font-size:1.3rem;margin:24px 0 12px">使用示例</h2><p style="margin:0 0 12px">页面打开时这几个字段已有默认值：表达式 = \b[a-z]+@[a-z]+\.[a-z]{2,}\b、修饰符 = gi。先点一次「测试」看看结果长什么样，再换成自己的数据重新点一次，新结果会替换旧结果。</p><h2 style="font-size:1.3rem;margin:24px 0 12px">常见问题</h2><h3 style="font-size:1rem;margin:18px 0 6px">我输入的内容会被上传吗？</h3><p style="margin:0 0 10px">不会。正则表达式测试工具 用浏览器里的脚本处理“表达式”、“修饰符”、“待测试文本”，输入和结果都留在你的设备上，Utilixo 不保存副本。</p><h3 style="font-size:1rem;margin:18px 0 6px">能不能保留多次结果做对比？</h3><p style="margin:0 0 10px">不能并排保留。每次点「测试」都会按当前输入重算并覆盖上一次结果；想对比请自己先记下前一次的数值。</p><h3 style="font-size:1rem;margin:18px 0 6px">用正则表达式测试工具时要注意什么？</h3><p style="margin:0 0 10px">结果只取决于页面上这几个字段（“表达式”、“修饰符”、“待测试文本”）；改动其中任意一项，再点「测试」就会得到更新后的结果。</p><h3 style="font-size:1rem;margin:18px 0 6px">结果怎么带走？</h3><p style="margin:0 0 10px">结果出现后点「复制」即可复制；结果为空时不会出现成功提示。</p><h3 style="font-size:1rem;margin:18px 0 6px">需要注册或付费吗？</h3><p style="margin:0 0 10px">不需要。正则表达式测试工具 免费、无需注册，也没有次数限制，打开页面直接用。</p><h2 style="font-size:1.3rem;margin:24px 0 12px">相关工具</h2><ul style="margin:0 0 12px;padding-left:22px"><li><a href="/zh/tools/base64-tool">Base64 编码解码工具</a> — 安全的 Base64 编码与解码，完整支持 UTF-8。</li><li><a href="/zh/tools/duplicate-line-remover">重复行去重工具</a> — 去除重复行，并可排序或清理列表。</li><li><a href="/zh/tools/hash-generator">哈希值生成器</a> — 生成 MD5、SHA-1、SHA-256 与 SHA-512 校验值。</li></ul><h2 style="font-size:1.3rem;margin:24px 0 12px">延伸阅读</h2><p style="margin:0">想看更完整的说明，可以读这篇<a class="guide-link" href="/zh/guides/text">文本与代码分类指南</a>，里面逐个介绍了本分类的工具，并附了实际用法和小技巧。</p><script type="application/ld+json">{"@context": "https://schema.org", "@type": "FAQPage", "mainEntity": [{"@type": "Question", "name": "我输入的内容会被上传吗？", "acceptedAnswer": {"@type": "Answer", "text": "不会。正则表达式测试工具 用浏览器里的脚本处理“表达式”、“修饰符”、“待测试文本”，输入和结果都留在你的设备上，Utilixo 不保存副本。"}}, {"@type": "Question", "name": "能不能保留多次结果做对比？", "acceptedAnswer": {"@type": "Answer", "text": "不能并排保留。每次点「测试」都会按当前输入重算并覆盖上一次结果；想对比请自己先记下前一次的数值。"}}, {"@type": "Question", "name": "用正则表达式测试工具时要注意什么？", "acceptedAnswer": {"@type": "Answer", "text": "结果只取决于页面上这几个字段（“表达式”、“修饰符”、“待测试文本”）；改动其中任意一项，再点「测试」就会得到更新后的结果。"}}, {"@type": "Question", "name": "结果怎么带走？", "acceptedAnswer": {"@type": "Answer", "text": "结果出现后点「复制」即可复制；结果为空时不会出现成功提示。"}}, {"@type": "Question", "name": "需要注册或付费吗？", "acceptedAnswer": {"@type": "Answer", "text": "不需要。正则表达式测试工具 免费、无需注册，也没有次数限制，打开页面直接用。"}}]}</script></section>
+</main>
+<footer class="ftr"><div class="wrap ftr-in">
+<div class="ftr-links">
+<a href="/zh/pages/about">关于我们</a><a href="/zh/pages/contact">联系我们</a>
+<a href="/zh/pages/privacy">隐私政策</a><a href="/zh/pages/terms">服务条款</a>
+<a href="/zh/pages/disclaimer">免责声明</a>
+</div>
+<p class="ftr-c">© 2026 Utilixo · 给只想马上知道答案的人。所有工具都在你的浏览器本地运行，输入的内容不会上传、不会保存、不会给第三方。</p>
+</div></footer>
+<script src="/assets/js/app.js"></script>
+<script>
+
+function rRun(){
+  var p=document.getElementById('rPat').value;
+  var f=document.getElementById('rFlags').value;
+  var t=document.getElementById('rTxt').value;
+  var box=document.getElementById('rOut');
+  var re;
+  try{re=new RegExp(p,f);}catch(e){box.innerHTML='<div class="err-t">无效的正则表达式：'+"请检查语法后重试。"+'</div>';return;}
+  var g=f.indexOf('g')>=0;
+  var ms=[],m,cnt=0;
+  if(g){while((m=re.exec(t))!==null&&cnt<500){ms.push(m);cnt++;if(m[0]==='')re.lastIndex++;}}
+  else{m=re.exec(t);if(m)ms.push(m);}
+  if(!ms.length){box.innerHTML='<div class="err-t">没有匹配项。</div>';return;}
+  var h='<div class="panel"><div class="panel-t">'+ms.length+' 处匹配'+'</div>';
+  ms.slice(0,60).forEach(function(mm,i){
+    var s=mm[0].replace(/&/g,'&amp;').replace(/</g,'&lt;');
+    h+='<div style="border-bottom:1px solid var(--border-soft);padding:8px 0;font-family:var(--mono);font-size:13px">'
+     +'<span style="color:var(--muted)">'+i+'</span>&nbsp; <b>'+s+'</b>'
+     +'<span style="color:var(--muted);font-size:12px"> @'+mm.index+'</span>';
+    if(mm.length>1){
+      h+='<div style="font-size:12px;color:var(--text-2);margin-top:3px">捕获组：';
+      for(var k=1;k<mm.length;k++)h+='<span style="background:var(--card-2);padding:1px 6px;border-radius:4px;margin-right:4px">$'+k+'='+(mm[k]===undefined?'—':mm[k])+'</span>';
+      h+='</div>';
+    }
+    h+='</div>';
+  });
+  var hl=t.replace(/&/g,'&amp;').replace(/</g,'&lt;');
+  var re2=new RegExp(p,f.indexOf('g')>=0?f:f+'g');
+  try{hl=hl.replace(re2,function(x){return '<mark style="background:rgba(99,102,241,.28);padding:0 2px;border-radius:3px">'+x+'</mark>';});}catch(e){}
+  h+='<div class="panel-t" style="margin:16px 0 8px">高亮结果</div><div style="font-family:var(--mono);font-size:13px;background:var(--card-2);padding:12px;border-radius:var(--r-sm);white-space:pre-wrap;word-break:break-word">'+hl+'</div>';
+  h+='</div>';
+  box.innerHTML=h;
+}
+document.addEventListener('DOMContentLoaded',function(){
+  try{
+    if('rRun'==='grInit'){grAdd();grAdd();grAdd();}
+    else if('rRun'==='gpInit'){gpAdd();gpAdd();gpAdd();}
+    else if('rRun'&&typeof window['rRun']==='function'){window['rRun']();}
+  }catch(e){console.warn(e);}
+});
+
+try{rRun();}catch(e){}
+</script>
+</body></html>

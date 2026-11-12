@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+
+<html lang="ja">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1" name="viewport"/>
+<title>テキスト差分チェッカー — すべてのツール | Utilixo</title>
+<meta content="2つのテキストを文字単位で比較し、追加・削除された部分を強調表示。「変更前」・「変更後」を入力して「比較」を押すと結果パネルに表示されます。処理はブラウザ内で完結し、入力内容は送信されません。" name="description"/>
+<link href="https://hho.us.ci/ja/tools/text-diff" rel="canonical"/>
+<link href="https://hho.us.ci/tools/text-diff" hreflang="en" rel="alternate"/>
+<link href="https://hho.us.ci/zh/tools/text-diff" hreflang="zh-CN" rel="alternate"/>
+<link href="https://hho.us.ci/pt/tools/text-diff" hreflang="pt-BR" rel="alternate"/>
+<link href="https://hho.us.ci/es/tools/text-diff" hreflang="es" rel="alternate"/>
+<link href="https://hho.us.ci/fr/tools/text-diff" hreflang="fr" rel="alternate"/>
+<link href="https://hho.us.ci/de/tools/text-diff" hreflang="de" rel="alternate"/>
+<link href="https://hho.us.ci/ja/tools/text-diff" hreflang="ja" rel="alternate"/>
+<link href="https://hho.us.ci/tools/text-diff" hreflang="x-default" rel="alternate"/>
+<meta content="index, follow" name="robots"/>
+<meta content="website" property="og:type"/>
+<meta content="ja_JP" property="og:locale"/>
+<meta content="en_US" property="og:locale:alternate"/>
+<meta content="zh_CN" property="og:locale:alternate"/>
+<meta content="pt_BR" property="og:locale:alternate"/>
+<meta content="es_ES" property="og:locale:alternate"/>
+<meta content="fr_FR" property="og:locale:alternate"/>
+<meta content="de_DE" property="og:locale:alternate"/>
+<meta content="Utilixo" property="og:site_name"/>
+<meta content="テキスト差分チェッカー — すべてのツール" property="og:title"/>
+<meta content="2つのテキストを文字単位で比較し、追加・削除された部分を強調表示。「変更前」・「変更後」を入力して「比較」を押すと結果パネルに表示されます。処理はブラウザ内で完結し、入力内容は送信されません。" property="og:description"/>
+<meta content="https://hho.us.ci/ja/tools/text-diff" property="og:url"/>
+<meta content="https://hho.us.ci/assets/img/og-cover.png" property="og:image"/>
+<meta content="summary_large_image" name="twitter:card"/>
+<meta content="テキスト差分チェッカー — すべてのツール" name="twitter:title"/>
+<meta content="2つのテキストを文字単位で比較し、追加・削除された部分を強調表示。「変更前」・「変更後」を入力して「比較」を押すと結果パネルに表示されます。処理はブラウザ内で完結し、入力内容は送信されません。" name="twitter:description"/>
+<meta content="https://hho.us.ci/assets/img/og-cover.png" name="twitter:image"/>
+<meta name="theme-color" content="#F4F6FB">
+
+<link href="/assets/img/favicon.svg" rel="icon" type="image/svg+xml"/>
+<link href="/assets/img/favicon-180.png" rel="apple-touch-icon"/>
+<link href="/manifest.webmanifest" rel="manifest"/>
+<script>(function(){try{var k='utilixo-theme';var s=localStorage.getItem(k);document.documentElement.setAttribute('data-theme',s==='dark'?'dark':'light');}catch(e){document.documentElement.setAttribute('data-theme','light');}})();</script>
+<link href="/assets/css/style-ja.css" rel="stylesheet"/>
+<script type="application/ld+json">
+{
+ "@context": "https://schema.org",
+ "@type": "WebApplication",
+ "name": "テキスト差分チェッカー",
+ "url": "https://hho.us.ci/ja/tools/text-diff",
+ "applicationCategory": "UtilityApplication",
+ "operatingSystem": "Any (web browser)",
+ "browserRequirements": "JavaScript が有効な最新のブラウザが必要です",
+ "offers": {
+  "@type": "Offer",
+  "price": "0",
+  "priceCurrency": "USD"
+ },
+ "description": "2つのテキストを文字単位で比較し、追加・削除された部分を強調表示。「変更前」・「変更後」を入力して「比較」を押すと結果パネルに表示されます。処理はブラウザ内で完結し、入力内容は送信されません。",
+ "publisher": {
+  "@type": "Organization",
+  "name": "Utilixo",
+  "url": "https://hho.us.ci/"
+ }
+}
+</script>
+<script type="application/ld+json">
+{
+ "@context": "https://schema.org",
+ "@type": "BreadcrumbList",
+ "itemListElement": [
+  {
+   "@type": "ListItem",
+   "position": 1,
+   "name": "ホーム",
+   "item": "https://hho.us.ci/ja/"
+  },
+  {
+   "@type": "ListItem",
+   "position": 2,
+   "name": "テキストとコード",
+   "item": "https://hho.us.ci/ja/category/text"
+  },
+  {
+   "@type": "ListItem",
+   "position": 3,
+   "name": "テキスト差分チェッカー",
+   "item": "https://hho.us.ci/ja/tools/text-diff"
+  }
+ ]
+}
+</script>
+</head>
+<body>
+<header class="hdr"><div class="wrap hdr-in">
+<a class="logo" href="/ja/"><span class="logo-mark">U</span><span>Utilixo<small>オンラインツール</small></span></a>
+<span class="hdr-sp"></span>
+<div class="hdr-search">
+<svg fill="none" height="15" stroke="currentColor" stroke-linecap="round" stroke-width="2.2" viewbox="0 0 24 24" width="15"><circle cx="11" cy="11" r="7"></circle><path d="M21 21l-4.3-4.3"></path></svg>
+<input aria-label="ツールを検索" data-filter="" placeholder="56個のツールを検索…" type="search"/>
+</div>
+<button aria-label="テーマ切替" class="icon-btn" id="themeBtn" onclick="utilixoToggle()">☾</button><div class="langsw"><select aria-label="言語" class="langsel" onchange="if(this.value)location.href=this.value"><option value="/tools/text-diff">English</option><option value="/zh/tools/text-diff">简体中文</option><option value="/pt/tools/text-diff">Português</option><option value="/es/tools/text-diff">Español</option><option value="/fr/tools/text-diff">Français</option><option value="/de/tools/text-diff">Deutsch</option><option selected="" value="/ja/tools/text-diff">日本語</option></select></div>
+</div></header>
+<main class="wrap tool-wrap">
+<div class="crumb"><a href="/ja/">ホーム</a> › <a href="/ja/category/text">テキストとコード</a> › テキスト差分チェッカー</div><div style="margin:12px 0 0"><a class="ux-back" href="/ja/">← ホームへ戻る</a></div>
+<div class="tool-hd">
+<div style="display:flex;align-items:center;gap:12px;margin-bottom:10px">
+<span class="ic" style="background:var(--c-text-bg);color:var(--c-text)"><svg aria-hidden="true" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.9" viewbox="0 0 24 24"><rect height="16" rx="1.5" width="8" x="3" y="4"></rect><rect height="16" rx="1.5" width="8" x="13" y="4"></rect><path d="M5.5 9h3"></path><path d="M15.5 9h3"></path><path d="M15.5 14h3"></path></svg></span>
+<h1 style="margin:0">テキスト差分チェッカー</h1></div>
+<p>2つのテキストを文字単位で比較し、追加・削除された部分を強調表示。項目を入力してボタンを押すと結果が表示されます。</p></div>
+<div class="panel"><div class="row">
+<div class="fld"><label for="dA">変更前</label><textarea id="dA" placeholder="1つ目のバージョン"></textarea></div>
+<div class="fld"><label for="dB">変更後</label><textarea id="dB" placeholder="2つ目のバージョン"></textarea></div>
+</div>
+<div class="ux-actions ux-row"><button class="btn ux-go" onclick="dRun()">比較</button><button class="btn ux-copy" onclick="utilixoCopy((document.getElementById('dOut')||{}).innerText||'' , this)">コピー</button></div>
+<div id="dOut" style="margin-top:14px"></div></div>
+<section class="ux-guide" data-guide="1" style="margin:26px 0 0;padding:24px;border:1px solid var(--bd,rgba(127,127,127,.25));border-radius:14px;line-height:1.8"><h2 style="font-size:1.3rem;margin:0 0 12px">テキスト差分チェッカーについて</h2><p style="margin:0 0 12px">2つのテキストを文字単位で比較し、追加・削除された部分を強調表示。「変更前」・「変更後」を入力して「比較」を押すと結果パネルに表示されます。処理はブラウザ内で完結し、入力内容は送信されません。</p><p style="margin:0 0 12px">テキスト差分チェッカーは上のフォームの「変更前」・「変更後」を読み取り、結果パネルへ答えを書き出します，&#x27;+U.hint+&#x27;。ログインやサーバーへの送信は不要で、ページ内の JavaScript が端末上で処理します。</p><h2 style="font-size:1.3rem;margin:24px 0 12px">使い方</h2><ol style="margin:0 0 12px;padding-left:22px"><li style="margin:0 0 8px">テキストとコードカテゴリからテキスト差分チェッカーを開くか、ヘッダーの検索ボックスで探してください。</li><li style="margin:0 0 8px">ページの項目を入力します：「変更前」・「変更後」。</li><li style="margin:0 0 8px">「比較」を押します。新しい結果が前回の結果を上書きし、表示されるのは常に現在の 1 回分だけで、2 つが並ぶことはありません。</li><li style="margin:0 0 8px">「コピー」で結果をクリップボードへコピーできます。実際にコピーできたときだけメッセージが出ます。</li></ol><h2 style="font-size:1.3rem;margin:24px 0 12px">使用例</h2><p style="margin:0 0 12px">上の項目に自分のデータを入力し、「比較」を押すと結果が出ます。入力を変えてもう一度押すと、現在の入力で再計算され前の結果を置き換えます。</p><h2 style="font-size:1.3rem;margin:24px 0 12px">よくある質問</h2><h3 style="font-size:1rem;margin:18px 0 6px">入力した内容は送信されますか？</h3><p style="margin:0 0 10px">いいえ。テキスト差分チェッカーは「変更前」・「変更後」をブラウザ内の JavaScript で処理します。入力と結果は端末内に残り、Utilixoで複製は保存されません。</p><h3 style="font-size:1rem;margin:18px 0 6px">複数回の結果を並べて比較できますか？</h3><p style="margin:0 0 10px">できません。「比較」を押すたびに現在の入力で再計算され、前の結果を上書きします。比較したい場合は前回の値を控えてください。</p><h3 style="font-size:1rem;margin:18px 0 6px">テキスト差分チェッカーで気を付けることは？</h3><p style="margin:0 0 10px">&#x27;+U.hint+&#x27;</p><h3 style="font-size:1rem;margin:18px 0 6px">結果を持ち出すには？</h3><p style="margin:0 0 10px">結果が出たら「コピー」を押してください。空の結果では成功メッセージは出ません。</p><h3 style="font-size:1rem;margin:18px 0 6px">登録や料金は必要ですか？</h3><p style="margin:0 0 10px">不要です。テキスト差分チェッカーは無料・登録不要・回数制限なしで、ページを開けばすぐ使えます。</p><h2 style="font-size:1.3rem;margin:24px 0 12px">関連ツール</h2><ul style="margin:0 0 12px;padding-left:22px"><li><a href="/ja/tools/base64-tool">Base64エンコード・デコード</a> — UTF-8対応の安全なBase64エンコードとデコード。</li><li><a href="/ja/tools/duplicate-line-remover">重複行削除ツール</a> — 重複行を除去し、リストの並べ替えや整形も可能。</li><li><a href="/ja/tools/hash-generator">ハッシュ生成ツール</a> — MD5、SHA-1、SHA-256、SHA-512のチェックサム。</li></ul><h2 style="font-size:1.3rem;margin:24px 0 12px">関連ガイド</h2><p style="margin:0">より詳しい解説は<a class="guide-link" href="/ja/guides/text">テキストとコードガイド</a>をご覧ください。このカテゴリの各ツールを、実例とコツとともに順に紹介しています。</p><script type="application/ld+json">{"@context": "https://schema.org", "@type": "FAQPage", "mainEntity": [{"@type": "Question", "name": "入力した内容は送信されますか？", "acceptedAnswer": {"@type": "Answer", "text": "いいえ。テキスト差分チェッカーは「変更前」・「変更後」をブラウザ内の JavaScript で処理します。入力と結果は端末内に残り、Utilixoで複製は保存されません。"}}, {"@type": "Question", "name": "複数回の結果を並べて比較できますか？", "acceptedAnswer": {"@type": "Answer", "text": "できません。「比較」を押すたびに現在の入力で再計算され、前の結果を上書きします。比較したい場合は前回の値を控えてください。"}}, {"@type": "Question", "name": "テキスト差分チェッカーで気を付けることは？", "acceptedAnswer": {"@type": "Answer", "text": "'+U.hint+'"}}, {"@type": "Question", "name": "結果を持ち出すには？", "acceptedAnswer": {"@type": "Answer", "text": "結果が出たら「コピー」を押してください。空の結果では成功メッセージは出ません。"}}, {"@type": "Question", "name": "登録や料金は必要ですか？", "acceptedAnswer": {"@type": "Answer", "text": "不要です。テキスト差分チェッカーは無料・登録不要・回数制限なしで、ページを開けばすぐ使えます。"}}]}</script></section>
+</main>
+<footer class="ftr"><div class="wrap ftr-in">
+<div class="ftr-links">
+<a href="/ja/pages/about">サイトについて</a><a href="/ja/pages/contact">お問い合わせ</a>
+<a href="/ja/pages/privacy">プライバシーポリシー</a><a href="/ja/pages/terms">利用規約</a>
+<a href="/ja/pages/disclaimer">免責事項</a>
+</div>
+<p class="ftr-c">© 2026 Utilixo · 答えだけが欲しい人のために。すべてのツールはブラウザ内で動くため、入力内容がアップロードされたり保存されたりすることはありません。</p>
+</div></footer>
+<script src="/assets/js/app.js"></script>
+<script>
+
+function dRun(){
+  var a=document.getElementById('dA').value, b=document.getElementById('dB').value;
+  var U={"orig": "元のテキスト", "changed": "変更後のテキスト", "title": "文字単位の差分", "add": "追加", "dele": "削除", "same": "変更なし", "unit": "文字", "hint": "赤＝元の文本から削除された部分、緑＝変更後に追加された部分。"};
+  var A=Array.from(a), B=Array.from(b);
+  var n=A.length,m=B.length;
+  /* O(n*m) LCS; cap length to avoid freezing */
+  var LIM=4000;
+  var ops=[];
+  if(n*m>LIM*LIM){
+    ops=[{t:'del',v:a},{t:'add',v:b}];
+  }else{
+    var dp=new Array(n+1);
+    for(var i=0;i<=n;i++){dp[i]=new Uint16Array(m+1);}
+    for(var i=n-1;i>=0;i--){
+      for(var j=m-1;j>=0;j--){
+        dp[i][j]=A[i]===B[j]?dp[i+1][j+1]+1:Math.max(dp[i+1][j],dp[i][j+1]);
+      }
+    }
+    var i=0,j=0,cur=null;
+    function push(t,ch){
+      if(cur&&cur.t===t)cur.v+=ch; else {cur={t:t,v:ch};ops.push(cur);}
+    }
+    while(i<n&&j<m){
+      if(A[i]===B[j]){push('same',A[i]);i++;j++;}
+      else if(dp[i+1][j]>=dp[i][j+1]){push('del',A[i]);i++;}
+      else{push('add',B[j]);j++;}
+    }
+    while(i<n){push('del',A[i]);i++;}
+    while(j<m){push('add',B[j]);j++;}
+  }
+  var add=0,del=0,same=0;
+  ops.forEach(function(o){if(o.t==='add')add+=Array.from(o.v).length;
+    else if(o.t==='del')del+=Array.from(o.v).length; else same+=Array.from(o.v).length;});
+  function esc(s){return (s||'').replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;');}
+  function block(title,titleCls,ops,keep,mark){
+    var h='<div style="margin-bottom:14px"><div class="panel-t" style="'+titleCls+'">'+title+'</div>';
+    h+='<div style="font-family:var(--mono);font-size:13px;line-height:1.9;white-space:pre-wrap;word-break:break-word;padding:10px 12px;border:1px solid var(--bd,rgba(127,127,127,.25));border-radius:9px">';
+    ops.forEach(function(o){
+      var v=esc(o.v);
+      if(o.t==='same')h+=v;
+      else if(o.t===keep)h+=mark(v);
+    });
+    h+='</div></div>';
+    return h;
+  }
+  var red=function(v){return '<del style="background:rgba(239,68,68,.28);color:inherit;text-decoration:line-through;border-radius:3px;padding:0 2px">'+v+'</del>';};
+  var green=function(v){return '<ins style="background:rgba(16,185,129,.30);color:inherit;text-decoration:none;border-radius:3px;padding:0 2px;font-weight:700">'+v+'</ins>';};
+  var h='<div class="panel"><div class="panel-t">'+U.title+'</div>';
+  h+=block(U.orig,'',ops,'del',red);
+  h+=block(U.changed,'',ops,'add',green);
+  h+='<div class="res-grid" style="margin-top:14px">'
+   +'<div class="res-cell"><div class="k">'+U.add+'</div><div class="v" style="color:var(--ok)">'+add+' '+U.unit+'</div></div>'
+   +'<div class="res-cell"><div class="k">'+U.dele+'</div><div class="v" style="color:var(--err)">'+del+' '+U.unit+'</div></div>'
+   +'<div class="res-cell"><div class="k">'+U.same+'</div><div class="v">'+same+' '+U.unit+'</div></div></div>';
+  h+='<p class="note">'+U.hint+'</p></div>';
+  document.getElementById('dOut').innerHTML=h;
+}
+function esc2(s){return (s||'').replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;');}
+document.addEventListener('DOMContentLoaded',function(){try{dRun();}catch(e){}});
+
+</script>
+</body></html>

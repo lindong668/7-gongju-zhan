@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+
+<html lang="es">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1" name="viewport"/>
+<title>Comparador de Texto — Todas las herramientas | Utilixo</title>
+<meta content="Compara dos bloques de texto carácter por carácter y resalta las partes añadidas y eliminadas. Todo se ejecuta localmente en el navegador, nada se envía." name="description"/>
+<link href="https://hho.us.ci/es/tools/text-diff" rel="canonical"/>
+<link href="https://hho.us.ci/tools/text-diff" hreflang="en" rel="alternate"/>
+<link href="https://hho.us.ci/zh/tools/text-diff" hreflang="zh-CN" rel="alternate"/>
+<link href="https://hho.us.ci/pt/tools/text-diff" hreflang="pt-BR" rel="alternate"/>
+<link href="https://hho.us.ci/es/tools/text-diff" hreflang="es" rel="alternate"/>
+<link href="https://hho.us.ci/fr/tools/text-diff" hreflang="fr" rel="alternate"/>
+<link href="https://hho.us.ci/de/tools/text-diff" hreflang="de" rel="alternate"/>
+<link href="https://hho.us.ci/ja/tools/text-diff" hreflang="ja" rel="alternate"/>
+<link href="https://hho.us.ci/tools/text-diff" hreflang="x-default" rel="alternate"/>
+<meta content="index, follow" name="robots"/>
+<meta content="website" property="og:type"/>
+<meta content="es_ES" property="og:locale"/>
+<meta content="en_US" property="og:locale:alternate"/>
+<meta content="zh_CN" property="og:locale:alternate"/>
+<meta content="pt_BR" property="og:locale:alternate"/>
+<meta content="fr_FR" property="og:locale:alternate"/>
+<meta content="de_DE" property="og:locale:alternate"/>
+<meta content="ja_JP" property="og:locale:alternate"/>
+<meta content="Utilixo" property="og:site_name"/>
+<meta content="Comparador de Texto — Todas las herramientas" property="og:title"/>
+<meta content="Compara dos bloques de texto carácter por carácter y resalta las partes añadidas y eliminadas. Todo se ejecuta localmente en el navegador, nada se envía." property="og:description"/>
+<meta content="https://hho.us.ci/es/tools/text-diff" property="og:url"/>
+<meta content="https://hho.us.ci/assets/img/og-cover.png" property="og:image"/>
+<meta content="summary_large_image" name="twitter:card"/>
+<meta content="Comparador de Texto — Todas las herramientas" name="twitter:title"/>
+<meta content="Compara dos bloques de texto carácter por carácter y resalta las partes añadidas y eliminadas. Todo se ejecuta localmente en el navegador, nada se envía." name="twitter:description"/>
+<meta content="https://hho.us.ci/assets/img/og-cover.png" name="twitter:image"/>
+<meta name="theme-color" content="#F4F6FB">
+
+<link href="/assets/img/favicon.svg" rel="icon" type="image/svg+xml"/>
+<link href="/assets/img/favicon-180.png" rel="apple-touch-icon"/>
+<link href="/manifest.webmanifest" rel="manifest"/>
+<script>(function(){try{var k='utilixo-theme';var s=localStorage.getItem(k);document.documentElement.setAttribute('data-theme',s==='dark'?'dark':'light');}catch(e){document.documentElement.setAttribute('data-theme','light');}})();</script>
+<link href="/assets/css/style-es.css" rel="stylesheet"/>
+<script type="application/ld+json">
+{
+ "@context": "https://schema.org",
+ "@type": "WebApplication",
+ "name": "Comparador de Texto",
+ "url": "https://hho.us.ci/es/tools/text-diff",
+ "applicationCategory": "UtilityApplication",
+ "operatingSystem": "Any (web browser)",
+ "browserRequirements": "Requiere un navegador moderno con JavaScript activado",
+ "offers": {
+  "@type": "Offer",
+  "price": "0",
+  "priceCurrency": "USD"
+ },
+ "description": "Compara dos bloques de texto carácter por carácter y resalta las partes añadidas y eliminadas. Todo se ejecuta localmente en el navegador, nada se envía. Solo se muestra el resultado actual — sin historial ni comparación en paralelo.",
+ "publisher": {
+  "@type": "Organization",
+  "name": "Utilixo",
+  "url": "https://hho.us.ci/"
+ }
+}
+</script>
+<script type="application/ld+json">
+{
+ "@context": "https://schema.org",
+ "@type": "BreadcrumbList",
+ "itemListElement": [
+  {
+   "@type": "ListItem",
+   "position": 1,
+   "name": "Inicio",
+   "item": "https://hho.us.ci/es/"
+  },
+  {
+   "@type": "ListItem",
+   "position": 2,
+   "name": "Texto y Código",
+   "item": "https://hho.us.ci/es/category/text"
+  },
+  {
+   "@type": "ListItem",
+   "position": 3,
+   "name": "Comparador de Texto",
+   "item": "https://hho.us.ci/es/tools/text-diff"
+  }
+ ]
+}
+</script>
+</head>
+<body>
+<header class="hdr"><div class="wrap hdr-in">
+<a class="logo" href="/es/"><span class="logo-mark">U</span><span>Utilixo<small>Herramientas online</small></span></a>
+<span class="hdr-sp"></span>
+<div class="hdr-search">
+<svg fill="none" height="15" stroke="currentColor" stroke-linecap="round" stroke-width="2.2" viewbox="0 0 24 24" width="15"><circle cx="11" cy="11" r="7"></circle><path d="M21 21l-4.3-4.3"></path></svg>
+<input aria-label="Buscar herramientas" data-filter="" placeholder="Buscar entre 56 herramientas…" type="search"/>
+</div>
+<button aria-label="Cambiar tema" class="icon-btn" id="themeBtn" onclick="utilixoToggle()">☾</button><div class="langsw"><select aria-label="Idioma" class="langsel" onchange="if(this.value)location.href=this.value"><option value="/tools/text-diff">English</option><option value="/zh/tools/text-diff">简体中文</option><option value="/pt/tools/text-diff">Português</option><option selected="" value="/es/tools/text-diff">Español</option><option value="/fr/tools/text-diff">Français</option><option value="/de/tools/text-diff">Deutsch</option><option value="/ja/tools/text-diff">日本語</option></select></div>
+</div></header>
+<main class="wrap tool-wrap">
+<div class="crumb"><a href="/es/">Inicio</a> › <a href="/es/category/text">Texto y código</a> › Comparador de Texto</div><div style="margin:12px 0 0"><a class="ux-back" href="/es/">← Volver al inicio</a></div>
+<div class="tool-hd">
+<div style="display:flex;align-items:center;gap:12px;margin-bottom:10px">
+<span class="ic" style="background:var(--c-text-bg);color:var(--c-text)"><svg aria-hidden="true" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.9" viewbox="0 0 24 24"><rect height="16" rx="1.5" width="8" x="3" y="4"></rect><rect height="16" rx="1.5" width="8" x="13" y="4"></rect><path d="M5.5 9h3"></path><path d="M15.5 9h3"></path><path d="M15.5 14h3"></path></svg></span>
+<h1 style="margin:0">Comparador de Texto</h1></div>
+<p>Compara dos bloques de texto carácter por carácter y resalta las partes añadidas y eliminadas. Introduce tus valores y pulsa el botón para ver el resultado.</p></div>
+<div class="panel"><div class="row">
+<div class="fld"><label for="dA">Original</label><textarea id="dA" placeholder="Primera versión"></textarea></div>
+<div class="fld"><label for="dB">Modificado</label><textarea id="dB" placeholder="Segunda versión"></textarea></div>
+</div>
+<div class="ux-actions ux-row"><button class="btn ux-go" onclick="dRun()">Comparar</button><button class="btn ux-copy" onclick="utilixoCopy((document.getElementById('dOut')||{}).innerText||'' , this)">Copiar</button></div>
+<div id="dOut" style="margin-top:14px"></div></div>
+<section class="ux-guide" data-guide="1" style="margin:26px 0 0;padding:24px;border:1px solid var(--bd,rgba(127,127,127,.25));border-radius:14px;line-height:1.8"><h2 style="font-size:1.3rem;margin:0 0 12px">Acerca de Comparador de Texto</h2><p style="margin:0 0 12px">Compara dos bloques de texto carácter por carácter y resalta las partes añadidas y eliminadas. Todo se ejecuta localmente en el navegador, nada se envía. Solo se muestra el resultado actual — sin historial ni comparación en paralelo.</p><p style="margin:0 0 12px">Comparador de Texto lee «Original» y «Modificado» del formulario y escribe la respuesta en el panel de resultados — &#x27;+U.hint+&#x27;. No hay cuenta ni envío al servidor: el JavaScript de la página trabaja en tu dispositivo.</p><h2 style="font-size:1.3rem;margin:24px 0 12px">Cómo usar esta herramienta</h2><ol style="margin:0 0 12px;padding-left:22px"><li style="margin:0 0 8px">Abre Comparador de Texto desde la categoría Texto y código o búscalo con el cuadro de búsqueda de la cabecera.</li><li style="margin:0 0 8px">Rellena los campos mostrados: «Original» y «Modificado».</li><li style="margin:0 0 8px">Pulsa Comparar. El nuevo resultado sustituye al anterior; solo se muestra la ejecución actual, nunca dos resultados en paralelo.</li><li style="margin:0 0 8px">Usa Copiar para copiar el resultado. El aviso solo aparece cuando realmente se ha copiado contenido.</li></ol><h2 style="font-size:1.3rem;margin:24px 0 12px">Ejemplo práctico</h2><p style="margin:0 0 12px">Introduce tus valores en los campos y pulsa Comparar. Tras cualquier cambio, un nuevo clic recalcula con los datos actuales y sustituye el resultado anterior.</p><h2 style="font-size:1.3rem;margin:24px 0 12px">Preguntas frecuentes</h2><h3 style="font-size:1rem;margin:18px 0 6px">¿Se suben mis datos a algún sitio?</h3><p style="margin:0 0 10px">No. Comparador de Texto procesa «Original» y «Modificado» con JavaScript en el navegador. Entradas y resultado quedan en tu dispositivo; Utilixo no guarda ninguna copia.</p><h3 style="font-size:1rem;margin:18px 0 6px">¿Puedo comparar varios resultados?</h3><p style="margin:0 0 10px">No en paralelo. Cada clic en Comparar recalcula con las entradas actuales y sobrescribe el resultado anterior. Anota tú los valores previos.</p><h3 style="font-size:1rem;margin:18px 0 6px">¿Algo a tener en cuenta con Comparador de Texto?</h3><p style="margin:0 0 10px">&#x27;+U.hint+&#x27;</p><h3 style="font-size:1rem;margin:18px 0 6px">¿Cómo me llevo el resultado?</h3><p style="margin:0 0 10px">Tras ver el resultado, pulsa Copiar. Si está vacío no aparece el aviso de éxito.</p><h3 style="font-size:1rem;margin:18px 0 6px">¿Hay que registrarse o pagar?</h3><p style="margin:0 0 10px">No. Comparador de Texto es gratis, sin registro y sin límite de usos. Abre la página y úsalo.</p><h2 style="font-size:1.3rem;margin:24px 0 12px">Herramientas relacionadas</h2><ul style="margin:0 0 12px;padding-left:22px"><li><a href="/es/tools/base64-tool">Codificar / Decodificar Base64</a> — Codifica y decodifica Base64, compatible con UTF-8.</li><li><a href="/es/tools/duplicate-line-remover">Eliminador de Líneas Duplicadas</a> — Quita líneas repetidas y ordena o limpia una lista.</li><li><a href="/es/tools/hash-generator">Generador de Hash</a> — Sumas de verificación MD5, SHA-1, SHA-256 y SHA-512.</li></ul><h2 style="font-size:1.3rem;margin:24px 0 12px">Lecturas adicionales</h2><p style="margin:0">Para una explicación más completa, lee la <a class="guide-link" href="/es/guides/text">guía de la categoría Texto y Código</a>, que repasa cada herramienta con ejemplos prácticos y consejos.</p><script type="application/ld+json">{"@context": "https://schema.org", "@type": "FAQPage", "mainEntity": [{"@type": "Question", "name": "¿Se suben mis datos a algún sitio?", "acceptedAnswer": {"@type": "Answer", "text": "No. Comparador de Texto procesa «Original» y «Modificado» con JavaScript en el navegador. Entradas y resultado quedan en tu dispositivo; Utilixo no guarda ninguna copia."}}, {"@type": "Question", "name": "¿Puedo comparar varios resultados?", "acceptedAnswer": {"@type": "Answer", "text": "No en paralelo. Cada clic en Comparar recalcula con las entradas actuales y sobrescribe el resultado anterior. Anota tú los valores previos."}}, {"@type": "Question", "name": "¿Algo a tener en cuenta con Comparador de Texto?", "acceptedAnswer": {"@type": "Answer", "text": "'+U.hint+'"}}, {"@type": "Question", "name": "¿Cómo me llevo el resultado?", "acceptedAnswer": {"@type": "Answer", "text": "Tras ver el resultado, pulsa Copiar. Si está vacío no aparece el aviso de éxito."}}, {"@type": "Question", "name": "¿Hay que registrarse o pagar?", "acceptedAnswer": {"@type": "Answer", "text": "No. Comparador de Texto es gratis, sin registro y sin límite de usos. Abre la página y úsalo."}}]}</script></section>
+</main>
+<footer class="ftr"><div class="wrap ftr-in">
+<div class="ftr-links">
+<a href="/es/pages/about">Sobre nosotros</a><a href="/es/pages/contact">Contacto</a>
+<a href="/es/pages/privacy">Privacidad</a><a href="/es/pages/terms">Términos</a>
+<a href="/es/pages/disclaimer">Descargo de responsabilidad</a>
+</div>
+<p class="ftr-c">© 2026 Utilixo · Para quien solo quiere la respuesta. Todas las herramientas funcionan en tu navegador: nada se sube, se guarda ni se comparte.</p>
+</div></footer>
+<script src="/assets/js/app.js"></script>
+<script>
+
+function dRun(){
+  var a=document.getElementById('dA').value, b=document.getElementById('dB').value;
+  var U={"orig": "Texto original", "changed": "Texto modificado", "title": "Comparación carácter por carácter", "add": "Añadido", "dele": "Eliminado", "same": "Sin cambios", "unit": "caracteres", "hint": "Rojo = eliminado del original, verde = añadido en la versión modificada."};
+  var A=Array.from(a), B=Array.from(b);
+  var n=A.length,m=B.length;
+  /* O(n*m) LCS; cap length to avoid freezing */
+  var LIM=4000;
+  var ops=[];
+  if(n*m>LIM*LIM){
+    ops=[{t:'del',v:a},{t:'add',v:b}];
+  }else{
+    var dp=new Array(n+1);
+    for(var i=0;i<=n;i++){dp[i]=new Uint16Array(m+1);}
+    for(var i=n-1;i>=0;i--){
+      for(var j=m-1;j>=0;j--){
+        dp[i][j]=A[i]===B[j]?dp[i+1][j+1]+1:Math.max(dp[i+1][j],dp[i][j+1]);
+      }
+    }
+    var i=0,j=0,cur=null;
+    function push(t,ch){
+      if(cur&&cur.t===t)cur.v+=ch; else {cur={t:t,v:ch};ops.push(cur);}
+    }
+    while(i<n&&j<m){
+      if(A[i]===B[j]){push('same',A[i]);i++;j++;}
+      else if(dp[i+1][j]>=dp[i][j+1]){push('del',A[i]);i++;}
+      else{push('add',B[j]);j++;}
+    }
+    while(i<n){push('del',A[i]);i++;}
+    while(j<m){push('add',B[j]);j++;}
+  }
+  var add=0,del=0,same=0;
+  ops.forEach(function(o){if(o.t==='add')add+=Array.from(o.v).length;
+    else if(o.t==='del')del+=Array.from(o.v).length; else same+=Array.from(o.v).length;});
+  function esc(s){return (s||'').replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;');}
+  function block(title,titleCls,ops,keep,mark){
+    var h='<div style="margin-bottom:14px"><div class="panel-t" style="'+titleCls+'">'+title+'</div>';
+    h+='<div style="font-family:var(--mono);font-size:13px;line-height:1.9;white-space:pre-wrap;word-break:break-word;padding:10px 12px;border:1px solid var(--bd,rgba(127,127,127,.25));border-radius:9px">';
+    ops.forEach(function(o){
+      var v=esc(o.v);
+      if(o.t==='same')h+=v;
+      else if(o.t===keep)h+=mark(v);
+    });
+    h+='</div></div>';
+    return h;
+  }
+  var red=function(v){return '<del style="background:rgba(239,68,68,.28);color:inherit;text-decoration:line-through;border-radius:3px;padding:0 2px">'+v+'</del>';};
+  var green=function(v){return '<ins style="background:rgba(16,185,129,.30);color:inherit;text-decoration:none;border-radius:3px;padding:0 2px;font-weight:700">'+v+'</ins>';};
+  var h='<div class="panel"><div class="panel-t">'+U.title+'</div>';
+  h+=block(U.orig,'',ops,'del',red);
+  h+=block(U.changed,'',ops,'add',green);
+  h+='<div class="res-grid" style="margin-top:14px">'
+   +'<div class="res-cell"><div class="k">'+U.add+'</div><div class="v" style="color:var(--ok)">'+add+' '+U.unit+'</div></div>'
+   +'<div class="res-cell"><div class="k">'+U.dele+'</div><div class="v" style="color:var(--err)">'+del+' '+U.unit+'</div></div>'
+   +'<div class="res-cell"><div class="k">'+U.same+'</div><div class="v">'+same+' '+U.unit+'</div></div></div>';
+  h+='<p class="note">'+U.hint+'</p></div>';
+  document.getElementById('dOut').innerHTML=h;
+}
+function esc2(s){return (s||'').replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;');}
+document.addEventListener('DOMContentLoaded',function(){try{dRun();}catch(e){}});
+
+</script>
+</body></html>

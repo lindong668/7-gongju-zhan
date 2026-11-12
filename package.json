@@ -1,0 +1,10 @@
+{
+  "name": "utilixo-tools",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Utilixo — 56 free browser tools",
+  "scripts": {},
+  "devDependencies": {
+    "wrangler": "^4.0.0"
+  }
+}
