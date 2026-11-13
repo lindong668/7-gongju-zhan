@@ -31,14 +31,29 @@ v16 相对 v15 只多一处修复：6 个非英文版「Meta 标签生成器」�
 - `<html lang>` 与 hreflang 代码一致（zh-CN / pt-BR）
 - `sitemap.xml`：504 条 `<loc>`、4032 条 `xhtml:link`、每块带 `<lastmod>`
 - 每页带 `og:locale` + 6 条 `og:locale:alternate`
-- 7 个 404 页：`noindex`、`/404` 与 `/{lang}/404` 返回真正 404 状态，切换器不再指向软 404 URL
+- 7 个 404 页：`noindex`、`/404` 与 `/{lang}/404` 返回真正 404 状态；v18 修复了切换器属性引号损坏（此前 7 个页面的下拉全部不可用）
 
 ## 安全与广告
 
 - `src/index.js`：归档/可执行后缀一律 410（纯文本、禁止下载）；HTML 响应统一附 HSTS / CSP / Permissions-Policy 等头
 - `public/_headers`：同样的头（双保险）
 - Cookie 同意条由 `app.js` 面向所有地区显示，未选择前不加载任何第三方脚本；删除了线上未生效的 `__UX_REGION_EEA__` 注入与反向 301 死代码
-- 广告加载器仍是审核后启用的占位；`ads.txt` 为站点级声明，不代表已投放广告
+- 广告：只在 7 个语言首页各 1 个广告位（工具网格之后、页脚之前），加载器全站唯一为 `/assets/js/ads.js`；`ads.txt` 为站点级声明，pub id 与页面 `data-ad-client` 一致（`ca-pub-8915931557404979`）
+
+## v18 相对 v17 的改动（2026-11-13）
+
+1. `src/index.js`：URL 收敛从"只处理 `.html`"扩展到全部入口形态，统一一次 301、链长 ≤ 1、无循环：
+   - `http` → `https`；`www` → apex（需 DNS 里存在 www 代理记录）
+   - `.html` / `.HTML` → 无扩展名（整段路径转小写，避免 301 落到大小写不匹配的 404）
+   - `/index`、`/{lang}/index` → `/`、`/{lang}/`；`/{lang}` → `/{lang}/`（语言首页规范形态带斜杠）
+   - 非根尾斜杠 → 去斜杠；连续斜杠 `//` → `/`
+   - `/404.html`、`/404/` 直接返回 404，不再 301→404
+2. 511 个 HTML 的全部 JS/CSS 引用统一加 `?v=20261113`；`/assets/*` 仍为一年 immutable，靠版本串破缓存
+3. 修复 7 个 404 页语言切换器属性引号损坏（`value="/ selected>` 一类），7 个语言选项均可正常跳转
+4. 新增 `/assets/js/ads.js`（唯一广告实现）、`/assets/css/ads.css`；7 个首页各 1 个广告位，其余页面 0 容器 0 广告请求
+5. `app.js` 删除空广告占位，仅把同意结果转发给 `ads.js`；未同意前不加载 AdSense
+6. `wrangler.toml` / `wrangler.utilixo-tools.toml` 增加 `www.hho.us.ci/*` 路由
+7. 同日增量：7 个首页广告单元号由占位改为正式 `1784463687`（pub id 不变）；6 个非英语语言的 336 条工具页标题统一带自然后缀（zh 免费在线工具 / pt Ferramenta Grátis / es Herramienta Gratis / fr Outil Gratuit / de Kostenloses Tool / ja 無料オンラインツール），英文页不动
 
 ## 本版相对 v14.4 基线的变化
 

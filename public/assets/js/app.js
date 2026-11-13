@@ -157,17 +157,10 @@
   window.utilixoConsent = function(v){ ckSet(v); ckHide(); if(v==='granted'){ uxLoadAds(); } };
   window.utilixoConsentOpen = function(){ ckShow(); };
 
-  /* ===== 广告代码占位：AdSense / 平台审核通过后再填 client 与 slot =====
-     当前不发任何第三方请求；ads.txt 为站点级声明文件，不代表已投放广告。 */
+  /* ===== 广告加载：实现统一在 /assets/js/ads.js（仅首页引用），这里只转发同意结果 =====
+     未同意前不加载任何第三方脚本；非首页不会存在广告容器，转发为 no-op。 */
   function uxLoadAds(){
-    if(window.__UX_ADS_LOADED__) return;
-    window.__UX_ADS_LOADED__ = true;
-    /* 例：
-    var s=document.createElement('script');
-    s.src='https://你的广告平台提供的脚本地址';
-    s.async=true; document.head.appendChild(s);
-    (window.adsbygoogle=window.adsbygoogle||[]).push({});
-    */
+    if(typeof window.uxAdsLoad === 'function') window.uxAdsLoad();
   }
 
   function ckShow(){ var b=document.getElementById('ckBanner'); if(b){ b.style.display='block'; } }

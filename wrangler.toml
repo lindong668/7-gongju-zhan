@@ -8,7 +8,9 @@ main = "src/index.js"
 send_metrics = false
 
 routes = [
-  { pattern = "hho.us.ci/*", zone_name = "hho.us.ci" }
+  { pattern = "hho.us.ci/*", zone_name = "hho.us.ci" },
+  # www 需先在 DNS 添加指向本 Worker 的代理记录，Worker 内会一次 301 回 apex
+  { pattern = "www.hho.us.ci/*", zone_name = "hho.us.ci" }
 ]
 
 [assets]

@@ -4,7 +4,7 @@
 <head>
 <meta charset="utf-8"/>
 <meta content="width=device-width, initial-scale=1" name="viewport"/>
-<title>Formatador e Validador JSON — Todas as ferramentas | Utilixo</title>
+<title>Formatador e Validador JSON — Ferramenta Grátis | Utilixo</title>
 <meta content="Formate, minifique e valide JSON na hora. Clique em Formatar; o resultado aparece no painel de resultados. Tudo corre localmente no navegador, nada é enviado." name="description"/>
 <link href="https://hho.us.ci/pt/tools/json-formatter" rel="canonical"/>
 <link href="https://hho.us.ci/tools/json-formatter" hreflang="en" rel="alternate"/>
@@ -39,7 +39,7 @@
 <link href="/assets/img/favicon-180.png" rel="apple-touch-icon"/>
 <link href="/manifest.webmanifest" rel="manifest"/>
 <script>(function(){try{var k='utilixo-theme';var s=localStorage.getItem(k);document.documentElement.setAttribute('data-theme',s==='dark'?'dark':'light');}catch(e){document.documentElement.setAttribute('data-theme','light');}})();</script>
-<link href="/assets/css/style-pt.css" rel="stylesheet"/>
+<link href="/assets/css/style-pt.css?v=20261113" rel="stylesheet"/>
 <script type="application/ld+json">
 {
  "@context": "https://schema.org",
@@ -124,7 +124,7 @@
 </div>
 <p class="ftr-c">© 2026 Utilixo · Para quem só quer a resposta. Todas as ferramentas rodam no seu navegador: nada é enviado, salvo ou compartilhado.</p>
 </div></footer>
-<script src="/assets/js/app.js"></script>
+<script src="/assets/js/app.js?v=20261113"></script>
 <script>
 
 function jSet(t,c){var m=document.getElementById('jMsg');m.innerHTML='<div class="'+(c?'ok-t':'err-t')+'">'+t+'</div>';}
@@ -150,7 +150,7 @@ document.addEventListener('DOMContentLoaded',function(){
   try{
     if('jFmt'==='grInit'){grAdd();grAdd();grAdd();}
     else if('jFmt'==='gpInit'){gpAdd();gpAdd();gpAdd();}
-    else if('jFmt'&&typeof window['jFmt']==='function'){window['jFmt']();}
+    /* 首屏不预跑：空输入只会显示报错/假结果，等用户输入后由按钮触发 */
   }catch(e){console.warn(e);}
 });
 </script>

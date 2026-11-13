@@ -4,7 +4,7 @@
 <head>
 <meta charset="utf-8"/>
 <meta content="width=device-width, initial-scale=1" name="viewport"/>
-<title>Regex-Testenener — Alle Tools | Utilixo</title>
+<title>Regex-Testenener — Kostenloses Tool | Utilixo</title>
 <meta content="JavaScript-Reguläre Ausdrücke mit Live-Treffern testen. Testen drücken – das Ergebnis erscheint im Ergebnisfeld." name="description"/>
 <link href="https://hho.us.ci/de/tools/regex-tester" rel="canonical"/>
 <link href="https://hho.us.ci/tools/regex-tester" hreflang="en" rel="alternate"/>
@@ -39,7 +39,7 @@
 <link href="/assets/img/favicon-180.png" rel="apple-touch-icon"/>
 <link href="/manifest.webmanifest" rel="manifest"/>
 <script>(function(){try{var k='utilixo-theme';var s=localStorage.getItem(k);document.documentElement.setAttribute('data-theme',s==='dark'?'dark':'light');}catch(e){document.documentElement.setAttribute('data-theme','light');}})();</script>
-<link href="/assets/css/style-de.css" rel="stylesheet"/>
+<link href="/assets/css/style-de.css?v=20261113" rel="stylesheet"/>
 <script type="application/ld+json">
 {
  "@context": "https://schema.org",
@@ -121,7 +121,7 @@
 </div>
 <p class="ftr-c">© 2026 Utilixo · Für alle, die einfach die Antwort wollen. Alle Werkzeuge laufen lokal in deinem Browser – nichts wird hochgeladen, gespeichert oder weitergegeben.</p>
 </div></footer>
-<script src="/assets/js/app.js"></script>
+<script src="/assets/js/app.js?v=20261113"></script>
 <script>
 
 function rRun(){
@@ -160,7 +160,7 @@ document.addEventListener('DOMContentLoaded',function(){
   try{
     if('rRun'==='grInit'){grAdd();grAdd();grAdd();}
     else if('rRun'==='gpInit'){gpAdd();gpAdd();gpAdd();}
-    else if('rRun'&&typeof window['rRun']==='function'){window['rRun']();}
+    /* 首屏不预跑：空输入只会显示报错/假结果，等用户输入后由按钮触发 */
   }catch(e){console.warn(e);}
 });
 

@@ -4,7 +4,7 @@
 <head>
 <meta charset="utf-8"/>
 <meta content="width=device-width, initial-scale=1" name="viewport"/>
-<title>XML整形ツール — すべてのツール | Utilixo</title>
+<title>XML整形ツール — 無料オンラインツール | Utilixo</title>
 <meta content="XMLマークアップを整形・検証。“XML”を入力して「整形」を押すと結果パネルに表示されます。処理はブラウザ内で完結し、入力内容は送信されません。表示されるのは現在の 1 回分だけで、履歴や並べての比較はありません。" name="description"/>
 <link href="https://hho.us.ci/ja/tools/xml-formatter" rel="canonical"/>
 <link href="https://hho.us.ci/tools/xml-formatter" hreflang="en" rel="alternate"/>
@@ -39,7 +39,7 @@
 <link href="/assets/img/favicon-180.png" rel="apple-touch-icon"/>
 <link href="/manifest.webmanifest" rel="manifest"/>
 <script>(function(){try{var k='utilixo-theme';var s=localStorage.getItem(k);document.documentElement.setAttribute('data-theme',s==='dark'?'dark':'light');}catch(e){document.documentElement.setAttribute('data-theme','light');}})();</script>
-<link href="/assets/css/style-ja.css" rel="stylesheet"/>
+<link href="/assets/css/style-ja.css?v=20261113" rel="stylesheet"/>
 <script type="application/ld+json">
 {
  "@context": "https://schema.org",
@@ -121,7 +121,7 @@
 </div>
 <p class="ftr-c">© 2026 Utilixo · 答えだけが欲しい人のために。すべてのツールはブラウザ内で動くため、入力内容がアップロードされたり保存されたりすることはありません。</p>
 </div></footer>
-<script src="/assets/js/app.js"></script>
+<script src="/assets/js/app.js?v=20261113"></script>
 <script>
 
 function xRun(){
@@ -153,7 +153,7 @@ document.addEventListener('DOMContentLoaded',function(){
   try{
     if('xRun'==='grInit'){grAdd();grAdd();grAdd();}
     else if('xRun'==='gpInit'){gpAdd();gpAdd();gpAdd();}
-    else if('xRun'&&typeof window['xRun']==='function'){window['xRun']();}
+    /* 首屏不预跑：空输入只会显示报错/假结果，等用户输入后由按钮触发 */
   }catch(e){console.warn(e);}
 });
 </script>

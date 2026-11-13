@@ -4,7 +4,7 @@
 <head>
 <meta charset="utf-8"/>
 <meta content="width=device-width, initial-scale=1" name="viewport"/>
-<title>Codificar e Decodificar Base64 | Utilixo</title>
+<title>Codificar e Decodificar Base64 — Ferramenta Grátis | Utilixo</title>
 <meta content="Codifique e decodifique Base64, seguro para UTF-8. Clique em Codificar → o resultado aparece no painel de resultados." name="description"/>
 <link href="https://hho.us.ci/pt/tools/base64-tool" rel="canonical"/>
 <link href="https://hho.us.ci/tools/base64-tool" hreflang="en" rel="alternate"/>
@@ -39,7 +39,7 @@
 <link href="/assets/img/favicon-180.png" rel="apple-touch-icon"/>
 <link href="/manifest.webmanifest" rel="manifest"/>
 <script>(function(){try{var k='utilixo-theme';var s=localStorage.getItem(k);document.documentElement.setAttribute('data-theme',s==='dark'?'dark':'light');}catch(e){document.documentElement.setAttribute('data-theme','light');}})();</script>
-<link href="/assets/css/style-pt.css" rel="stylesheet"/>
+<link href="/assets/css/style-pt.css?v=20261113" rel="stylesheet"/>
 <script type="application/ld+json">
 {
  "@context": "https://schema.org",
@@ -123,7 +123,7 @@
 </div>
 <p class="ftr-c">© 2026 Utilixo · Para quem só quer a resposta. Todas as ferramentas rodam no seu navegador: nada é enviado, salvo ou compartilhado.</p>
 </div></footer>
-<script src="/assets/js/app.js"></script>
+<script src="/assets/js/app.js?v=20261113"></script>
 <script>
 
 function bMsg(t,ok){document.getElementById('bMsg').innerHTML='<div class="'+(ok?'ok-t':'err-t')+'">'+t+'</div>';}
@@ -143,7 +143,7 @@ document.addEventListener('DOMContentLoaded',function(){
   try{
     if('bEnc'==='grInit'){grAdd();grAdd();grAdd();}
     else if('bEnc'==='gpInit'){gpAdd();gpAdd();gpAdd();}
-    else if('bEnc'&&typeof window['bEnc']==='function'){window['bEnc']();}
+    /* 首屏不预跑：空输入只会显示报错/假结果，等用户输入后由按钮触发 */
   }catch(e){console.warn(e);}
 });
 </script>

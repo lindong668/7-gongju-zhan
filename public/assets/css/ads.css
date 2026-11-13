@@ -1,0 +1,10 @@
+/* Utilixo — 首页广告位样式（仅 7 个语言首页引用）
+   未填充：保持 90px / 50px 占位高度，透明、无边框、无圆角、无可见文字
+   已填充：由 ads.js 依据 data-ad-status 加 .is-filled，高度自适应，不裁切高创意 */
+.ad-slot{margin:32px auto 0;width:100%;max-width:728px;min-height:90px;background:transparent;border:0;border-radius:0}
+.ad-slot .adsbygoogle{display:block;width:100%;min-height:inherit;background:transparent;border:0}
+.ad-slot.is-filled{min-height:0;height:auto}
+.ad-slot.is-filled .adsbygoogle{min-height:0}
+@media(max-width:640px){
+  .ad-slot{max-width:320px;min-height:50px}
+}

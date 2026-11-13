@@ -1,6 +1,14 @@
 /**
- * Utilixo Tools — Cloudflare Worker (v15)
- * 最终 URL 形态：无扩展名（/tools/json-formatter），.html 为历史形态并 301 永久回无扩展名。
+ * Utilixo Tools — Cloudflare Worker (v18)
+ * 规范 URL：HTTPS + apex 域名（hho.us.ci）+ 无扩展名；语言首页保留尾斜杠（/、/zh/、/pt/ …）。
+ * v18 起所有入口形态在 Worker 内一次 301 收敛，链长 ≤ 1：
+ *   http  → https
+ *   www   → apex
+ *   .html → 无扩展名（同时把整段路径转小写，避免 301 落到大小写不匹配的 404）
+ *   /index、/{lang}/index → /、/{lang}/
+ *   /{lang} → /{lang}/（语言首页规范形态带斜杠）
+ *   非根尾斜杠 → 去斜杠
+ *   连续斜杠 // → /
  * 职责：
  *   1. 归档/可执行类路径显式 410（禁止下载，杜绝 site-pages.zip 类误报复发）
  *   2. ads.txt / robots.txt / sitemap.xml 保证 Content-Type 与内容
@@ -11,8 +19,7 @@
  *   run_worker_first = true —— 所有请求先经过本 Worker，以上职责才真正生效；
  *   html_handling = "none" —— ASSETS.fetch 不做 .html 重定向，内部映射才能取到 200 文件；
  *   not_found_handling 保持默认 none —— 未命中不回退 SPA。
- * 删除了历史版本里线上未生效的 EEA 地区标记注入与反向 301 死代码；
- * Cookie 同意条由 app.js 面向所有地区显示，不依赖地区标记。
+ * Cookie 同意条由 app.js 面向所有地区显示；广告只在 7 个语言首页加载 /assets/js/ads.js。
  */
 
 const ARCHIVE_EXT = /\.(zip|rar|7z|tar|gz|tgz|bz2|xz|apk|exe|dmg|msi|bin|iso|jar|war|deb|rpm|cab)$/i;
@@ -57,13 +64,6 @@ function withSecurity(response, isHtml) {
   return new Response(response.body, { status: response.status, statusText: response.statusText, headers: h });
 }
 
-function htmlResponse(body, status) {
-  return new Response(body, {
-    status: status,
-    headers: Object.assign({ 'content-type': 'text/html; charset=utf-8' }, SECURITY_HEADERS)
-  });
-}
-
 const FALLBACK_ADS_TXT = `# refreshed 2026-11-03
 google.com, pub-8915931557404979, DIRECT, f08c47fec0942fa0
 
@@ -87,6 +87,28 @@ sharethrough.com, 4926, RESELLER, 060d053dcf45cbf3
 `;
 
 const LANGS = ['', 'zh', 'pt', 'es', 'fr', 'de', 'ja'];
+const CANON_HOST = 'hho.us.ci';
+const LANG_ROOTS = new Set(['zh', 'pt', 'es', 'fr', 'de', 'ja']);
+const M404 = /^\/(?:(zh|pt|es|fr|de|ja)\/)?404$/;
+
+/**
+ * 计算规范路径。只做纯字符串归并，不查文件系统，保证一次 301 即可到终态。
+ * 规则顺序很重要：先去掉尾斜杠，再拆 .html，最后处理 index 与语言首页。
+ */
+function canonicalPath(p) {
+  let path = p;
+  if (path.length > 1) path = path.replace(/\/+$/, '') || '/';
+  path = path.replace(/\/{2,}/g, '/');
+  if (/\.html$/i.test(path)) path = path.slice(0, -5).toLowerCase();
+  if (path === '/index') {
+    path = '/';
+  } else {
+    const m = path.match(/^\/(zh|pt|es|fr|de|ja)\/index$/);
+    if (m) path = '/' + m[1];
+    if (LANG_ROOTS.has(path.slice(1))) path += '/';
+  }
+  return path;
+}
 
 async function assetText(env, request, pathname, fallback) {
   const u = new URL(request.url);
@@ -105,15 +127,32 @@ async function notFound(env, request, langdir) {
 export default {
   async fetch(request, env) {
     const url = new URL(request.url);
-    let p = url.pathname;
+    const rawPath = url.pathname;
+    const path = canonicalPath(rawPath);
 
-    // ---- 归档/可执行类路径：明确 410，不走下载通道 ----
-    if (ARCHIVE_EXT.test(p) || /site-pages/i.test(p)) {
+    // ---- 归档/可执行类路径：明确 410，不走下载通道、也不做跳转 ----
+    if (ARCHIVE_EXT.test(path) || /site-pages/i.test(path)) {
       return withSecurity(goneResponse(request.method), true);
     }
 
+    // ---- 404 等价形态（/404.html、/404/、/zh/404.html…）直接返回 404，避免 301→404 ----
+    const m404 = path.match(M404);
+    if (m404) return await notFound(env, request, m404[1] || '');
+
+    // ---- 一次 301 收敛：协议 / www / 路径形态任一不同即跳转 ----
+    const host = url.hostname;
+    const isPreview = /\.workers\.dev$/i.test(host);
+    const needScheme = !isPreview && url.protocol !== 'https:';
+    const needHost = !isPreview && host !== CANON_HOST;
+    if (needScheme || needHost || path !== rawPath) {
+      const origin = isPreview ? url.origin : 'https://' + CANON_HOST;
+      return withSecurity(new Response(null, {
+        status: 301, headers: { location: origin + path + url.search }
+      }), false);
+    }
+
     // ---- ads.txt ----
-    if (p === '/ads.txt') {
+    if (path === '/ads.txt') {
       const body = await assetText(env, request, '/ads.txt', FALLBACK_ADS_TXT);
       return withSecurity(new Response(body, {
         headers: { 'content-type': 'text/plain; charset=utf-8', 'cache-control': 'public, max-age=300' }
@@ -121,13 +160,13 @@ export default {
     }
 
     // ---- robots.txt / sitemap.xml ----
-    if (p === '/robots.txt') {
+    if (path === '/robots.txt') {
       const body = await assetText(env, request, '/robots.txt', 'User-agent: Mediapartners-Google\nAllow: /\n\nUser-agent: AdsBot-Google\nAllow: /\n\nUser-agent: Googlebot\nAllow: /\n\nUser-agent: *\nAllow: /\n\nSitemap: https://hho.us.ci/sitemap.xml\n');
       return withSecurity(new Response(body, {
         headers: { 'content-type': 'text/plain; charset=utf-8', 'cache-control': 'public, max-age=3600' }
       }), false);
     }
-    if (p === '/sitemap.xml') {
+    if (path === '/sitemap.xml') {
       const body = await assetText(env, request, '/sitemap.xml',
         '<?xml version="1.0" encoding="UTF-8"?>\n<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"></urlset>');
       return withSecurity(new Response(body, {
@@ -135,23 +174,16 @@ export default {
       }), false);
     }
 
-    // ---- 硬 404：/404 与 /{lang}/404 返回 404 状态 ----
-    const m404 = p.match(/^\/(?:(zh|pt|es|fr|de|ja)\/)?404\/?$/);
-    if (m404) return await notFound(env, request, m404[1] || '');
-
-    // ---- .html 历史形态：301 永久回无扩展名最终 URL（307 会让 Google 保留两套 URL）----
-    if (/\.html$/i.test(p)) {
-      const target = new URL(request.url);
-      target.pathname = p.replace(/\.html$/i, '');
-      return withSecurity(new Response(null, {
-        status: 301, headers: { 'location': target.pathname + target.search }
-      }), false);
+    // ---- 带扩展名的静态资源（css/js/图片/manifest 等）原样交给 Assets ----
+    // 放在页面映射之前：避免每个静态资源都先白跑两次 .html 探测
+    if (/\.[a-zA-Z0-9]+$/.test(path)) {
+      return withSecurity(await env.ASSETS.fetch(request), false);
     }
 
     // ---- 无扩展名：映射到 index.html / xxx.html，直接 200（不反向 301）----
-    const base = p.endsWith('/') ? p.slice(0, -1) : p;
+    const base = path.endsWith('/') ? path.slice(0, -1) : path;
     const tries = [base + '/index.html', base + '.html'];
-    if (p === '/' || p === '') tries.unshift('/index.html');
+    if (path === '/') tries.unshift('/index.html');
     for (const t of tries) {
       const u = new URL(request.url);
       u.pathname = t;
@@ -159,13 +191,8 @@ export default {
       if (r && r.status === 200) return withSecurity(r, true);
     }
 
-    // ---- 其它静态资源（css/js/图片/manifest 等）原样交给 Assets ----
-    if (/\.[a-zA-Z0-9]+$/.test(p)) {
-      return withSecurity(await env.ASSETS.fetch(request), false);
-    }
-
     // ---- 未知路径：对应语言 404 页 + 404 状态 ----
-    const seg = p.split('/').filter(Boolean)[0] || '';
+    const seg = path.split('/').filter(Boolean)[0] || '';
     const langdir = LANGS.indexOf(seg) >= 0 ? seg : '';
     return await notFound(env, request, langdir);
   }
