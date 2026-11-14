@@ -1,6 +1,6 @@
 /**
  * Utilixo Tools — Cloudflare Worker (v18)
- * 规范 URL：HTTPS + apex 域名（hho.us.ci）+ 无扩展名；语言首页保留尾斜杠（/、/zh/、/pt/ …）。
+ * 规范 URL：HTTPS + apex 域名（box.599568.xyz）+ 无扩展名；语言首页保留尾斜杠（/、/zh/、/pt/ …）。
  * v18 起所有入口形态在 Worker 内一次 301 收敛，链长 ≤ 1：
  *   http  → https
  *   www   → apex
@@ -87,7 +87,7 @@ sharethrough.com, 4926, RESELLER, 060d053dcf45cbf3
 `;
 
 const LANGS = ['', 'zh', 'pt', 'es', 'fr', 'de', 'ja'];
-const CANON_HOST = 'hho.us.ci';
+const CANON_HOST = 'box.599568.xyz';
 const LANG_ROOTS = new Set(['zh', 'pt', 'es', 'fr', 'de', 'ja']);
 const M404 = /^\/(?:(zh|pt|es|fr|de|ja)\/)?404$/;
 
@@ -161,7 +161,7 @@ export default {
 
     // ---- robots.txt / sitemap.xml ----
     if (path === '/robots.txt') {
-      const body = await assetText(env, request, '/robots.txt', 'User-agent: Mediapartners-Google\nAllow: /\n\nUser-agent: AdsBot-Google\nAllow: /\n\nUser-agent: Googlebot\nAllow: /\n\nUser-agent: *\nAllow: /\n\nSitemap: https://hho.us.ci/sitemap.xml\n');
+      const body = await assetText(env, request, '/robots.txt', 'User-agent: Mediapartners-Google\nAllow: /\n\nUser-agent: AdsBot-Google\nAllow: /\n\nUser-agent: Googlebot\nAllow: /\n\nUser-agent: *\nAllow: /\n\nSitemap: https://box.599568.xyz/sitemap.xml\n');
       return withSecurity(new Response(body, {
         headers: { 'content-type': 'text/plain; charset=utf-8', 'cache-control': 'public, max-age=3600' }
       }), false);
