@@ -8,12 +8,15 @@
   if (!slots.length) return;
 
   function load() {
+    /* 新域纯净版：ADS_URL 留空 = 不加载任何第三方脚本；恢复广告只需填回 AdSense 脚本地址 */
+    var ADS_URL = '';
+    if (!ADS_URL) return;
     if (window.__UX_ADS_LOADED__) return;
     window.__UX_ADS_LOADED__ = true;
     var s = document.createElement('script');
     s.async = true;
     s.crossOrigin = 'anonymous';
-    s.src = 'https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=' + CLIENT;
+    s.src = ADS_URL + CLIENT;
     document.head.appendChild(s);
     (window.adsbygoogle = window.adsbygoogle || []).push({});
   }
