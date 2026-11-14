@@ -88,6 +88,8 @@ sharethrough.com, 4926, RESELLER, 060d053dcf45cbf3
 
 const LANGS = ['', 'zh', 'pt', 'es', 'fr', 'de', 'ja'];
 const CANON_HOST = 'box.599568.xyz';
+// 复核期保留：旧域继续 200 出干净页，不向新域 301。复核通过后再移除本行与下方 isLegacy 分支。
+const LEGACY_HOSTS = ['hho.us.ci', 'www.hho.us.ci'];
 const LANG_ROOTS = new Set(['zh', 'pt', 'es', 'fr', 'de', 'ja']);
 const M404 = /^\/(?:(zh|pt|es|fr|de|ja)\/)?404$/;
 
@@ -142,9 +144,12 @@ export default {
     // ---- 一次 301 收敛：协议 / www / 路径形态任一不同即跳转 ----
     const host = url.hostname;
     const isPreview = /\.workers\.dev$/i.test(host);
-    const needScheme = !isPreview && url.protocol !== 'https:';
-    const needHost = !isPreview && host !== CANON_HOST;
-    if (needScheme || needHost || path !== rawPath) {
+    const isLegacy = LEGACY_HOSTS.includes(host.toLowerCase());
+    // 旧域：跳过整段 301，直接走后面的内部映射返回 200 干净页，供 Google 复核抓取。
+    // 复核通过、准备做正式 301 迁移时，删掉 isLegacy 两处即可恢复全域收敛。
+    const needScheme = !isPreview && !isLegacy && url.protocol !== 'https:';
+    const needHost = !isPreview && !isLegacy && host !== CANON_HOST;
+    if (!isLegacy && (needScheme || needHost || path !== rawPath)) {
       const origin = isPreview ? url.origin : 'https://' + CANON_HOST;
       return withSecurity(new Response(null, {
         status: 301, headers: { location: origin + path + url.search }
