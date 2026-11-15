@@ -15,3 +15,4 @@ User-agent: *
 Allow: /
 
 Sitemap: https://box.599568.xyz/sitemap.xml
+Sitemap: https://box.599568.xyz/sitemap.txt

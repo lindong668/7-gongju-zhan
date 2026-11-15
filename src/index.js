@@ -179,6 +179,13 @@ export default {
       }), false);
     }
 
+    if (path === '/sitemap.txt') {
+      const body = await assetText(env, request, '/sitemap.txt', '');
+      return withSecurity(new Response(body, {
+        headers: { 'content-type': 'text/plain; charset=utf-8', 'cache-control': 'public, max-age=3600' }
+      }), false);
+    }
+
     // ---- 带扩展名的静态资源（css/js/图片/manifest 等）原样交给 Assets ----
     // 放在页面映射之前：避免每个静态资源都先白跑两次 .html 探测
     if (/\.[a-zA-Z0-9]+$/.test(path)) {
