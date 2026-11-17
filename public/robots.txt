@@ -14,4 +14,4 @@ Allow: /
 User-agent: *
 Allow: /
 
-Sitemap: https://hho.us.ci/sitemap.xml
+Sitemap: https://box.599568.xyz/sitemap.xml

@@ -130,6 +130,25 @@ export default {
   async fetch(request, env) {
     const url = new URL(request.url);
     const rawPath = url.pathname;
+    // ★ 关键 SEO 文件：放在所有 410 / 404 / 301 / host 判断之前，先返回。
+    // 不经过 withSecurity，也不依赖平台猜 MIME；Content-Type 由这一行钉死。
+    // 历史坑见 public/_headers 注释：静态 sitemap.xml 未声明 MIME → 被当 text/html 吐
+    // → Chrome 吃掉 <loc> 标签只剩纯文本，GSC 判「无法读取此站点地图 / 类型未知 / 0 个网址」。
+    if (rawPath === '/sitemap.xml' || rawPath === '/sitemap.txt' || rawPath === '/robots.txt') {
+      const isXml = rawPath === '/sitemap.xml';
+      const mime = isXml ? 'application/xml; charset=utf-8' : 'text/plain; charset=utf-8';
+      const fallback = isXml
+        ? '<?xml version="1.0" encoding="UTF-8"?>\n<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"></urlset>'
+        : (rawPath === '/robots.txt' ? 'User-agent: *\nAllow: /\n\nSitemap: https://box.599568.xyz/sitemap.xml\n' : '');
+      const body = await assetText(env, request, rawPath, fallback);
+      return new Response(body, {
+        headers: {
+          'content-type': mime,
+          'cache-control': 'public, max-age=3600',
+          'x-content-type-options': 'nosniff'
+        }
+      });
+    }
     const path = canonicalPath(rawPath);
 
     // ---- 归档/可执行类路径：明确 410，不走下载通道、也不做跳转 ----
@@ -165,19 +184,6 @@ export default {
     }
 
     // ---- robots.txt / sitemap.xml ----
-    if (path === '/robots.txt') {
-      const body = await assetText(env, request, '/robots.txt', 'User-agent: Mediapartners-Google\nAllow: /\n\nUser-agent: AdsBot-Google\nAllow: /\n\nUser-agent: Googlebot\nAllow: /\n\nUser-agent: *\nAllow: /\n\nSitemap: https://box.599568.xyz/sitemap.xml\n');
-      return withSecurity(new Response(body, {
-        headers: { 'content-type': 'text/plain; charset=utf-8', 'cache-control': 'public, max-age=3600' }
-      }), false);
-    }
-    if (path === '/sitemap.xml') {
-      const body = await assetText(env, request, '/sitemap.xml',
-        '<?xml version="1.0" encoding="UTF-8"?>\n<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"></urlset>');
-      return withSecurity(new Response(body, {
-        headers: { 'content-type': 'application/xml; charset=utf-8', 'cache-control': 'public, max-age=3600' }
-      }), false);
-    }
 
     // ---- 带扩展名的静态资源（css/js/图片/manifest 等）原样交给 Assets ----
     // 放在页面映射之前：避免每个静态资源都先白跑两次 .html 探测
