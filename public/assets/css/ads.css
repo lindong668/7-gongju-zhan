@@ -8,6 +8,3 @@
 @media(max-width:640px){
   .ad-slot{max-width:320px;min-height:50px}
 }
-
-/* 新域纯净版：广告位不占位 */
-.ad-slot{display:none!important}
