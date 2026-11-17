@@ -1,5 +1,5 @@
 # Utilixo — Cloudflare Workers + Assets
-# 域名 box.599568.xyz
+# 域名 hho.us.ci
 name = "7-gongju-zhan"
 compatibility_date = "2026-09-01"
 main = "src/index.js"
@@ -8,9 +8,9 @@ main = "src/index.js"
 send_metrics = false
 
 routes = [
-  { pattern = "box.599568.xyz/*", zone_name = "599568.xyz" },
+  { pattern = "hho.us.ci/*", zone_name = "hho.us.ci" },
   # www 需先在 DNS 添加指向本 Worker 的代理记录，Worker 内会一次 301 回 apex
-  { pattern = "www.box.599568.xyz/*", zone_name = "599568.xyz" }
+  { pattern = "www.hho.us.ci/*", zone_name = "hho.us.ci" }
 ]
 
 [assets]

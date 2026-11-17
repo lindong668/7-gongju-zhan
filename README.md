@@ -1,4 +1,4 @@
-# Utilixo（7号站 / box.599568.xyz）v17
+# Utilixo（7号站 / hho.us.ci）v17
 
 7 语言（en 根 + zh / pt / es / fr / de / ja）× 73 页 = 511 个 HTML，56 个浏览器端工具。
 本版为 2026-11-10 全站审计后的整改定稿 + 2026-11-13 收录对齐，**完整整套源码（539 文件），不是补丁包**。
@@ -14,7 +14,7 @@ v16 相对 v15 只多一处修复：6 个非英文版「Meta 标签生成器」�
 
 ## URL 形态（全站唯一）
 
-- 最终 URL：**无扩展名**，例 `https://box.599568.xyz/tools/json-formatter`
+- 最终 URL：**无扩展名**，例 `https://hho.us.ci/tools/json-formatter`
 - `.html` 是历史形态：Worker 显式 **301 永久**回无扩展名（v16 是 307）；全站声明与内链已不再指向 `.html`
 - canonical / hreflang / `og:url` / sitemap `<loc>` / 站内 `<a href>` / 语言切换器 / JSON-LD 全部为无扩展名，且都直接 200
 
@@ -52,7 +52,7 @@ v16 相对 v15 只多一处修复：6 个非英文版「Meta 标签生成器」�
 3. 修复 7 个 404 页语言切换器属性引号损坏（`value="/ selected>` 一类），7 个语言选项均可正常跳转
 4. 新增 `/assets/js/ads.js`（唯一广告实现）、`/assets/css/ads.css`；7 个首页各 1 个广告位，其余页面 0 容器 0 广告请求
 5. `app.js` 删除空广告占位，仅把同意结果转发给 `ads.js`；未同意前不加载 AdSense
-6. `wrangler.toml` / `wrangler.utilixo-tools.toml` 增加 `www.box.599568.xyz/*` 路由
+6. `wrangler.toml` / `wrangler.utilixo-tools.toml` 增加 `www.hho.us.ci/*` 路由
 7. 同日增量：7 个首页广告单元号由占位改为正式 `1784463687`（pub id 不变）；6 个非英语语言的 336 条工具页标题统一带自然后缀（zh 免费在线工具 / pt Ferramenta Grátis / es Herramienta Gratis / fr Outil Gratuit / de Kostenloses Tool / ja 無料オンラインツール），英文页不动
 
 ## 本版相对 v14.4 基线的变化
